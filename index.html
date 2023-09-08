@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>Michigan Air Polluters: Violations</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script> -->
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/Turf.js/5.1.5/turf.min.js'></script>
+	<!-- <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' /> -->
+	<link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+	<script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<link rel="stylesheet" href="docs/violation-map.css">
+
+</head>
+
+<body>
+
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
+<div id="nav">
+    <img src = "img/PlanetDetroitLogo.svg" style="width:140px;margin:0 auto;display:inline-flex;"/>
+</div>
+<div id="intro-container">
+	<div id="small-screen-alert">
+		<p>For the best interactive experience, please load this map on a larger screen.
+			 Some functionality may be impaired when viewing on a mobile device.</p>
+	</div>
+	<div id="title-mobile">
+		<h1 style="text-align:center;">Michigan Air Permit Violations</h1>
+		<h2 style="text-align:center;">2018 - PRESENT</h2>
+	</div>
+	<div id="intro-mobile">
+		<h2 style="text-transform:none;color:#2E333F;letter-spacing:normal;line-height:1.5em;">Welcome to Planet Detroit's interactive map of Michigan air polluter violations.</h2>
+		<p>This map updates daily with new violation notices issued by EGLE
+			to companies that hold permits to pollute the air throughout the state.</p>
+		<p><a class="recent-vns" href="#recent-vns">View the most recent violations.</a></p>
+		<p>Violation notices may be about excessive air pollution, failure to keep records,
+			maintain equipment, renew permits and more.</p>
+		<p>Each circle represents one facility. Dots are sized by the number of violation notices
+			the company received since 2018. Click on the dots to read more about the violations issued
+			and find links to each document.</p>
+		<p>Results will populate below the map.</p>
+	</div>
+	<div class="spacer"></div>
+	<div id = "mobile-legend">
+		<div>
+            <h4>Violation Notices Issued Since 2018</h4>
+			<p>Click on a facility for details about its violation notices.</p>
+			<img src="img/legend-dots-02.svg" style="width:100%;margin:0 auto;"/>
+        </div>
+        <div>
+            <h4>EPA Classification</h4>
+			<p><button id="epaButton">Read more</button> about these categories.</p>
+            <div class="source-legend"><span style="background-color: #8F0043"></span>Megasite</div>
+            <div class="source-legend"><span style="background-color: #FF0037"></span>Major Source</div>
+            <div class="source-legend"><span style="background-color: #FF5400"></span>Synthetic Minor Source</div>
+            <div class="source-legend"><span style="background-color: #FFBD00"></span>True Minor Source</div>
+        </div>
+	</div>
+</div>
+<div class="map-container">
+	<div id='map'>
+		<div id="dropdown">
+			<select id="select-menu">
+				<option value="">All Sources</option>
+			</select>
+		</div>
+		<div class="legend-container">
+		<div id="violations-legend" class="legend2">
+            <h4>Violation Notices Issued <br/>Since 2018</h4>
+			<p>Click on a facility for details about its violation notices.</p>
+			<img src="img/legend-dots-02.svg" style="width:80%;margin:0 auto;"/>
+        </div>
+        <div id="epa-class-legend" class="legend1">
+            <h4>EPA Classification</h4>
+			<p><button id="epaButton">Read more</button> about these categories.</p>
+            <div><span style="background-color: #8F0043"></span>Megasite</div>
+            <div><span style="background-color: #FF0037"></span>Major Source</div>
+            <div><span style="background-color: #FF5400"></span>Synthetic Minor Source</div>
+            <div><span style="background-color: #FFBD00"></span>True Minor Source</div>
+        </div>
+		<!-- <hr/> -->
+		<div id= "data-source">
+			<p>Source: EGLE's database of <a href="https://www.shelbyjouppi.com/egle-air-database" target="_blank">air polluter documents.</a></p>
+		</div>
+		</div>
+
+
+	</div>
+	<!-- The Modal -->
+	<div id="epaPopup" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+		<span class="close">&times;</span>
+		<h4 style="text-transform:none;">The EPA classifies air polluters into four categories.</h4>
+		<p><span class="highlight-1">Megasites</span> are the largest of the EPA classifications. 
+			These are made up of multiple, complex facilities that emit air pollutants at a Major source scale.</p>
+
+		<p><span class="highlight-2">Major Sources</span> are classified as such when they emit more than 10 tons per year 
+			of a Hazardous Air Pollutant (HAP)<sup>*</sup>, more than 25 tons per year of a combination of HAPs, or more than 
+			100 tons of all air pollutants. </p>
+
+		<p><span class="highlight-3">Synthetic Minor Sources</span> have the capacity to pollute like a Major source, 
+			but these facillities agree to limit their emissions. If the facility were to violate its permit, 
+			and emit more than allowed, it could be polluting as much as a Major source.</p>
+
+		<p><span class="highlight-4">True Minor Sources</span> do not have the capacity to pollute like a Major source,
+		but emit enough air pollution to require a permit.</p>
+		<hr/>
+		<p><span class="caption"><sup>*</sup>Hazardous air pollutants are those known to cause cancer or other serious health problems. 
+			<a href="https://www.epa.gov/haps/initial-list-hazardous-air-pollutants-modifications" target="_blank" class="article">
+			See the EPA's list of 188 HAPs.</a> Other air pollutants are known to cause significant health problems 
+			in large quanities, like particulate matter, carbon monoxide and sulfur dioxide.</span></p>
+			<!-- Researchers are studying the cumulative impact of so many sources 
+			of air pollution concentrated in areas <a href ="https://graham.umich.edu/activity/13265" target="_blank" class="article">like Detroit.</a></em></p> -->
+		</div>
+	
+	</div>
+	<div id='articlePlace'>
+        <div id="epa-class"></div>
+		<div id="company-profile">
+			<div id="title-desktop">
+				<h1 style="text-align:center;">Michigan Air Permit Violations</h1>
+				<h2 style="text-align:center;">2018 - PRESENT</h2>
+			</div>
+		</div>
+		<div id="company-violations">
+			<div id="intro-desktop">
+				<h2 style="text-transform:none;color:#2E333F;letter-spacing:normal;line-height:1.5em;">Welcome to Planet Detroit's interactive map of Michigan air polluter violations.</h2>
+				<p>This map updates daily with new violation notices issued by EGLE
+					to companies that hold permits to pollute the air throughout the state.</p>
+				<p><a class="recent-vns" href="#recent-vns">View the most recent violations.</a></p>
+				<p>Violation notices may be about excessive air pollution, failure to keep records,
+					maintain equipment, renew permits and more.</p>
+				<p>Each circle represents one facility. Dots are sized by the number of violation notices
+					the company received since 2018. Click on the dots to read more about the violations issued
+					and find links to each document.</p>
+			</div>
+		</div>
+		<div id="learn">
+			<p>Please note this is a work-in-progress that was created with the help of automation technology that is wonderful but flawed. <a href ="#" class="article">Read more</a> about caveats, methodology and how to report any issues.</p>
+		</div>
+	</div>
+</div>
+<div id="content-container">
+	<br/>
+	<div class="spacer"></div>
+	<!-- <hr/> -->
+	<a name="recent-vns"></a>
+    <div id="recent-violations">
+    </div>
+	<br/>
+	<hr/>
+	<p><h3>Methodology</h3></p>
+</div>
+	<!-- Loading Data -->
+	<script type="text/javascript" src="output/violation-map-geo-data.js"></script>
+	<script type="text/javascript" src="output/recent-violations.js"></script>
+
+	<!-- Loading Map -->
+	<script type="text/javascript">
+		
+		// mapboxgl.accessToken = 'pk.eyJ1IjoiZGF0YW1hbWExMTYiLCJhIjoiY2xnZmU0b3RvMDBwZDNna3h4bWc5eDh2MyJ9.PBGhYjmYNCs4dL3cE04zxw';
+		mapboxgl.accessToken = 'pk.eyJ1IjoiZGF0YW1hbWExMTYiLCJhIjoiY2xncXMxM21rMTFhZDNybGh6cmE4YjZreCJ9.XPLngEtaW3V0Xd2vBDaxMQ'
+		
+		var map = new mapboxgl.Map({
+			container: 'map', // HTML container ID
+			// style: 'mapbox://styles/datamama116/clgfe9yix000901ozp92q5dud', // style URL DARK
+			// style:'mapbox://styles/datamama116/cll09v4me004v01rg3ctpge5k',
+			style:'mapbox://styles/datamama116/cll62uwv8008r01r8drpohcph',
+			center: [-83.6136, 43.7833], // starting position as [lng, lat]
+			bbox:[-90.418136, 41.696118, -82.413474, 48.2388],
+			zoom: 12,
+			maxZoom: 16,
+		});
+
+				// disable map rotation using right click + drag
+		map.dragRotate.disable();
+		
+		// disable map rotation using touch rotation gesture
+		map.touchZoomRotate.disableRotation();
+		// Define bounds that conform to the `LngLatBoundsLike` object.
+		const bounds = [
+		[-91, 40], // [west, south]
+		[-80, 49]  // [east, north]
+		];
+		// Set the map's max bounds.
+
+		map.setMaxBounds(bounds);
+
+		// map.addControl(new mapboxgl.NavigationControl(), 'top-left');
+		// Add the control to the map.
+		map.addControl(
+		new MapboxGeocoder({
+			
+		accessToken: mapboxgl.accessToken,
+		mapboxgl: mapboxgl,
+		zoom: 12,
+		countries: 'us',
+		bbox: [-90.418136, 41.696118, -82.413474, 48.2388],
+		limit:10,
+		types: 'poi,place,address',
+	
+		})
+		);
+
+
+// Functions
+		var popup = new mapboxgl.Popup({ closeButton: false, closeOnClick: true });
+
+		let hoverCurrentId = null
+		var datalayer;
+
+		function updateArticle(e) {
+			console.log(e)
+			let feature = e.features[0]
+            var group_id = feature.properties.group_id
+			var group_name = feature.properties.group_name
+            var srn = feature.properties.srn
+            var violation_count = feature.properties.violationCount
+            var address = feature.properties.address_full
+            var facility_name = feature.properties.facility_name
+            var violation_article = feature.properties.violation_article
+
+            // if (group_id == 4) {
+            //     document.getElementById("articlePlace").innerHTML = `<div class="epa-class-${group_id}"><h3 class="epa-class-dark">${group_name}</h3><h3 class="srn-dark">SRN: ${srn}</h3></div>`
+            // }
+            // else {
+            //     document.getElementById("articlePlace").innerHTML = `<div class="epa-class-${group_id}"><h3 class="epa-class">${group_name}</h3><h3 class="srn">SRN: ${srn}</h3></div>`
+
+            // }
+            if (group_id == 4) {
+                if (violation_count > 1) {
+                    var article = `<div class="epa-class-${group_id}"><h3 class="epa-class-dark">${group_name}</h3><h3 class="srn-dark">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1><h2>${violation_count} Violation Notices</h2></div><div id="company-violations">${violation_article}</div>`
+                }
+                else {
+                    
+                    var article = `<div class="epa-class-${group_id}"><h3 class="epa-class-dark">${group_name}</h3><h3 class="srn-dark">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1><h2>${violation_count} Violation Notice</h2></div><div id="company-violations">${violation_article}</div>`
+                }
+            }
+            else {
+                if (violation_count > 1) {
+                    var article = `<div class="epa-class-${group_id}"><h3 class="epa-class">${group_name}</h3><h3 class="srn">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1><h2>${violation_count} Violation Notices</h2></div><div id="company-violations">${violation_article}</div>`
+                }
+                else {
+                    
+                    var article = `<div class="epa-class-${group_id}"><h3 class="epa-class">${group_name}</h3><h3 class="srn">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1><h2>${violation_count} Violation Notice</h2></div><div id="company-violations">${violation_article}</div>`
+                }
+            }
+
+            learn = `<div id='learn'><h4>Want to Learn More About This Facility?</h4><p>Find staff reports, tests, and more by searching <a href='https://www.tinyurl.com/egle-air-documents' target='_blank'>this dataset</a> of EGLE documents pertaining to air pollters throughout the state.</p><p><em>Pro tip: Filter using the State Registration Number (SRN) - ${srn}.</em></p></div>`
+            document.getElementById("articlePlace").innerHTML = article + learn
+			// document.getElementById("articlePlace").innerHTML = feature.properties.article + "<div id='learn'><h4>Want to Learn More About this Facility?</h4><p>Find staff reports, tests, and more by searching <a href='https://www.tinyurl.com/egle-air-documents' target='_blank'>this dataset</a> of EGLE documents pertaining to air pollters throughout the state.</p><p><em>Pro tip: Filter using the facility's unique State Registration Number (SRN) located at the top right corner of this profile.</em></p></div>"
+			articlePlace.scrollTop = 0
+
+		}
+
+		function startHover(e) {
+			let feature = e.features[0]
+
+			if (hoverCurrentId) {
+				map.setFeatureState({ source: 'datalayer', id: hoverCurrentId }, { hover: false });
+			}
+			hoverCurrentId = feature.id
+			map.setFeatureState({ source: 'datalayer', id: hoverCurrentId }, { hover: true });
+		}
+
+		function stopHover(e) {
+			if (hoverCurrentId) {
+				map.setFeatureState({ source: 'datalayer', id: hoverCurrentId }, { hover: false });
+			}
+			hoverCurrentId = null;
+		}
+
+		// Draw Popup
+		function drawPopup(e) {
+			let feature = e.features[0]
+            console.log(feature)
+			map.getCanvas().style.cursor = 'pointer';
+			var coordinates = e.lngLat;//turf.centerOfMass(feature);
+			var headline = feature.properties.facility_name;
+			var violationCount = feature.properties.violationCount
+			var group_id = feature.properties.group_id
+			var group_name = feature.properties.group_name
+			var group_name_simple = group_name.replace("Source","")
+			var recent_vn = new Date(feature.properties.most_recent_vn.replace(/-/g, '\/'))
+			var today = new Date()
+			var duration = Math.round((today - recent_vn) / (1000 * 3600 * 24))
+			function differenceInMonths(today, recent_vn) {
+				const monthDiff = today.getMonth() - recent_vn.getMonth();
+				const yearDiff = today.getYear() - recent_vn.getYear();
+
+				return monthDiff + yearDiff * 12;
+			}
+			
+			if (duration > 365) {
+				duration = (today.getYear() - recent_vn.getYear()).toLocaleString()
+				duration = duration + "+ YEARS AGO"
+			}
+			else if (duration > 31 ) {
+				duration = differenceInMonths(today, recent_vn).toLocaleString()
+				duration = duration + " MONTHS AGO"
+			}
+			else {
+				duration = duration.toLocaleString() + " DAYS AGO"
+			}
+			
+			var recent_vn_str = recent_vn.toLocaleDateString('en-us', {year:"numeric", month:"short"}).toUpperCase()
+			// var days_since_last_vn = feature.properties.days_since_last_vn.toLocaleString()
+			while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+				coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+			}
+
+			popup.setLngLat(coordinates)
+				.setHTML(`<span class="pop-headline-${group_id}">${group_name_simple}</span><div class="pop-body"><span class="pop-facility-name">${headline}</span><br/><div class="pop-violation-count">${violationCount}</div><hr/><span style="font-size:1.3em;"><strong>Last Violation Notice</strong><br/>${duration}</span></div>`)
+				.addTo(map);
+		}
+
+		function removePopup(e) {
+			map.getCanvas().style.cursor = '';
+			popup.remove();
+		}
+
+
+		map.on('load', function () {
+			for (let i = 0; i < infoData.features.length; i++) {
+				infoData.features[i]['id'] = i + 1
+			}
+// Draw Facilities
+
+			datalayer = map.addLayer({
+				id: "datalayer",
+				type: "circle",
+				source: {
+					type: "geojson",
+					data: infoData,
+				},
+				paint: {
+					'circle-radius': [
+						'interpolate', ['exponential',2], ['zoom'], 
+						5, ['interpolate', ['linear'],['get', 'violationCount'],
+						1, 3,  // When the value is 0, the radius will be 5 pixels
+						15, 18,
+						35, 25  
+						],
+						12, ['interpolate', ['linear'], ['get','violationCount'],
+						1, 9,
+						15, 54,
+						35, 75
+					],
+				],
+					'circle-color': ['get', 'color'],
+					// 'circle-color':[
+					// 	'interpolate',
+					// 	['linear'],
+					// 	['get','violationCount'],
+					// 	1, '#FFBD00',
+					// 	15, '#FF0037',
+					// 	35, '#631C1C'
+					// ],
+					
+					// 'circle-color': [
+					// 	'interpolate',
+					// 	['linear'],
+					// 	['number',['get','days_since_last_vn']],
+					// 	1, '#FF5400',
+					// 	1460, "#cdcdcd",
+					// ],
+				// 	'circle-color': [
+				// 	'interpolate',
+				// 	['linear'],
+				// 	['get','days_since_last_vn'],
+				// 	1,"#8C0335",
+				// 	365,"#F27F3D",
+				// 	740,"#F2A74B",
+				// 	1095, "#F2DC9B",
+				// 	1460, '#FFFFCC',
+				// 	1825, '#cdcdcd' 
+					
+					
+					
+					
+					
+				// ],
+
+					'circle-opacity':[
+						'case',
+						['boolean', ['feature-state', 'hover'], false],
+							1,
+							0.5
+						],
+				// 	'circle-opacity': [
+				// 		'interpolate', ['linear'], ['get','days_since_last_vn'], 
+				// 		0, .7,
+				// 		1460, 0.1
+				// ],
+					'circle-opacity-transition': { duration: 300 }, // Smooth transition for opacity changes
+					'circle-stroke-color': '#2E333F',  // Outline color
+   				    'circle-stroke-width': .7, // Outline thickness
+					'circle-stroke-opacity': .8
+				}
+			});
+
+// these functions control Mouse actions
+// they make the pop-up headline or update the article text
+			// When we move the mouse over, draw the popup and change the hover style
+			map.on('mousemove', 'datalayer', function (e) {
+				startHover(e)
+				drawPopup(e)
+			});
+
+			// When we move the mouse away from a point, turn off the hovering and popup
+			map.on('mouseleave', 'datalayer', function (e) {
+				stopHover(e)
+				removePopup(e)
+			});
+
+			
+			// When we click, update the article (the right-hand side)
+			map.on('click', 'datalayer', function (e) {
+				
+				updateArticle(e)
+				
+				var currentZoom = map.getZoom();
+				
+				if (currentZoom < 12) {
+				map.flyTo({
+				center: e.features[0].geometry.coordinates,
+				zoom:12,
+				});
+			}
+			else if (currentZoom == 12) {
+				map.flyTo({
+				center: e.features[0].geometry.coordinates,
+				duration: 1000,
+				essential: true
+				});
+			}
+			else if (currentZoom > 12) {
+				map.flyTo({
+				center: e.features[0].geometry.coordinates,
+				essential: true,
+				duration: 1000
+				// zoom:12,
+				});
+			
+			map.addLayer({
+				"id": "circle-selected",
+				"type": "circle",
+				"source": {
+					type: "geojson",
+					data: e.features[0]
+				},
+				paint: {
+				'circle-radius': [
+					'interpolate',
+					['linear'],
+					['get', 'violationCount'],
+					1, 3,  // When the value is 0, the radius will be 5 pixels
+					15, 18,
+					35, 25  
+					],
+				'circle-color': "black",
+				'circle-opacity':1,
+				'circle-stroke-color': 'white',  // Outline color
+   			    'circle-stroke-width': 1, // Outline thickness
+				'circle-stroke-opacity': 1
+				}
+	});
+			}
+	// 			var feature = e.features[0];
+	// 			//I think you could add the vector tile feature to the map, but I'm more familiar with JSON
+	// 			map.addSource('circle-selected', {
+	// 				"type":"geojson",
+	// 				"data": feature
+	// 			});
+	// 			map.addLayer({
+	// 				"id": "circle-selected",
+	// 				"type": "circle",
+	// 				"source": "circle-selected",
+	// 				paint: {
+	// 				'circle-radius': [
+	// 					'interpolate',
+	// 					['linear'],
+	// 					['get', 'violationCount'],
+	// 					1, 3,  // When the value is 0, the radius will be 5 pixels
+	// 					15, 18,
+	// 					35, 25  
+	// 					],
+	// 				'circle-color': ['get', 'color'],
+	// 				'circle-opacity':1,
+	// 				'circle-stroke-color': 'white',  // Outline color
+   	// 			    'circle-stroke-width': 1, // Outline thickness
+	// 				'circle-stroke-opacity': 1
+	// 				}
+    // });
+			});
+
+
+// very important!! this automatically centers the map and zooms it
+			map.fitBounds(turf.bbox(infoData), { padding: 0, linear: true })
+		})
+
+
+	</script>
+	<script>
+	// this part is J query / with some mapbox JavaScript
+	// it changes what is displayed based on the pulldown menu
+
+		var groupsObj = {};
+
+		$(document).ready(function () {
+			infoData.features.forEach(function (feature) {
+				groupsObj[feature.properties.group_id] = feature.properties.group_name;
+			})
+
+			$.each(groupsObj, function (key, value) {
+				$('#select-menu')
+					.append($("<option></option>")
+						.attr("value", value)
+						.text(value));
+			});
+
+			$('#select-menu').change(function () {
+				var selectedGroup = $('#select-menu').val();
+
+				if (!selectedGroup) {
+					map.setFilter('datalayer', null);
+				} else {
+					map.setFilter('datalayer', ['==', ['get', 'group_name'], selectedGroup]);
+				}
+			});
+		});
+
+// Get the Epa Modal
+var epaModal = document.getElementById("epaPopup");
+
+// Get the Epa Button that opens the modal
+var epaBtn = document.getElementById("epaButton");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+epaBtn.onclick = function() {
+	epaModal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+	epaModal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == epaModal) {
+    epaModal.style.display = "none";
+  }
+}
+	</script>
+    <script>
+
+    let newViolations = violationData.features
+    let violationDivs = ``
+    
+    newViolations.forEach((item) => {
+        let epa_class = item.properties.group_name
+        let group_id = item.properties.group_id
+        let facility_name = item.properties.facility_name
+        let date_str = item.properties.date_str
+		let violation_comments = item.properties.comment_list
+        let violation_comment_1 = violation_comments[0]
+        let doc_url = item.properties.doc_url
+        var geom = item.geometry.coordinates
+        var lat = item.properties.lat
+        var long = item.properties.long
+		var id = item.properties.srn
+		var county = item.properties.county
+
+        if (group_id == 4){
+            var oneDivOpen = `<div class="one-vn"><div class="epa-class-${group_id}"><h3 class="dark">${epa_class}</h3></div>`
+        }
+        else {
+            var oneDivOpen = `<div class="one-vn"><div class="epa-class-${group_id}"><h3>${epa_class}</h3></div>`
+        }
+
+		if (violation_comments.length > 1) {
+			var oneDivClose = `<div class="snippet"><h5>${county} County</h5><h1>${facility_name}</h1><a href="${doc_url}" target="_blank">${date_str}</a><img class="icon" src="img/doc-link.svg"/><div id="map-link"><p>${violation_comment_1}..<a class="read-more" data-lat="${lat}" data-long="${long}" data-id="${id}">[Read more]</a></p><a class="article" data-lat="${lat}" data-long="${long}" data-id="${id}">View on the map &#8594;</a></div></div></div>`
+		}
+		else {
+			var oneDivClose = `<div class="snippet"><h5>${county} County</h5><h1>${facility_name}</h1><a href="${doc_url}" target="_blank">${date_str}</a><img class="icon" src="img/doc-link.svg"/><p>${violation_comment_1}</p><div id="map-link"><a class="article" data-lat="${lat}" data-long="${long}" data-id="${id}">View on the map &#8594;</a></div></div></div>`
+		}
+
+		var oneDiv = oneDivOpen + oneDivClose
+
+        violationDivs = violationDivs + oneDiv
+
+    })
+    
+    document.getElementById("recent-violations").innerHTML = violationDivs
+
+    $(document).on('click', '#map-link a', function(e) {
+        // lngLat = $(this).attr('data-coord')
+        // console.log(lngLat)
+        // lngLat = $(this).attr(data-geom)
+        // console.log(lngLat)
+		var id = $(this).attr('data-id')
+		console.log(id)
+        var ll = new mapboxgl.LngLat($(this).attr('data-long'), $(this).attr('data-lat'));
+        console.log(ll)
+        // new LngLat(lng: number, lat: number)
+       map.flyTo({
+				center:ll,
+				duration:100,
+				zoom:12,
+        })
+		var mapContainer = document.getElementById('map');
+		mapContainer.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+		function findFeatureBySRN(srnToFind) {
+			for (var i = 0; i < infoData.features.length; i++) {
+				if (infoData.features[i].properties.srn === srnToFind) {
+					return infoData.features[i];
+				}
+			}
+			return null; // Return null if the feature with the specified srn is not found
+		}
+
+		// Usage
+		var srnToSearchFor = id; // Replace with the SRN you want to find
+		var foundFeature = findFeatureBySRN(srnToSearchFor);
+		console.log(foundFeature)
+
+		function updateArticle2(foundFeature) {
+			let feature = foundFeature
+			var group_id = feature.properties.group_id
+			var group_name = feature.properties.group_name
+            var srn = feature.properties.srn
+            var violation_count = feature.properties.violationCount
+            var address = feature.properties.address_full
+            var facility_name = feature.properties.facility_name
+            var violation_article = feature.properties.violation_article
+
+            if (group_id == 4) {
+                if (violation_count > 1) {
+                    var article = `<div class="epa-class-${group_id}"><h3 class="epa-class-dark">${group_name}</h3><h3 class="srn-dark">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1><h2>${violation_count} Violation Notices</h2></div><div id="company-violations">${violation_article}</div>`
+                }
+                else {
+                    
+                    var article = `<div class="epa-class-${group_id}"><h3 class="epa-class-dark">${group_name}</h3><h3 class="srn-dark">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1><h2>${violation_count} Violation Notice</h2></div><div id="company-violations">${violation_article}</div>`
+                }
+            }
+            else {
+                if (violation_count > 1) {
+                    var article = `<div class="epa-class-${group_id}"><h3 class="epa-class">${group_name}</h3><h3 class="srn">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1><h2>${violation_count} Violation Notices</h2></div><div id="company-violations">${violation_article}</div>`
+                }
+                else {
+                    
+                    var article = `<div class="epa-class-${group_id}"><h3 class="epa-class">${group_name}</h3><h3 class="srn">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1><h2>${violation_count} Violation Notice</h2></div><div id="company-violations">${violation_article}</div>`
+                }
+            }
+
+            learn = `<div id='learn'><h4>Want to Learn More About This Facility?</h4><p>Find staff reports, tests, and more by searching <a href='https://www.tinyurl.com/egle-air-documents' target='_blank'>this dataset</a> of EGLE documents pertaining to air pollters throughout the state.</p><p><em>Pro tip: Filter using the State Registration Number (SRN) - ${srn}.</em></p></div>`
+            document.getElementById("articlePlace").innerHTML = article + learn
+			articlePlace.scrollTop = 0
+		}
+		updateArticle2(foundFeature)
+		// $('#' + $(this).attr('data-id')).trigger('click');
+
+		// marker.addListener("click", () => {
+		// 	map.event.trigger(map, 'click', {
+		// 		longLat: ll
+		// 	});
+		// });
+        // map.fire('click','datalayer')
+		// const mouseoverEvent = new Event('mouseover');
+
+		// map.dispatchEvent(mouseoverEvent);
+    //    map.fire('click', {lngLat: ll, point: map.project(ll)}, console.log(event));
+// 		document.querySelector('canvas').click()
+// 		const event = new MouseEvent({
+// 		clientX: 200,
+// 		clientY: 200,
+// 		bubbles: true
+// 		}
+
+// map.dispatchEvent(event)
+    })
+
+    // console.log(newViolations)
+
+    </script>
+
+
+</body>
+
+</html>
