@@ -2,16 +2,16 @@
 ----
 #### by [Shelby Jouppi](https://www.shelbyjouppi.com)
 
-This dashboard contains an interactive map of Michigan facilities that have violatated their permits within the past five years, as well as a digest of the most recent violation notices issued by the Michigan Department Environment Great Lakes and Energy (EGLE) that oversees the air quality program.
+This dashboard contains an interactive map of Michigan facilities that have violatated their [air permits](https://www.epa.gov/sites/default/files/2013-09/documents/cmspolicy.pdf) within the past five years, as well as a digest of the most recent violation notices issued by the Michigan Department Environment Great Lakes and Energy (EGLE) that oversees the air quality program.
 
 The map updates daily with new violation notices posted to [EGLE's Air Quality Division database.](https://www.egle.state.mi.us/aps/downloads/srn/)
 
 ### How it works
-🔍 **Finding and parsing new violation notices** 
+🔍 **1. Finding and parsing new violation notices** 
 
-A python script looks for new violations added to the EGLE database. [Data and methodology can be found here.](https://www.shelbyjouppi.com/egle-air-database) Using the library [pdfplumber](https://github.com/jsvine/pdfplumber) the script searches for standard phrases and tables that indicate which violations are cited in the notice. It also extracts the full text of the PDF.
+A python script looks for new violation notices added to the EGLE database. [Data and methodology can be found here.](https://www.shelbyjouppi.com/egle-air-database) Using the library [pdfplumber](https://github.com/jsvine/pdfplumber) the script searches for standard phrases and tables that indicate which violations are cited in the notice. It also extracts the full text of the PDF.
 
-:chart_with_upwards_trend: **Clean and save the data**
+:chart_with_upwards_trend: **2. Clean and save the data**
 
 The script then cleans the violation details and saves it to a csv with the following fields:
 
@@ -29,11 +29,36 @@ The script then cleans the violation details and saves it to a csv with the foll
 | doc_url | The url for the violation notice hosted on EGLE's database. |
 | full_text | A raw copy of the entire text of the violation notice as extracted by pdfplumber. |
 
-:round_pushpin: **Update the map with the new violations**
+:round_pushpin: **3. Update the map with the new violations**
 
 The script then updates the facilities with new violation notices by adding to the total violation count for that facility as well as the year and updating its article with the new violation text.
 
 It then exports another file with the top 6 most recent violation notices to populate the dashboard.
+
+------
+### A few notes regarding our methodology
+
+`violationCount`: is derived from adding up the number of violation notices in the EGLE database since 2018. This number could be higher if EGLE has not uploaded every violation notice.
+
+We limited the violation notices within the past 5 years, however there could be relevant violation notices predating this period. To search past violation notices, use the [full document dataset](https://www.shelbyjouppi.com/egle-air-database) and contact EGLE for the most comprehensive list.
+
+If you have obtained violation notices that are not in the dataset, please submit them to this form and we will get them added as soon as we are able.
+
+`facility_name`, `address`, `epa_class`: Information about these facilities was derived from a spreadsheet provided by EGLE in early 2022. There is always a potential that some of this information might have changed or that new facilities have popped up that aren't included in the database.
+
+The facilities were mapped using the address provided, but that address might not always be the exact physical location of a polluting facility. Please check the violation notice PDF for more detail about the location.
+
+Please report any errors to this formand we will correct them as soon as possible.
+------
+`location_clean`: The location of the facility cited in the violation was extracted by searching for the text "located at [address], Michigan." on the front page. The map only serves this data if it doesn't match the facility's address in the directory.
+
+
+
+`violation_text`: This text was extracted by using the python library pdfplumber to isolate the standard table on the violation notice that looks like so:
+
+
+
+This technology expedited a process that would have taken weeks of manual labor, and allows the map to be updated daily without human intervention. The idea behind this was to give the user a quick snapshot of the violation. The downside of the automated method is that it is flawed. It might cause typos or other imperfections in the text, so please always verify the details of the violation by looking at the Violation Notice PDF itself.
 
 ### The files
 | file    | description |
