@@ -15,7 +15,7 @@ A python script looks for new violation notices added to the EGLE database. [Dat
 
 The script then cleans the violation details and saves it to a csv with the following fields:
 
-:file_fold: `output/EGLE-AQD-Violation-Notices-2018-Present.csv`
+📁 `output/EGLE-AQD-Violation-Notices-2018-Present.csv`
 
 | field    | description |
 | -------- | ------- |
@@ -52,11 +52,11 @@ Please report any errors to this formand we will correct them as soon as possibl
 ------
 `location_clean`: The location of the facility cited in the violation was extracted by searching for the text "located at [address], Michigan." on the front page. The map only serves this data if it doesn't match the facility's address in the directory.
 
+![Screenshot of a violation notice with the location cited in the document highlighted.](/img/violation-notice-examples-01)
 
+`violation_text`: This text was extracted by using the python library pdfplumber to isolate the standard table on the violation notice. Due to the technical jargon in the "Process Description" and "Rule/Permit Condition Violated" columns, we only included the Comments column on the map. The data from the other columns can be found in `archive/violations-parsed-raw.csv.`
 
-`violation_text`: This text was extracted by using the python library pdfplumber to isolate the standard table on the violation notice that looks like so:
-
-
+![Screenshot of a standard violation table within the violation notice, with the Comments column highlighted.](/img/violation-notice-examples-02)
 
 This technology expedited a process that would have taken weeks of manual labor, and allows the map to be updated daily without human intervention. The idea behind this was to give the user a quick snapshot of the violation. The downside of the automated method is that it is flawed. It might cause typos or other imperfections in the text, so please always verify the details of the violation by looking at the Violation Notice PDF itself.
 
