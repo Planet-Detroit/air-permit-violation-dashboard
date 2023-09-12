@@ -404,6 +404,10 @@ align-items: center;
 #map{
     scroll-margin: 10px;
 }
+#methodology {
+    width:600px;
+    margin: 0 auto;
+}
 @media (min-width: 975px) {
     #map {
         min-height:558px;
@@ -875,8 +879,116 @@ a {
     color:#2E333F;
     text-decoration:underline;
 }
+#how-to{
+    width:600px;
+    margin:0 auto;
+}
+#how-to h4{
+    text-transform: initial;
+    font-size:1.6em;
+}
+.home-link{
+    margin: 0 auto;
+}
+.home-link:hover{
+    background-color:inherit;
+    opacity:.7;
+}
+#footer{
+    display:flex;
+    background-color:#2E333F;
+    color:white;
+    padding:2em 3em 2em;
+    margin-top:20px;
+}
+#footer-about {
+    flex:1.2;
+    margin-right:5em;
+}
+#footer-about p{
+    font-family:'Asap', sans-serif;
+    font-weight:600;
+    font-size:1.2em;
+    letter-spacing:.02em;
+    color:white;
+}
+#footer-newsletter{
+    flex:1.2;
+    margin-right:4em;
+}
+#footer-newsletter h4{
+    color:white;
+    text-transform:none;
+    font-size:1.6em;
+}
+#footer-newsletter p{
+    color:white;
+    line-height:1.9em;
+}
+#footer-nav{
+    flex:.8;
+}
+#footer-nav a{
+    text-transform:uppercase;
+    color:white;
+    font-weight:500;
+    text-decoration:none;
+    letter-spacing:.02em;
+}
+#footer-nav a:hover{
+    color:#aeba3c;
+    background-color:inherit;
+}
+#footer-nav ul{
+    list-style-type:none;
+    margin-left:-40px;
+}
+#footer-nav li{
+    margin: 20px 0;
+}
+#footer-copyright{
+    background-color:#2E333F;
+    padding:25px 25px 40px;
+    font-family:"Roboto-Mono", monospace;
+    font-size:.9em;
+    color:white;
+    margin:0auto;
+    width:100%;
+    text-align:center;
+    box-sizing:border-box;
 
-
+}
+a.button-blue{
+    padding:17px;
+    background-color:#0274be;
+    text-transform:none;
+    text-decoration:none;
+    letter-spacing:.02em;
+    border-radius:.3em;
+    color:white;
+    font-family:'Asap', sans-serif;
+    font-weight:700;
+}
+a.button-blue:hover{
+    background-color: #aeba3c !important;
+    color:#2E333F !important;
+    text-decoration:none;
+}
+a.button-green{
+    padding:17px;
+    background-color:#aeba3c;
+    text-transform:initial !important;
+    text-decoration:none !important;
+    letter-spacing:.02em;
+    border-radius:.3em;
+    color:#2E333F;
+    font-family:'Asap', sans-serif;
+    font-weight:700 !important;
+}
+a.button-green:hover{
+    background-color: #0274be !important;
+    color:white !important;
+}
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */

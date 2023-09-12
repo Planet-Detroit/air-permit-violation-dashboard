@@ -18,6 +18,8 @@
 	<link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
 	<script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+ 
 	<link rel="stylesheet" href="docs/violation-map.css">
 
 </head>
@@ -27,7 +29,9 @@
 <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
 <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
 <div id="nav">
-    <img src = "img/PlanetDetroitLogo.svg" style="width:140px;margin:0 auto;display:inline-flex;"/>
+    <a href="https://planetdetroit.org/" class="home-link" target="_blank">
+		<img src = "img/PlanetDetroitLogo.svg" style="width:140px;margin:0 auto;display:inline-flex;"/>
+	</a>
 </div>
 <div id="intro-container">
 	<div id="small-screen-alert">
@@ -39,7 +43,8 @@
 		<h2 style="text-align:center;">2018 - PRESENT</h2>
 	</div>
 	<div id="intro-mobile">
-		<h2 style="text-transform:none;color:#2E333F;letter-spacing:normal;line-height:1.5em;">Welcome to Planet Detroit's interactive map of Michigan air polluter violations.</h2>
+		<h2 style="text-transform:none;color:#2E333F;letter-spacing:normal;line-height:1.5em;">Welcome 
+			to Planet Detroit's interactive map of Michigan air polluter violations.</h2>
 		<p>This map updates daily with new violation notices issued by EGLE
 			to companies that hold permits to pollute the air throughout the state.</p>
 		<p><a class="recent-vns" href="#recent-vns">View the most recent violations.</a></p>
@@ -48,11 +53,14 @@
 		<p>Each circle represents one facility. Dots are sized by the number of violation notices
 			the company received since 2018. Click on the dots to read more about the violations issued
 			and find links to each document.</p>
-		<p>Results will populate below the map.</p>
+		<p>Results will appear below the map.</p>
+		<br/>
 	</div>
-	<div class="spacer"></div>
+				<div class="spacer"></div>
+
 	<div id = "mobile-legend">
 		<div>
+				<!-- <div class="spacer"></div> -->
             <h4>Violation Notices Issued Since 2018</h4>
 			<p>Click on a facility for details about its violation notices.</p>
 			<img src="img/legend-dots-02.svg" style="width:100%;margin:0 auto;"/>
@@ -161,7 +169,81 @@
     </div>
 	<br/>
 	<hr/>
-	<p><h3>Methodology</h3></p>
+	<div id="how-to">
+	<h4>About the project</h4>
+	<p>
+	Planet Detroit's Air Permit Violation Dashboard was created using 
+	data from the Michigan Department of Environment, 
+	Great Lakes and Energy's (EGLE) database of air polluter documents. 
+	The data was collected and cleaned by data journalist Shelby Jouppi.
+	</p>
+	<p>
+		<a class="article" href="https://github.com/Planet-Detroit/air-permit-violation-dashboard/#readme" target="_blank">
+			Read the full methodology and access our data on Github.
+		</a>
+		</p>
+	<p>
+	   The map updates on a daily basis and shows sources of air pollution that have violated
+	   their permits since 2018. You can find more information about these facilities 
+	   and others by browsing the <a class="article" href="https://www.shelbyjouppi.com/egle-air-database">full dataset</a>  
+	   for inspection reports, enforcement notices, older violations and more.
+	</p>
+	<p>
+	   Search for a specific facility by using its "SRN" or State Registration Number located
+	   at the top right of their profile on the map.
+	</p>
+
+
+	<p>
+	
+	And please <a class="article" href="https://planetdetroit.org/contact-us/" target="_blank">reach out to us</a> with any questions about the dashboard.
+	If you have a specific error to report, please submit it to this form and we will address it as soon as possible.
+	</p>
+	</div>
+</div>
+<div class="spacer"></div>
+
+<div id="footer">
+	<div id="footer-about">
+		<img src="img/PlanetDetroitLogo-WhiteText-2.svg" style="width:200px;"/>
+		<p>
+			Our mission is to produce quality climate, 
+			equity, health and environment journalism in 
+			the public interest that centers grassroots voices,  
+			holds power accountable, spotlights solutions
+			+ serves the community.
+		</p>
+	</div>
+	<div id="footer-newsletter">
+		<h4>Get smarter about your environment and your health</h4>
+
+		<p>
+			Our newsletters provide accountability, solutions-based 
+			and community journalism around local climate, 
+			environmental and public health issues in 
+			Detroit and Michigan.
+		</p>
+		<br/>
+		<p>
+		<a class="button-blue" href="https://planetdetroit.org/our-sponsors/" target="_blank">Sign up for free</a>
+		</p>
+	</div>
+	<div id="footer-nav">
+		<ul>
+		<li><a href="https://planetdetroit.org/about-us/" target="_blank">About Us</a></li>
+		<li><a href="https://planetdetroit.org/contact-us/" target="_blank">Contact Us</a></li>
+		<li><a href="https://planetdetroit.org/wp-content/uploads/2023/06/Planet-Detroit-2019-2023-Impact-Report.pdf" target="_blank">2023 Impact Report</a></li>
+		<li><a href="https://planetdetroit.org/our-sponsors/" target="_blank">Our Funders, Partners and Sponsors</a></li>
+		<li><a href="https://planetdetroit.org/impactpartners/" target="_blank">Impact Partners Circle</a></li>
+		</ul>
+		<br/>
+		<p>
+		<a class="button-green" href="https://planetdetroit.org/support-planet-detroit/" target="_blank">Become a Planet Detroiter</a>
+		</p>
+	</div>
+</div>
+<div id="footer-copyright">
+	Copyright © 2023 Planet Detroit
 </div>
 	<!-- Loading Data -->
 	<script type="text/javascript" src="output/violation-map-geo-data.js"></script>
@@ -175,8 +257,6 @@
 		
 		var map = new mapboxgl.Map({
 			container: 'map', // HTML container ID
-			// style: 'mapbox://styles/datamama116/clgfe9yix000901ozp92q5dud', // style URL DARK
-			// style:'mapbox://styles/datamama116/cll09v4me004v01rg3ctpge5k',
 			style:'mapbox://styles/datamama116/cll62uwv8008r01r8drpohcph',
 			center: [-83.6136, 43.7833], // starting position as [lng, lat]
 			bbox:[-90.418136, 41.696118, -82.413474, 48.2388],
@@ -198,7 +278,6 @@
 
 		map.setMaxBounds(bounds);
 
-		// map.addControl(new mapboxgl.NavigationControl(), 'top-left');
 		// Add the control to the map.
 		map.addControl(
 		new MapboxGeocoder({
@@ -258,7 +337,7 @@
                 }
             }
 
-            learn = `<div id='learn'><h4>Want to Learn More About This Facility?</h4><p>Find staff reports, tests, and more by searching <a href='https://www.tinyurl.com/egle-air-documents' target='_blank'>this dataset</a> of EGLE documents pertaining to air pollters throughout the state.</p><p><em>Pro tip: Filter using the State Registration Number (SRN) - ${srn}.</em></p></div>`
+            learn = `<div id='learn'><h4>Want to Learn More About This Facility?</h4><p>Find inspection reports, older violations and other documents for ${facility_name} in <a href="https://www.egle.state.mi.us/aps/downloads/SRN/${srn}" target="_blank">EGLE's database</a>, and use the <a href="https://www.michigan.gov/egle/-/media/Project/Websites/egle/Documents/Programs/AQD/misc-info/file-naming-convention.pdf" target="_blank">file naming conventions</a> to decode the documents (ie "SAR" = "Staff Activity Report", "ENFN" = "Enforcement Notice")</p><p>Explore all documents for permitted sources by browsing this <a href="https://www.tinyurl.com/egle-air-documents" target="_blank">Google sheet.</a> If you're looking for this facility, filter by its State Registration Number (SRN): ${srn}</p></div>`
             document.getElementById("articlePlace").innerHTML = article + learn
 			// document.getElementById("articlePlace").innerHTML = feature.properties.article + "<div id='learn'><h4>Want to Learn More About this Facility?</h4><p>Find staff reports, tests, and more by searching <a href='https://www.tinyurl.com/egle-air-documents' target='_blank'>this dataset</a> of EGLE documents pertaining to air pollters throughout the state.</p><p><em>Pro tip: Filter using the facility's unique State Registration Number (SRN) located at the top right corner of this profile.</em></p></div>"
 			articlePlace.scrollTop = 0
@@ -360,39 +439,6 @@
 					],
 				],
 					'circle-color': ['get', 'color'],
-					// 'circle-color':[
-					// 	'interpolate',
-					// 	['linear'],
-					// 	['get','violationCount'],
-					// 	1, '#FFBD00',
-					// 	15, '#FF0037',
-					// 	35, '#631C1C'
-					// ],
-					
-					// 'circle-color': [
-					// 	'interpolate',
-					// 	['linear'],
-					// 	['number',['get','days_since_last_vn']],
-					// 	1, '#FF5400',
-					// 	1460, "#cdcdcd",
-					// ],
-				// 	'circle-color': [
-				// 	'interpolate',
-				// 	['linear'],
-				// 	['get','days_since_last_vn'],
-				// 	1,"#8C0335",
-				// 	365,"#F27F3D",
-				// 	740,"#F2A74B",
-				// 	1095, "#F2DC9B",
-				// 	1460, '#FFFFCC',
-				// 	1825, '#cdcdcd' 
-					
-					
-					
-					
-					
-				// ],
-
 					'circle-opacity':[
 						'case',
 						['boolean', ['feature-state', 'hover'], false],
@@ -478,32 +524,6 @@
 				}
 	});
 			}
-	// 			var feature = e.features[0];
-	// 			//I think you could add the vector tile feature to the map, but I'm more familiar with JSON
-	// 			map.addSource('circle-selected', {
-	// 				"type":"geojson",
-	// 				"data": feature
-	// 			});
-	// 			map.addLayer({
-	// 				"id": "circle-selected",
-	// 				"type": "circle",
-	// 				"source": "circle-selected",
-	// 				paint: {
-	// 				'circle-radius': [
-	// 					'interpolate',
-	// 					['linear'],
-	// 					['get', 'violationCount'],
-	// 					1, 3,  // When the value is 0, the radius will be 5 pixels
-	// 					15, 18,
-	// 					35, 25  
-	// 					],
-	// 				'circle-color': ['get', 'color'],
-	// 				'circle-opacity':1,
-	// 				'circle-stroke-color': 'white',  // Outline color
-   	// 			    'circle-stroke-width': 1, // Outline thickness
-	// 				'circle-stroke-opacity': 1
-	// 				}
-    // });
 			});
 
 
@@ -674,29 +694,7 @@ window.onclick = function(event) {
 			articlePlace.scrollTop = 0
 		}
 		updateArticle2(foundFeature)
-		// $('#' + $(this).attr('data-id')).trigger('click');
-
-		// marker.addListener("click", () => {
-		// 	map.event.trigger(map, 'click', {
-		// 		longLat: ll
-		// 	});
-		// });
-        // map.fire('click','datalayer')
-		// const mouseoverEvent = new Event('mouseover');
-
-		// map.dispatchEvent(mouseoverEvent);
-    //    map.fire('click', {lngLat: ll, point: map.project(ll)}, console.log(event));
-// 		document.querySelector('canvas').click()
-// 		const event = new MouseEvent({
-// 		clientX: 200,
-// 		clientY: 200,
-// 		bubbles: true
-// 		}
-
-// map.dispatchEvent(event)
     })
-
-    // console.log(newViolations)
 
     </script>
 
