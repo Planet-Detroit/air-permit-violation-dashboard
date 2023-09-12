@@ -270,8 +270,8 @@
 		map.touchZoomRotate.disableRotation();
 		// Define bounds that conform to the `LngLatBoundsLike` object.
 		const bounds = [
-		[-89.3, 43], // [west, south]
-		[-84, 46]  // [east, north]
+		[-91, 40], // [west, south]
+		[-80, 49]  // [east, north]
 		];
 		// Set the map's max bounds.
 
@@ -298,6 +298,7 @@
 
 		let hoverCurrentId = null
 		var datalayer;
+		// var circleSelected;
 
 		function updateArticle(e) {
 			console.log(e)
@@ -409,6 +410,7 @@
 			map.getCanvas().style.cursor = '';
 			popup.remove();
 		}
+	
 
 
 		map.on('load', function () {
@@ -500,31 +502,16 @@
 				// zoom:12,
 				});
 			
-			map.addLayer({
-				"id": "circle-selected",
-				"type": "circle",
-				"source": {
-					type: "geojson",
-					data: e.features[0]
-				},
-				paint: {
-				'circle-radius': [
-					'interpolate',
-					['linear'],
-					['get', 'violationCount'],
-					1, 3,  // When the value is 0, the radius will be 5 pixels
-					15, 18,
-					35, 25  
-					],
-				'circle-color': "black",
-				'circle-opacity':1,
-				'circle-stroke-color': 'white',  // Outline color
-   			    'circle-stroke-width': 1, // Outline thickness
-				'circle-stroke-opacity': 1
-				}
-	});
+			
 			}
+			// map.setLayoutProperty(
+			// 	'circleSelected',
+			// 	'visibility',
+			// 	'none'
+			// )
+			// map.circleSelected.setVisibility(false)
 			});
+			
 
 
 // very important!! this automatically centers the map and zooms it
@@ -651,7 +638,7 @@ window.onclick = function(event) {
         var ll = new mapboxgl.LngLat($(this).attr('data-long'), $(this).attr('data-lat'));
         console.log(ll)
         // new LngLat(lng: number, lat: number)
-       map.flyTo({
+       	map.flyTo({
 				center:ll,
 				duration:100,
 				zoom:12,
@@ -666,12 +653,27 @@ window.onclick = function(event) {
 			}
 			return null; // Return null if the feature with the specified srn is not found
 		}
-
+		
 		// Usage
 		var srnToSearchFor = id; // Replace with the SRN you want to find
 		var foundFeature = findFeatureBySRN(srnToSearchFor);
 		console.log(foundFeature)
-
+		// circleSelected = map.addLayer({
+		// 		"id": "circle-selected",
+		// 		"type": "circle",
+		// 		"source": {
+		// 			type: "geojson",
+		// 			data: foundFeature,
+		// 		},
+		// 		paint: {
+		// 		'circle-radius': 40,
+		// 		'circle-color': "white",
+		// 		'circle-opacity':0,
+		// 		'circle-stroke-color': 'black',  // Outline color
+   		// 	    'circle-stroke-width': 4, // Outline thickness
+		// 		'circle-stroke-opacity': .5
+		// 		}
+		// });
 		function updateArticle2(foundFeature) {
 			let feature = foundFeature
 			var group_id = feature.properties.group_id
@@ -707,7 +709,6 @@ window.onclick = function(event) {
 		}
 		updateArticle2(foundFeature)
     })
-
     </script>
 
 
