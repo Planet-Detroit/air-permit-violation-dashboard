@@ -1,7 +1,6 @@
 # Planet Detroit's Dashboard of Michigan Air Permit Violations
 ----
-#### by [Shelby Jouppi](https://www.shelbyjouppi.com)
-
+#### by [Shelby Jouppi](https://www.shelbyjouppi.com), Data Reporter
 This dashboard contains an interactive map of Michigan facilities that have violatated their [air permits](https://www.epa.gov/sites/default/files/2013-09/documents/cmspolicy.pdf) within the past five years, as well as a digest of the most recent violation notices issued by the Michigan Department Environment Great Lakes and Energy (EGLE) that oversees the air quality program.
 
 The map updates daily with new violation notices posted to [EGLE's Air Quality Division database.](https://www.egle.state.mi.us/aps/downloads/srn/)
