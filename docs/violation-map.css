@@ -227,7 +227,7 @@ path{
         margin-top:10px;
         margin-bottom:10px;
         font-style: italic;
-        /* font-size:1.2em; */
+        font-size:1.3em;
     }
     .legend-container a{
         font-size:inherit;
@@ -266,7 +266,6 @@ text-transform: none;
 font-weight: 700;
 margin-top:10px;
 letter-spacing: .01em;
-font-size:16px;
 line-height:1.3em;
 margin-bottom:7px;
 opacity: 100%;
@@ -929,11 +928,11 @@ a {
     color:#2E333F;
     text-decoration:underline;
 }
-#how-to{
+#about-project{
     width:600px;
     margin:0 auto;
 }
-#how-to h4{
+#about-project h4{
     text-transform: initial;
     font-size:1.6em;
 }
@@ -1095,8 +1094,11 @@ a:hover{
     letter-spacing:.01em;
     font-weight:700;
     background-color: #8F0043;
+    border: 1px solid black;
+    border-radius:.1em;
     padding:4px;
     color:white;
+    margin-right:7px;
 }
 
 
@@ -1106,8 +1108,11 @@ a:hover{
     letter-spacing:.01em;
     font-weight:700;
     background-color: #FF0037;
+    border: 1px solid black;
+    border-radius:.1em;
     padding:4px;
     color:white;
+    margin-right:7px;
 }
 
 .highlight-3{
@@ -1116,8 +1121,11 @@ a:hover{
     letter-spacing:.01em;
     font-weight:700;
     background-color: #FF5400;
+    border: 1px solid black;
+    border-radius:.1em;
     padding:4px;
     color:white;
+    margin-right:7px;
 }
 
 .highlight-4{
@@ -1126,7 +1134,10 @@ a:hover{
     letter-spacing:.01em;
     font-weight:700;
     background-color: #FFBD00;
+    border: 1px solid black;
+    border-radius:.1em;
     padding:4px;
+    margin-right:7px;
     color:black;
 }
 
