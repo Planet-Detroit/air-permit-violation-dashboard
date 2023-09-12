@@ -44,7 +44,7 @@
 	</div>
 	<div id="intro-mobile">
 		<h2 style="text-transform:none;color:#2E333F;letter-spacing:normal;line-height:1.5em;">Welcome 
-			to Planet Detroit's interactive map of Michigan air polluter violations.</h2>
+			to Planet Detroit's interactive map of Michigan air permit violations.</h2>
 		<p>This map updates daily with new violation notices issued by EGLE
 			to companies that hold permits to pollute the air throughout the state.</p>
 		<p><a class="recent-vns" href="#recent-vns">View the most recent violations.</a></p>
@@ -67,7 +67,7 @@
         </div>
         <div>
             <h4>EPA Classification</h4>
-			<p><button id="epaButton">Read more</button> about these categories.</p>
+			<p><button id="epaButton2">Read more</button> about these categories.</p>
             <div class="source-legend"><span style="background-color: #8F0043"></span>Megasite</div>
             <div class="source-legend"><span style="background-color: #FF0037"></span>Major Source</div>
             <div class="source-legend"><span style="background-color: #FF5400"></span>Synthetic Minor Source</div>
@@ -169,7 +169,7 @@
     </div>
 	<br/>
 	<hr/>
-	<div id="how-to">
+	<div id="about-project">
 	<h4>About the project</h4>
 	<p>
 	Planet Detroit's Air Permit Violation Dashboard was created using 
@@ -343,7 +343,8 @@
 			articlePlace.scrollTop = 0
 
 		}
-
+		// epaClass = document.getElementByID("epa-class")
+		// $('epaClass:empty').hide();
 		function startHover(e) {
 			let feature = e.features[0]
 
@@ -564,15 +565,24 @@
 
 // Get the Epa Modal
 var epaModal = document.getElementById("epaPopup");
+// var epaModal2 = document.getElementById("epaPopup2");
 
 // Get the Epa Button that opens the modal
 var epaBtn = document.getElementById("epaButton");
 
+// Get the Epa Button that opens the modal
+var epaBtn2 = document.getElementById("epaButton2");
+
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
+// var span2 = document.getElementsByClassName("close2")[0];
 
 // When the user clicks the button, open the modal 
 epaBtn.onclick = function() {
+	epaModal.style.display = "block";
+}
+// When the user clicks the button, open the modal 
+epaBtn2.onclick = function() {
 	epaModal.style.display = "block";
 }
 
@@ -580,7 +590,10 @@ epaBtn.onclick = function() {
 span.onclick = function() {
 	epaModal.style.display = "none";
 }
-
+// // When the user clicks on <span> (x), close the modal
+// span2.onclick = function() {
+// 	epaModal2.style.display = "none";
+// }
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == epaModal) {

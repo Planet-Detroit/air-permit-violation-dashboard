@@ -187,6 +187,19 @@ path{
 #epaButton:hover {
     background-color:#FFBD00;
 }
+#epaButton2 {
+    border: 0;
+    padding:0;
+    background-color:inherit;
+    font-family:inherit;
+    font-style: inherit;
+    font-size:inherit;
+    text-decoration:underline;
+    color:inherit;
+}
+#epaButton2:hover {
+    background-color:#FFBD00;
+}
 .legend-container a{
     font:inherit;
     text-transform:none;
@@ -357,11 +370,13 @@ align-items: center;
 #small-screen-alert{
     background-color:#f7f7f7;
     margin:0 auto;
-    padding-left:2em;
-    padding-right:2em;
     font-style:italic;
     color:#2E333F;
     display:none;
+    box-sizing: border-box;
+}
+#small-screen-alert p{
+    padding:20px 20px 20px !important;
 }
 .map-container{
     display:flex;
@@ -372,6 +387,7 @@ align-items: center;
     background-color:#f7f7f7;
     border-top: 1px solid black;
     display:none;
+    padding:1.5em 0 1.5em;
     /* padding: 0 2em 0; */
 }
 #mobile-legend p{
@@ -422,6 +438,9 @@ align-items: center;
     }
     }
 @media (max-width: 974px){
+    #epa-class{
+        background-color:#fff;
+    }
     .map-container{
         flex-direction:column;
         width:100%;
@@ -455,11 +474,16 @@ align-items: center;
         display:flex;
         flex-direction:column;
         margin:0 auto;
+        padding:20px 20px 20px;
+        box-sizing:border-box;
     }
     }
 @media (max-width:630px){
     p {
         font-size:1.2em;
+    }
+    .modal-content{
+        width:70% !important;
     }
     #select-menu {
         visibility:hidden;
@@ -483,6 +507,29 @@ align-items: center;
     #intro-mobile{
         width:100%;
         margin:0 auto;
+
+    }
+    #about-project{
+        width:100%;
+        padding:20px;
+        box-sizing: border-box;
+    }
+    #footer{
+        flex-direction:column;
+    }
+    #footer-about{
+        margin-right:0px !important;
+        margin-bottom:20px;
+        flex:1;
+    }
+    #footer-newsletter{
+        margin-right:0px !important;
+        margin-bottom:20px;
+        flex:1;
+
+    }
+    #footer-nav{
+        text-align:center;
     }
 }
 #content-container {
@@ -608,6 +655,9 @@ br {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
 
+}
+#company-profile:emtpy{
+    display:none;
 }
 
 #company-profile hr{
@@ -982,6 +1032,7 @@ a.button-green{
     letter-spacing:.02em;
     border-radius:.3em;
     color:#2E333F;
+    display:inline-block;
     font-family:'Asap', sans-serif;
     font-weight:700 !important;
 }
@@ -993,7 +1044,7 @@ a.button-green:hover{
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 2; /* Sit on top */
+    z-index: 100; /* Sit on top */
     padding-top: 6em; /* Location of the box */
     padding-bottom: 3em;
     left: 0;
@@ -1005,16 +1056,15 @@ a.button-green:hover{
     background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
   }
 
- /* Modal Content */
+   /* Modal Content */
 .modal-content {
     font-size:1em;
     background-color: #fefefe;
-    margin: auto;
+    margin: 0 auto 150px;
     padding: 1em 2.2em 1em 2.2em;
     border: 1px solid #888;
     width: 50%;
   }
-  
   /* The Close Button */
 .close {
     color: #aaaaaa;
