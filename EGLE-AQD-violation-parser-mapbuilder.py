@@ -591,8 +591,7 @@ if len(new_facilities) > 0:
             new_facility_df[['2018','2019','2020','2021','2022','2023']] = 0
             new_facility_df['type'] = 'Feature'
             new_facility_df['geometry.type'] = 'Point'
-            new_facility_df['properties.address_full'] = new_facility_df.address_full
-            new_facility_df = new_facility_df.rename({'facility_name_title':'properties.facility_name'},axis=1)
+            new_facility_df = new_facility_df.rename({'facility_name_title':'properties.facility_name','address_full':'properties.address_full'},axis=1)
             if pd.isnull(new_facility_df.epa_class.item()):
                 new_facility_df.epa_class = 'None'
             new_facility_df['properties.group_id'] = new_facility_df.epa_class.replace(epa_class_num_dict)
