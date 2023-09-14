@@ -611,7 +611,16 @@ align-items: center;
     /* color:#8F0043; */
     font-size:1em;
 }
+#recent-violations ul{
+    font-size:1.1em;
+    /* list-style:none; */
+    padding-bottom:0;
+    margin-left:-15px;   
+}
 
+li{
+    margin: 10px 0;
+}
 a.read-more{
     font-family: 'Gelasio', serif;
     font-weight: 300;

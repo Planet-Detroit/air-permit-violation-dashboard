@@ -695,7 +695,7 @@ for facility in new_vns_clean.drop_duplicates(subset='srn').srn:
     one_facility_report['new_violation_count'] = map_df.query(f'srn=="{facility}"')['properties.violationCount'].item()
 
     # 5. Update most_recent_vn:
-    map_df.loc[map_df.srn == facility, 'properties.most_recent_vn'] = most_recent_vn
+    map_df.loc[map_df.srn == facility, 'properties.most_recent_vn'] = most_recent_vn_str
     
     # 6. Appending the report
     map_update_report.append(one_facility_report)

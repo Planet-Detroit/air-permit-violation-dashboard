@@ -301,7 +301,6 @@
 		// var circleSelected;
 
 		function updateArticle(e) {
-			console.log(e)
 			let feature = e.features[0]
             var group_id = feature.properties.group_id
 			var group_name = feature.properties.group_name
@@ -365,7 +364,6 @@
 		// Draw Popup
 		function drawPopup(e) {
 			let feature = e.features[0]
-            console.log(feature)
 			map.getCanvas().style.cursor = 'pointer';
 			var coordinates = e.lngLat;//turf.centerOfMass(feature);
 			var headline = feature.properties.facility_name;
@@ -373,6 +371,7 @@
 			var group_id = feature.properties.group_id
 			var group_name = feature.properties.group_name
 			var group_name_simple = group_name.replace("Source","")
+			console.log(feature.properties.most_recent_vn)
 			var recent_vn = new Date(feature.properties.most_recent_vn.replace(/-/g, '\/'))
 			var today = new Date()
 			var duration = Math.round((today - recent_vn) / (1000 * 3600 * 24))
@@ -597,14 +596,46 @@ window.onclick = function(event) {
         let group_id = item.properties.group_id
         let facility_name = item.properties.facility_name
         let date_str = item.properties.date_str
-		let violation_comments = item.properties.comment_list
-        let violation_comment_1 = violation_comments[0]
-        let doc_url = item.properties.doc_url
+		let violation_comment_list = item.properties.comment_list
+		let doc_url = item.properties.doc_url
         var geom = item.geometry.coordinates
         var lat = item.properties.lat
         var long = item.properties.long
 		var id = item.properties.srn
 		var county = item.properties.county
+		// let violation_comments = "<ul><li>" + violation_comment_list.join("</li><li>") + "</li></ul>"
+
+		let totalCharacters = 0;
+
+		for (let i = 0; i < violation_comment_list.length; i++) {
+		totalCharacters += violation_comment_list[i].length;
+		}
+		console.log(totalCharacters)
+
+		let violation_comments = "Hi!!!"
+		console.log(violation_comment_list.length)
+
+		if (violation_comment_list.length > 1) {
+			violation_comments = "<ul><li>" + violation_comment_list.join("</li><li>") + "</li></ul>"
+		}
+		else {
+			violation_comments = violation_comment_list[0]
+		}
+		
+		function limitCharacterLength(inputString, maxLength) {
+		if (inputString.length > maxLength) {
+			return `<div id="map-link">` + inputString.slice(0, maxLength)+`...<a class="read-more" data-lat="${lat}" data-long="${long}" data-id="${id}">[Read more]</a></p>`; // Truncate the string to the desired length
+		}
+		return inputString + `</p><div id="map-link">`; // If the string is already within the limit, return it as is
+		}
+
+		// // Limit the character length to 200 characters
+		const maxLength = 500;
+		violation_comments = limitCharacterLength(violation_comments, maxLength);
+		
+		console.log(violation_comments)
+		// console.log(violationCommentTruncated)
+
 
         if (group_id == 4){
             var oneDivOpen = `<div class="one-vn"><div class="epa-class-${group_id}"><h3 class="dark">${epa_class}</h3></div>`
@@ -613,12 +644,10 @@ window.onclick = function(event) {
             var oneDivOpen = `<div class="one-vn"><div class="epa-class-${group_id}"><h3>${epa_class}</h3></div>`
         }
 
-		if (violation_comments.length > 1) {
-			var oneDivClose = `<div class="snippet"><h5>${county} County</h5><h1>${facility_name}</h1><a href="${doc_url}" target="_blank">${date_str}</a><img class="icon" src="img/doc-link.svg"/><div id="map-link"><p>${violation_comment_1}..<a class="read-more" data-lat="${lat}" data-long="${long}" data-id="${id}">[Read more]</a></p><a class="article" data-lat="${lat}" data-long="${long}" data-id="${id}">View on the map &#8594;</a></div></div></div>`
-		}
-		else {
-			var oneDivClose = `<div class="snippet"><h5>${county} County</h5><h1>${facility_name}</h1><a href="${doc_url}" target="_blank">${date_str}</a><img class="icon" src="img/doc-link.svg"/><p>${violation_comment_1}</p><div id="map-link"><a class="article" data-lat="${lat}" data-long="${long}" data-id="${id}">View on the map &#8594;</a></div></div></div>`
-		}
+		// if (violation_comment_list.length > 1) {
+		// 	var oneDivClose = `<div class="snippet"><h5>${county} County</h5><h1>${facility_name}</h1><a href="${doc_url}" target="_blank">${date_str}</a><img class="icon" src="img/doc-link.svg"/><div id="map-link"><p>${violation_comments}<a class="read-more" data-lat="${lat}" data-long="${long}" data-id="${id}">[Read more]</a></p><a class="article" data-lat="${lat}" data-long="${long}" data-id="${id}">View on the map &#8594;</a></div></div></div>`
+		// }
+			var oneDivClose = `<div class="snippet"><h5>${county} County</h5><h1>${facility_name}</h1><a href="${doc_url}" target="_blank">${date_str}</a><img class="icon" src="img/doc-link.svg"/><p>${violation_comments}<a class="article" data-lat="${lat}" data-long="${long}" data-id="${id}">View on the map &#8594;</a></div></div></div>`
 
 		var oneDiv = oneDivOpen + oneDivClose
 
@@ -630,13 +659,9 @@ window.onclick = function(event) {
 
     $(document).on('click', '#map-link a', function(e) {
         // lngLat = $(this).attr('data-coord')
-        // console.log(lngLat)
         // lngLat = $(this).attr(data-geom)
-        // console.log(lngLat)
 		var id = $(this).attr('data-id')
-		console.log(id)
         var ll = new mapboxgl.LngLat($(this).attr('data-long'), $(this).attr('data-lat'));
-        console.log(ll)
         // new LngLat(lng: number, lat: number)
        	map.flyTo({
 				center:ll,
@@ -657,7 +682,6 @@ window.onclick = function(event) {
 		// Usage
 		var srnToSearchFor = id; // Replace with the SRN you want to find
 		var foundFeature = findFeatureBySRN(srnToSearchFor);
-		console.log(foundFeature)
 		// circleSelected = map.addLayer({
 		// 		"id": "circle-selected",
 		// 		"type": "circle",
