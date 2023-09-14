@@ -28,7 +28,7 @@ today = today.strftime("%-m/%-d/%Y")
 # # Look for new violations
 
 # Reading in the old parser report:
-old_report = pd.read_csv('output/violation-parser-report.csv')
+old_report = pd.read_csv('output/report-parser.csv')
 
 # Reading in the documents from the past 90 days
 docs = pd.read_csv('https://raw.githubusercontent.com/srjouppi/michigan-egle-database-auto-scraper/main/output/EGLE-AQD-document-dataset-90days.csv')
@@ -54,7 +54,7 @@ if len(new_vn) == 0:
     one_parse_df = pd.DataFrame(one_parse)
     
     new_report = pd.concat([old_report,one_parse_df])
-    new_report.to_csv('output/violation-parser-report.csv',index=False)
+    new_report.to_csv('output/report-parser.csv',index=False)
     sys.exit()
     
 # # Parse the new PDFs
@@ -393,7 +393,8 @@ one_parse_df = pd.DataFrame(one_parse)
 
 # EXPORTING UPDATED REPORT
 new_report = pd.concat([old_report,one_parse_df])
-new_report.to_csv('output/violation-parser-report.csv',index=False)
+new_report.date = pd.to_datetime(new_report.date)
+new_report.sort_values('date',ascending=False).to_csv('output/report-parser.csv',index=False)
 
 # # Cleaning the output
 def process_comments(comments):
@@ -706,10 +707,12 @@ map_update_report = pd.DataFrame(map_update_report)
 map_update_report = map_update_report.merge(parser_srn_report,how='left',left_on='srn',right_on='srn')
 
 # Reading in old map report
-old_map_report = pd.read_csv('output/map-update-report.csv')
+old_map_report = pd.read_csv('output/report-map-update.csv')
 
 # EXPORTING MAP UPDATE REPORT
-pd.concat([old_map_report,map_update_report],ignore_index=True).to_csv('output/map-update-report.csv',index=False)
+updated_map_report = pd.concat([old_map_report,map_update_report],ignore_index=True)
+updated_map_report.date_updated = pd.to_datetime(updated_map_report.date_updated)
+updated_map_report.sort_values('date_updated',ascending=False).to_csv('output/report-map-update.csv',index=False)
 
 # Exporting updated map data
 map_df.to_csv('output/violation-map-data.csv',index=False)
