@@ -392,6 +392,7 @@ one_parse.append(data)
 one_parse_df = pd.DataFrame(one_parse)
 
 # EXPORTING UPDATED REPORT
+one_parse_df.date = pd.to_datetime(one_parse_df.date)
 new_report = pd.concat([old_report,one_parse_df])
 new_report.date = pd.to_datetime(new_report.date)
 new_report.sort_values('date',ascending=False).to_csv('output/report-parser.csv',index=False)
@@ -705,6 +706,7 @@ map_update_report = pd.DataFrame(map_update_report)
 
 # Merging with parser report to make sure all vns are accounted for
 map_update_report = map_update_report.merge(parser_srn_report,how='left',left_on='srn',right_on='srn')
+map_update_report.date_updated = pd.to_datetime(map_update_report.date_updated)
 
 # Reading in old map report
 old_map_report = pd.read_csv('output/report-map-update.csv')
