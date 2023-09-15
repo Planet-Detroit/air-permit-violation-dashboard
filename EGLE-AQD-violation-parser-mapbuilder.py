@@ -392,7 +392,7 @@ one_parse.append(data)
 one_parse_df = pd.DataFrame(one_parse)
 
 # EXPORTING UPDATED REPORT
-one_parse_df.date = pd.to_datetime(one_parse_df.date)
+one_parse_df.date = pd.to_datetime(one_parse_df.date, format='%-m/%-d/%Y')
 new_report = pd.concat([old_report,one_parse_df])
 new_report.date = pd.to_datetime(new_report.date)
 new_report.sort_values('date',ascending=False).to_csv('output/report-parser.csv',index=False)

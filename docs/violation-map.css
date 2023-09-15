@@ -1098,6 +1098,10 @@ a.button-green:hover{
     border: 1px solid #888;
     width: 50%;
   }
+  .modal-content h4{
+    font-size:1.3em;
+    text-transform:initial;
+  }
   /* The Close Button */
 .close {
     color: #aaaaaa;

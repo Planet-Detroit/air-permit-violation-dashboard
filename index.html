@@ -49,10 +49,15 @@
 		<p><a class="recent-vns" href="#recent-vns">View the most recent violations.</a></p>
 		<p>Violation notices may be about excessive air pollution, failure to keep records,
 			maintain equipment, renew permits and more.</p>
-		<p>Each circle represents one facility. Dots are sized by the number of violation notices
-			the company received since 2018. Click on the dots to read more about the violations issued
-			and find links to each document.</p>
-		<p>Results will appear below the map.</p>
+			<p>Each circle represents one facility and are sized by the number of violation notices
+				the company received since 2018.</p>
+			<p>Click on the circles to read more about the specific violations
+				as well as find links to each document. Or search for a location and 
+				browse the facilities nearby. Text about the source will appear below the map.</p>
+			<p><em>There are more sources of air pollution in Michigan
+				than are on the map, as they might not have had a violation in the past five years.
+				Learn more about them by browsing <a href="https://www.tinyurl.com/egle-air-documents" target="_blank" class="article">this dataset</a>
+				 of EGLE's Air Quality Division documents.</em></p>
 		<br/>
 	</div>
 				<div class="spacer"></div>
@@ -109,21 +114,23 @@
 		<!-- Modal content -->
 		<div class="modal-content">
 		<span class="close">&times;</span>
-		<h4 style="text-transform:none;">The EPA classifies air polluters into four categories.</h4>
-		<p><span class="highlight-1">Megasites</span> are the largest of the EPA classifications. 
-			These are made up of multiple, complex facilities that emit air pollutants at a Major source scale.</p>
+		<h4>The EPA classifies sources of air pollution large enough to require a permit into four categories.</h4>
+		<p><span class="highlight-1">Megasites</span> are the most severe of the EPA classifications. 
+			These are considered "extremely large, complex facilities" that emit air pollutants at a Major Source scale.</p>
 
 		<p><span class="highlight-2">Major Sources</span> are classified as such when they emit more than 10 tons per year 
 			of a Hazardous Air Pollutant (HAP)<sup>*</sup>, more than 25 tons per year of a combination of HAPs, or more than 
 			100 tons of all air pollutants. </p>
 
-		<p><span class="highlight-3">Synthetic Minor Sources</span> have the capacity to pollute like a Major source, 
-			but these facillities agree to limit their emissions. If the facility were to violate its permit, 
-			and emit more than allowed, it could be polluting as much as a Major source.</p>
+		<p><span class="highlight-3">Synthetic Minor Sources</span> have the capacity to pollute like a Major Source, 
+			but the company has agreed to limit its emissions. If the facility were to violate its permit 
+			and emit more than allowed, it could be polluting as much as a Major Source.</p>
 
-		<p><span class="highlight-4">True Minor Sources</span> do not have the capacity to pollute like a Major source,
+		<p><span class="highlight-4">True Minor Sources</span> do not have the capacity to pollute like a Major Source,
 		but emit enough air pollution to require a permit.</p>
+		<br/>
 		<hr/>
+		<p><span class="caption">Source: <a href="https://www.epa.gov/sites/default/files/2013-09/documents/cmspolicy.pdf" target="_blank" class="article">The Clean Air Act Stationary Source Compliance Monitoring Strategy.</a></span></p>
 		<p><span class="caption"><sup>*</sup>Hazardous air pollutants are those known to cause cancer or other serious health problems. 
 			<a href="https://www.epa.gov/haps/initial-list-hazardous-air-pollutants-modifications" target="_blank" class="article">
 			See the EPA's list of 188 HAPs.</a> Other air pollutants are known to cause significant health problems 
@@ -149,21 +156,21 @@
 				<p><a class="recent-vns" href="#recent-vns">View the most recent violations.</a></p>
 				<p>Violation notices may be about excessive air pollution, failure to keep records,
 					maintain equipment, renew permits and more.</p>
-				<p>Each circle represents one facility. Dots are sized by the number of violation notices
+				<p>Each circle represents one facility and are sized by the number of violation notices
 					the company received since 2018.</p>
-				<p>Click on the dots to read more about the specific violations
+				<p>Click on the circles to read more about the specific violations
 					as well as find links to each document. Or search for a location and 
-				    browse the facilities nearby.
+				    browse the facilities nearby.</p>
 				<p><em>There are more sources of air pollution in Michigan
 				    than are on the map, as they might not have had a violation in the past five years.
-				    Learn more about them by browsing this dataset of EGLE's Air Quality Division documents. </em></p>
+				    Learn more about them by browsing <a href="https://www.tinyurl.com/egle-air-documents" target="_blank" class="article">this dataset</a>
+					 of EGLE's Air Quality Division documents. </em></p>
 			</div>
 		</div>
 		<div id="learn">
 			<p>Please note this map was created with the help of automation
 				 technology that is wonderful but imperfect. 
-				 <a href ="https://github.com/Planet-Detroit/air-permit-violation-dashboard/#a-few-notes-regarding-our-methodology" target="_blank" class="article">Read more</a> about caveats
-				 , methodology and how to report any issues.</p>
+				 <a href ="https://github.com/Planet-Detroit/air-permit-violation-dashboard/#a-few-notes-regarding-our-methodology" target="_blank" class="article">Read more</a> about caveats, methodology and how to report any issues.</p>
 		</div>
 	</div>
 </div>
@@ -490,7 +497,6 @@
 			map.on('click', 'datalayer', function (e) {
 				
 				updateArticle(e)
-				
 				var currentZoom = map.getZoom();
 				
 				if (currentZoom < 12) {
@@ -499,14 +505,14 @@
 				zoom:12,
 				});
 			}
-			else if (currentZoom == 12) {
+				else if (currentZoom == 12) {
 				map.flyTo({
 				center: e.features[0].geometry.coordinates,
 				duration: 1000,
 				essential: true
 				});
 			}
-			else if (currentZoom > 12) {
+				else if (currentZoom > 12) {
 				map.flyTo({
 				center: e.features[0].geometry.coordinates,
 				essential: true,
@@ -514,8 +520,8 @@
 				// zoom:12,
 				});
 			
-			
 			}
+			 
 			// map.setLayoutProperty(
 			// 	'circleSelected',
 			// 	'visibility',
@@ -529,7 +535,7 @@
 // very important!! this automatically centers the map and zooms it
 			map.fitBounds(turf.bbox(infoData), { padding: 0, linear: true })
 		})
-
+		
 
 	</script>
 	<script>
@@ -695,22 +701,22 @@ window.onclick = function(event) {
 		// Usage
 		var srnToSearchFor = id; // Replace with the SRN you want to find
 		var foundFeature = findFeatureBySRN(srnToSearchFor);
-		// circleSelected = map.addLayer({
-		// 		"id": "circle-selected",
-		// 		"type": "circle",
-		// 		"source": {
-		// 			type: "geojson",
-		// 			data: foundFeature,
-		// 		},
-		// 		paint: {
-		// 		'circle-radius': 40,
-		// 		'circle-color': "white",
-		// 		'circle-opacity':0,
-		// 		'circle-stroke-color': 'black',  // Outline color
-   		// 	    'circle-stroke-width': 4, // Outline thickness
-		// 		'circle-stroke-opacity': .5
-		// 		}
-		// });
+		circleSelected = map.addLayer({
+				"id": "circle-selected",
+				"type": "circle",
+				"source": {
+					type: "geojson",
+					data: foundFeature,
+				},
+				paint: {
+				'circle-radius': 40,
+				'circle-color': "white",
+				'circle-opacity':0,
+				'circle-stroke-color': 'black',  // Outline color
+   			    'circle-stroke-width': 4, // Outline thickness
+				'circle-stroke-opacity': .5
+				}
+		});
 		function updateArticle2(foundFeature) {
 			let feature = foundFeature
 			var group_id = feature.properties.group_id
@@ -740,7 +746,7 @@ window.onclick = function(event) {
                 }
             }
 
-            learn = `<div id='learn'><h4>Want to Learn More About This Facility?</h4><p>Find staff reports, tests, and more by searching <a href='https://www.tinyurl.com/egle-air-documents' target='_blank'>this dataset</a> of EGLE documents pertaining to air pollters throughout the state.</p><p><em>Pro tip: Filter using the State Registration Number (SRN) - ${srn}.</em></p></div>`
+            learn = `<div id='learn'><h4>Want to Learn More About This Facility?</h4><p>Find inspection reports, older violations and other documents for ${facility_name} in <a href="https://www.egle.state.mi.us/aps/downloads/SRN/${srn}" target="_blank">EGLE's database</a>, and use the <a href="https://www.michigan.gov/egle/-/media/Project/Websites/egle/Documents/Programs/AQD/misc-info/file-naming-convention.pdf" target="_blank">file naming conventions</a> to decode the documents (ie "SAR" = "Staff Activity Report", "ENFN" = "Enforcement Notice")</p><p>Explore all documents for permitted sources by browsing this <a href="https://www.tinyurl.com/egle-air-documents" target="_blank">Google sheet.</a> If you're looking for this facility, filter by its State Registration Number (SRN): ${srn}</p></div>`
             document.getElementById("articlePlace").innerHTML = article + learn
 			articlePlace.scrollTop = 0
 		}
