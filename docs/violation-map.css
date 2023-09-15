@@ -729,7 +729,31 @@ br {
     text-transform:none;
     font-size:inherit;
 }
+#dataset{
+    /* border-top:1px solid black; */
+    width:auto;
+    padding:1em 2.2em 1em 2.2em;
+    background-color:#e8e8e8;;
+}
 
+#dataset h4{
+    font-weight:700;
+    font-size:1.2em;
+    font-family:'Asap', sans-serif;
+    /* text-transform:initial; */
+    color:#8F0043;
+    text-align:center;
+}
+
+#dataset a{
+    font-family:inherit;
+    text-transform:none;
+    font-size:inherit;
+    color: inherit;
+}
+#dataset a:hover{
+    background-color:#2E333F;
+}
 #company-violations{
     width: auto;
     padding:2em 2.2em 1em 2.2em;
