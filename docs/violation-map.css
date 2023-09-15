@@ -549,17 +549,20 @@ align-items: center;
     width:90%;
     margin: 0 auto;
 }
-
+#content-container h4{
+        text-transform: initial;
+        font-size:1.6em;
+}
 .snippet{
     padding:20px 20px 30px;
 }
 .recent-vns{
     border: 1px solid black;
     border-radius:.2em;
-    padding:0 10px 0;
+    padding:10px 15px 10px;
     text-decoration: none;
     text-transform:none;
-    line-height:3em;
+    /* line-height:3em; */
     color:white;
     margin: 0 auto;
     text-align:center;
@@ -579,6 +582,15 @@ align-items: center;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     /* flex:1; */
 }
+#recent-violations-header-container {
+    width:100%;
+    background-color:#2E333F;
+}
+#recent-violations-header{
+    width:90%;
+    margin: 0 auto;
+}
+
 #recent-violations {
     width: 90%;
     display:flex;
@@ -693,7 +705,7 @@ br {
 #learn{
     border-top:1px solid black;
     width:auto;
-    padding:2em 2.2em 1em 2.2em;
+    padding:1em 2.2em 1em 2.2em;
     background-color:#e8e8e8;
 }
 #learn h4{
@@ -957,10 +969,7 @@ a {
     width:600px;
     margin:0 auto;
 }
-#about-project h4{
-    text-transform: initial;
-    font-size:1.6em;
-}
+
 .home-link{
     margin: 0 auto;
 }

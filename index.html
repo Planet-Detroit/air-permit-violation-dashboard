@@ -143,19 +143,27 @@
 		</div>
 		<div id="company-violations">
 			<div id="intro-desktop">
-				<h2>Welcome to Planet Detroit's interactive map of Michigan air polluter violations.</h2>
+				<h2>Welcome to Planet Detroit's interactive map of Michigan air permit violations.</h2>
 				<p>This map updates daily with new violation notices issued by EGLE
 					to companies that hold permits to pollute the air throughout the state.</p>
 				<p><a class="recent-vns" href="#recent-vns">View the most recent violations.</a></p>
 				<p>Violation notices may be about excessive air pollution, failure to keep records,
 					maintain equipment, renew permits and more.</p>
 				<p>Each circle represents one facility. Dots are sized by the number of violation notices
-					the company received since 2018. Click on the dots to read more about the violations issued
-					and find links to each document.</p>
+					the company received since 2018.</p>
+				<p>Click on the dots to read more about the specific violations
+					as well as find links to each document. Or search for a location and 
+				    browse the facilities nearby.
+				<p><em>There are more sources of air pollution in Michigan
+				    than are on the map, as they might not have had a violation in the past five years.
+				    Learn more about them by browsing this dataset of EGLE's Air Quality Division documents. </em></p>
 			</div>
 		</div>
 		<div id="learn">
-			<p>Please note this is a work-in-progress that was created with the help of automation technology that is wonderful but flawed. <a href ="#" class="article">Read more</a> about caveats, methodology and how to report any issues.</p>
+			<p>Please note this map was created with the help of automation
+				 technology that is wonderful but imperfect. 
+				 <a href ="https://github.com/Planet-Detroit/air-permit-violation-dashboard/#a-few-notes-regarding-our-methodology" target="_blank" class="article">Read more</a> about caveats
+				 , methodology and how to report any issues.</p>
 		</div>
 	</div>
 </div>
@@ -164,39 +172,44 @@
 	<div class="spacer"></div>
 	<!-- <hr/> -->
 	<a name="recent-vns"></a>
+	<div id="recent-violations-header">
+		<h4>Most Recent Violation Notices</h4>
+		<hr/>
+		<!-- <p>Here are the top six violation notices issued most recently.</p> -->
+	</div>
     <div id="recent-violations">
     </div>
 	<br/>
 	<hr/>
 	<div id="about-project">
 	<h4>About the project</h4>
-	<p>
-	Planet Detroit's Air Permit Violation Dashboard was created using 
-	data from the Michigan Department of Environment, 
-	Great Lakes and Energy's (EGLE) database of air polluter documents. 
-	The data was collected and cleaned by data journalist Shelby Jouppi.
-	</p>
-	<p>
-		<a class="article" href="https://github.com/Planet-Detroit/air-permit-violation-dashboard/#readme" target="_blank">
-			Read the full methodology and access our data on Github.
-		</a>
-		</p>
-	<p>
-	   The map updates on a daily basis and shows sources of air pollution that have violated
-	   their permits since 2018. You can find more information about these facilities 
-	   and others by browsing the <a class="article" href="https://www.shelbyjouppi.com/egle-air-database">full dataset</a>  
-	   for inspection reports, enforcement notices, older violations and more.
-	</p>
-	<p>
-	   Search for a specific facility by using its "SRN" or State Registration Number located
-	   at the top right of their profile on the map.
-	</p>
 
+	<p>Thousands of sources of air pollution operate in Michigan under a permit.
+	EGLE's Air Quality Division routinely inspects, reviews emission data and 
+	responds to complaints about these facilities. Sometimes they issue violation
+	notices if a company has violated one of the terms of its permit.</p>
 
+	<p>It could be that the source has emitted more air pollution than is allowed, 
+	or failed to track its emissions, maintain equipment or aquire a permit in the first place.</p>
+
+	<p>These violations are public record, but they are not easy to find as they live in a <a class="article" href="https://www.egle.state.mi.us/aps/downloads/SRN/" target="_blank">system of folders</a>
+		on EGLE's database. Planet Detroit's Air Permit Violation Dashboard is an attempt 
+		to make this information more accessible.</p>
+		
+		<p>The map and recent violations update on a daily basis and shows sources of air pollution that have violated
+		their permits since 2018. You can find more information about these facilities 
+		and others by browsing the <a class="article" href="https://www.tinyurl.com/egle-air-documents" target="_blank">full dataset</a>  
+		for inspection reports, enforcement notices, older violations and more.	<em>Pro Tip: Filter for a specific facility by using its "SRN" or State Registration Number located
+		at the top right of their profile on the map.</em>
+	 </p>
+
+	<p> <a class="article" href="https://github.com/Planet-Detroit/air-permit-violation-dashboard/#readme" target="_blank">
+		Read the full methodology and access our data on Github.</a> And please <a class="article" href="https://planetdetroit.org/contact-us/" target="_blank">reach out to us</a> with any questions about the dashboard.
+		If you have a specific error to report, please submit it to this form and we will address it as soon as possible.</p>
 	<p>
 	
-	And please <a class="article" href="https://planetdetroit.org/contact-us/" target="_blank">reach out to us</a> with any questions about the dashboard.
-	If you have a specific error to report, please submit it to this form and we will address it as soon as possible.
+	 <hr/>
+	 <p><em>Data collection, automation and dashboard design by <a class="article" target="_blank" href="https://www.shelbyjouppi.com">Shelby Jouppi.</a> Editing by <a href="https://planetdetroit.org/author/nina-ignaczak/" target="_blank" class="article">Nina Ignaczak.</a></em>
 	</p>
 	</div>
 </div>
