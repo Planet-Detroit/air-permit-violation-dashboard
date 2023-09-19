@@ -662,7 +662,7 @@ for facility in new_vns_clean.drop_duplicates(subset='srn').srn:
 
             # If they don't match, include the location in the tooltip
             if (location[:3] != address[:3]):
-                text = f"<a href='{url}' target='_blank'>{date_str}</a><img class='icon' src='img/doc-link.svg'/><br><span class='location'><u>Location:</u> {location}</span><p>{comment_list_html}</p><br>"
+                text = f"<a href='{url}' target='_blank'>{date_str}</a><img class='icon' src='img/doc-link.svg'/><br><span class='location'><p><span style='font-weight:700;'>Location:</span> {location}</span></p><p>{comment_list_html}</p><br>"
             
             # If they do, skip it
             else:
