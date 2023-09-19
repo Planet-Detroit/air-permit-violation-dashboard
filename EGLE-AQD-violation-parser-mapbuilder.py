@@ -22,7 +22,7 @@ import wget
 
 tz = timezone('America/Detroit')
 today = datetime.now(tz)
-today = today.strftime("%-m/%-d/%Y")
+today = today.strftime("%Y-%m-%d")
 
 
 # # Look for new violations
