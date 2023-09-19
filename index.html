@@ -4,9 +4,9 @@
 <head>
 
 	<title>Michigan Air Permit Violation Dashboard</title>
-	<meta name="description" content="Explore violation notices issued to air polluters throughout the state, and check for new violations daily."/>
-    <meta property="og:title" content="Planet Detroit's Air Permit Violation Dashboard" />
-    <meta property="og:description" content="Use our interactive map to explore violation notices issued to air polluters throughout the state, and check back daily for the most recent violations." />
+	<meta name="description" content="Explore violation notices issued to air polluters across Michigan, and check for new violations daily."/>
+    <meta property="og:title" content="Michigan Air Permit Violation Dashboard" />
+    <meta property="og:description" content="Use our interactive map to explore violation notices issued to air polluters across Michigan, and check back daily for the most recent violations." />
     <meta property="og:type" content="article"/>
     <meta property="og:image" content="https://github.com/Planet-Detroit/air-permit-violation-dashboard/blob/main/img/planet-detroit-air-violation-dashboard-01.jpg?raw=true" />
     <meta name="twitter:card" content="summary_large_image"/>
@@ -47,17 +47,18 @@
 		<p>This map updates daily with new violation notices issued by EGLE
 			to companies that hold permits to pollute the air throughout the state.</p>
 		<p><a class="recent-vns" href="#recent-vns">View the most recent violations.</a></p>
-		<p>Violation notices may be about excessive air pollution, failure to keep records,
+		<p>Violation notices may be about excessive pollution levels, failure to keep records,
 			maintain equipment, renew permits and more.</p>
 			<p>Each circle represents one facility and is sized by the number of violation notices
 				the company received since 2018.</p>
 			<p>Click on the circles to read more about the specific violations
-				as well as find links to each document. Or search for a location and 
-				browse the facilities nearby. Text about the source will appear below the map.</p>
-			<p><em>There are more sources of air pollution in Michigan
+				and find links to each document. Or search for a location and 
+				browse the facilities nearby.</p>
+			
+			<h4>Information about the source will appear below the map.</h4>
+			<p> Please note, there are more sources of air pollution in Michigan
 				than are on the map, as they might not have had a violation in the past five years.
-				Learn more about them by browsing <a href="https://www.tinyurl.com/egle-air-documents" target="_blank" class="article">this dataset</a>
-				 of EGLE's Air Quality Division documents.</em></p>
+				<!-- <a href="#">Read about</a> how you can learn more about these facilities.</p> -->
 		<br/>
 	</div>
 				<div class="spacer"></div>
@@ -123,8 +124,8 @@
 			100 tons of all air pollutants. </p>
 
 		<p><span class="highlight-3">Synthetic Minor Sources</span> have the capacity to pollute like a Major Source, 
-			but the company has agreed to limit its emissions. If the facility were to violate its permit 
-			and emit more than allowed, it could be polluting as much as a Major Source.</p>
+			but the company has agreed to limit emissions. If the facility were to violate its permit 
+			and emit more than allowed, it could pollute as much as a Major Source.</p>
 
 		<p><span class="highlight-4">True Minor Sources</span> do not have the capacity to pollute like a Major Source,
 		but emit enough air pollution to require a permit.</p>
@@ -134,7 +135,7 @@
 		<p><span class="caption"><sup>*</sup>Hazardous air pollutants are those known to cause cancer or other serious health problems. 
 			<a href="https://www.epa.gov/haps/initial-list-hazardous-air-pollutants-modifications" target="_blank" class="article">
 			See the EPA's list of 188 HAPs.</a> Other air pollutants are known to cause significant health problems 
-			in large quanities, like particulate matter, carbon monoxide and sulfur dioxide.</span></p>
+			in large quantities, like particulate matter, carbon monoxide and sulfur dioxide.</span></p>
 			<!-- Researchers are studying the cumulative impact of so many sources 
 			of air pollution concentrated in areas <a href ="https://graham.umich.edu/activity/13265" target="_blank" class="article">like Detroit.</a></em></p> -->
 		</div>
@@ -154,12 +155,12 @@
 				<p>This map updates daily with new violation notices issued by EGLE
 					to companies that hold permits to pollute the air throughout the state.</p>
 				<p><a class="recent-vns" href="#recent-vns">View the most recent violations.</a></p>
-				<p>Violation notices may be about excessive air pollution, failure to keep records,
+				<p>Violation notices may be about excessive pollution levels, failure to keep records,
 					maintain equipment, renew permits and more.</p>
 				<p>Each circle represents one facility and is sized by the number of violation notices
 					the company received since 2018.</p>
 				<p>Click on the circles to read more about the specific violations
-					as well as find links to each document. Or search for a location and 
+					and find links to each document. Or search for a location and 
 				    browse the facilities nearby.</p>
 				<p><em>There are more sources of air pollution in Michigan
 				    than are on the map, as they might not have had a violation in the past five years.
@@ -197,13 +198,13 @@
 	notices if a company has violated one of the terms of its permit.</p>
 
 	<p>It could be that the source has emitted more air pollution than is allowed, 
-	or failed to track its emissions, maintain equipment or aquire a permit in the first place.</p>
+	or failed to track its emissions, maintain equipment or acquire a permit in the first place.</p>
 
-	<p>These violations are public record, but they are not easy to find as they live in a <a class="article" href="https://www.egle.state.mi.us/aps/downloads/SRN/" target="_blank">system of folders</a>
-		on EGLE's database. Planet Detroit's Air Permit Violation Dashboard is an attempt 
+	<p>These violations are public records, but they are not easy to find as they live in a <a class="article" href="https://www.egle.state.mi.us/aps/downloads/SRN/" target="_blank">system of folders</a>
+		in EGLE's database. Planet Detroit's Air Permit Violation Dashboard is an attempt 
 		to make this information more accessible.</p>
 		
-		<p>The map and recent violations update on a daily basis and shows sources of air pollution that have violated
+		<p>The map and recent violations update on a daily basis and show sources of air pollution that have violated
 		their permits since 2018. You can find more information about these facilities 
 		and others by browsing the <a class="article" href="https://www.tinyurl.com/egle-air-documents" target="_blank">full dataset</a>  
 		for inspection reports, enforcement notices, older violations and more.	<em>Pro Tip: Filter for a specific facility by using its "SRN" or State Registration Number located
@@ -356,7 +357,7 @@
                 }
             }
 
-            learn = `<div id='learn'><h4>Want to Learn More About This Facility?</h4><p>Find inspection reports, older violations and other documents for ${facility_name} in <a href="https://www.egle.state.mi.us/aps/downloads/SRN/${srn}" target="_blank">EGLE's database</a>, and use the <a href="https://www.michigan.gov/egle/-/media/Project/Websites/egle/Documents/Programs/AQD/misc-info/file-naming-convention.pdf" target="_blank">file naming conventions</a> to decode the documents.</p><br/><h4>Explore documents for more than 4,000 permitted sources</h4> <p>Browse this <a href="https://www.tinyurl.com/egle-air-documents" target="_blank">Google sheet</a> or download the data from <a href="https://github.com/srjouppi/michigan-egle-database-auto-scraper#open_file_folder-output" target="_blank">Github.</a> Pro Tip: If you're looking for this facility, filter by its State Registration Number (SRN): ${srn}</p></div>`
+            learn = `<div id='learn'><h4>Want to Learn More About This Facility?</h4><p>Find inspection reports, older violations and other documents for ${facility_name} in <a href="https://www.egle.state.mi.us/aps/downloads/SRN/${srn}" target="_blank">EGLE's database</a>, and use the <a href="https://www.michigan.gov/egle/-/media/Project/Websites/egle/Documents/Programs/AQD/misc-info/file-naming-convention.pdf" target="_blank">file naming conventions</a> to decode the documents.</p><br/><h4>Explore documents from more than 4,000 permitted sources</h4> <p>Browse this <a href="https://www.tinyurl.com/egle-air-documents" target="_blank">Google sheet</a> or download the data from <a href="https://github.com/srjouppi/michigan-egle-database-auto-scraper#open_file_folder-output" target="_blank">Github.</a> Pro Tip: If you're looking for this facility, filter by its State Registration Number (SRN): ${srn}</p></div>`
             document.getElementById("articlePlace").innerHTML = article + learn
 			// document.getElementById("articlePlace").innerHTML = feature.properties.article + "<div id='learn'><h4>Want to Learn More About this Facility?</h4><p>Find staff reports, tests, and more by searching <a href='https://www.tinyurl.com/egle-air-documents' target='_blank'>this dataset</a> of EGLE documents pertaining to air pollters throughout the state.</p><p><em>Pro tip: Filter using the facility's unique State Registration Number (SRN) located at the top right corner of this profile.</em></p></div>"
 			articlePlace.scrollTop = 0
@@ -466,11 +467,7 @@
 							1,
 							0.5
 						],
-				// 	'circle-opacity': [
-				// 		'interpolate', ['linear'], ['get','days_since_last_vn'], 
-				// 		0, .7,
-				// 		1460, 0.1
-				// ],
+
 					'circle-opacity-transition': { duration: 300 }, // Smooth transition for opacity changes
 					'circle-stroke-color': '#2E333F',  // Outline color
    				    'circle-stroke-width': .7, // Outline thickness
@@ -478,6 +475,19 @@
 				}
 			});
 
+			let currentCircle = null; // To keep track of the currently drawn circle
+			
+			function drawCircle(coordinates) {
+			// Remove the previously drawn circle, if any
+			if (currentCircle) {
+				currentCircle.remove();
+			}
+
+			// Add a new circle
+			currentCircle = new mapboxgl.Marker({ color: 'blue' })
+				.setLngLat(coordinates)
+				.addTo(map);
+			}
 // these functions control Mouse actions
 // they make the pop-up headline or update the article text
 			// When we move the mouse over, draw the popup and change the hover style
@@ -492,7 +502,6 @@
 				removePopup(e)
 			});
 
-			
 			// When we click, update the article (the right-hand side)
 			map.on('click', 'datalayer', function (e) {
 				
@@ -522,13 +531,12 @@
 			
 			}
 			 
-			// map.setLayoutProperty(
-			// 	'circleSelected',
-			// 	'visibility',
-			// 	'none'
-			// )
-			// map.circleSelected.setVisibility(false)
+			const coordinates = e.features[0].geometry.coordinates;
+
+			// Call the drawCircle function with the coordinates
+			drawCircle(coordinates);
 			});
+			
 			
 
 

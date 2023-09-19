@@ -44,7 +44,7 @@ new_vn = docs.query('(type_simple == "VN") & (~doc_url.isin(@parsed_vn.doc_url))
 one_parse = []
 data = {}
 
-data['date'] = today
+data['date'] = pd.to_datetime(today)
 data['vns_found'] = len(new_vn)
 
 # # If there are no new violation notices, break the script
@@ -392,7 +392,6 @@ one_parse.append(data)
 one_parse_df = pd.DataFrame(one_parse)
 
 # EXPORTING UPDATED REPORT
-one_parse_df.date = pd.to_datetime(one_parse_df.date, format='%-m/%-d/%Y')
 new_report = pd.concat([old_report,one_parse_df])
 new_report.date = pd.to_datetime(new_report.date)
 new_report.sort_values('date',ascending=False).to_csv('output/report-parser.csv',index=False)
