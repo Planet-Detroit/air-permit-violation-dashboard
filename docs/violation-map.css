@@ -582,6 +582,26 @@ align-items: center;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     /* flex:1; */
 }
+.one-vn:nth-child(n+7) {
+    display: none;
+  }
+#load-more{
+    width:100%;
+    display:flex;
+    justify-content: center;
+
+}
+#loadMoreButton {
+    width:300px;
+    margin: 0 auto;
+    margin-top:25px;
+    font-family:'Asap',sans-serif;
+    font-weight:700;
+    font-size:1.1em;
+    padding:10px;
+    border: 1px solid black;
+    border-radius:.2em;
+}
 #recent-violations-header-container {
     width:100%;
     background-color:#2E333F;

@@ -498,7 +498,7 @@ vn_export.to_csv('output/EGLE-AQD-Violation-Notices-2018-Present.csv', index=Fal
 # Creating geo-data for most recent violation notices
 source_directory = pd.read_csv('docs/EGLE-AQD-source-directory-geocoded.csv')
 
-new_vn_highlight = vn_export.sort_values('date',ascending=False).head(6)
+new_vn_highlight = vn_export.sort_values('date',ascending=False).head(12)
 new_vn_highlight = new_vn_highlight.merge(source_directory[['lat','long','geometry','facility_name_title','srn']],how='left',left_on='srn',right_on='srn')
 new_vn_highlight.epa_class = new_vn_highlight.epa_class.fillna('None')
 def category_color(epa_class):
@@ -651,7 +651,7 @@ for facility in new_vns_clean.drop_duplicates(subset='srn').srn:
         date = row['date']
         if date > most_recent_vn:
             most_recent_vn = date
-            most_recent_vn_str = date_str
+            most_recent_vn_str = date.strftime('%Y-%m-%d')
         comment_list_html = row['comment_list_html']
         location = row['location_clean']
         address = row['address_full']

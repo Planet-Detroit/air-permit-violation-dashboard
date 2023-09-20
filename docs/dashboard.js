@@ -346,32 +346,38 @@ var id = item.properties.srn
 var county = item.properties.county
 // let violation_comments = "<ul><li>" + violation_comment_list.join("</li><li>") + "</li></ul>"
 
+// Getting ready to count characters
 let totalCharacters = 0;
 
+// Calculating the total characters
 for (let i = 0; i < violation_comment_list.length; i++) {
 totalCharacters += violation_comment_list[i].length;
 }
-console.log(totalCharacters)
 
-let violation_comments = "Hi!!!"
-console.log(violation_comment_list.length)
+let violation_comments = ""
 
+// If there are more than 1 violation comment, make a list
 if (violation_comment_list.length > 1) {
 	violation_comments = "<ul><li>" + violation_comment_list.join("</li><li>") + "</li></ul>"
 }
+// Otherwise save the first item in the list
 else {
 	violation_comments = violation_comment_list[0]
 }
 
+const maxLength = 500;
+
+// Now let's limit the character length if it's over 500 characters
 function limitCharacterLength(inputString, maxLength) {
 if (inputString.length > maxLength) {
-	return `<div id="map-link">` + inputString.slice(0, maxLength)+`...<a class="read-more" data-lat="${lat}" data-long="${long}" data-id="${id}">[Read more]</a></p>`; // Truncate the string to the desired length
+    // 
+	return `<div id="map-link"><p>` + inputString.slice(0, maxLength)+`...<a class="read-more" data-lat="${lat}" data-long="${long}" data-id="${id}">[Read more]</a></p>`; // Truncate the string to the desired length
 }
-return inputString + `</p><div id="map-link">`; // If the string is already within the limit, return it as is
+return `<p>`+ inputString + `</p><div id="map-link">`; // If the string is already within the limit, return it as is
 }
 
 // // Limit the character length to 200 characters
-const maxLength = 500;
+
 violation_comments = limitCharacterLength(violation_comments, maxLength);
 
 if (group_id == 4){
@@ -381,7 +387,7 @@ else {
 	var oneDivOpen = `<div class="one-vn"><div class="epa-class-${group_id}"><h3>${epa_class}</h3></div>`
 }
 
-var oneDivClose = `<div class="snippet"><h5>${county} County</h5><h1>${facility_name}</h1><a href="${doc_url}" target="_blank">${date_str}</a><img class="icon" src="img/doc-link.svg"/><p>${violation_comments}<a class="article" data-lat="${lat}" data-long="${long}" data-id="${id}">View on the map &#8594;</a></div></div></div>`
+var oneDivClose = `<div class="snippet"><h5>${county} County</h5><h1>${facility_name}</h1><a href="${doc_url}" target="_blank">${date_str}</a><img class="icon" src="img/doc-link.svg"/>${violation_comments}<a class="article" data-lat="${lat}" data-long="${long}" data-id="${id}">View on the map &#8594;</a></div></div></div>`
 
 var oneDiv = oneDivOpen + oneDivClose
 
@@ -467,3 +473,14 @@ function updateArticle2(foundFeature) {
 }
 updateArticle2(foundFeature)
 })
+document.addEventListener("DOMContentLoaded", function () {
+    const loadMoreButton = document.getElementById("loadMoreButton");
+    const hiddenDivs = document.querySelectorAll(".one-vn:nth-child(n+7)");
+  
+    loadMoreButton.addEventListener("click", function () {
+      hiddenDivs.forEach(function (div) {
+        div.style.display = "block";
+      });
+      loadMoreButton.style.display = "none"; // Optionally hide the button after loading all divs
+    });
+  });
