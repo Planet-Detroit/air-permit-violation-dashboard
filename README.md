@@ -82,7 +82,7 @@ This technology expedited a process that would have taken weeks of manual labor,
 | -------- | ------- |
 |`EGLE-AQD-source-directory-geocoded.csv` | A directory of sources with their `epa_class`, `address`, and geocoded (`lat`, `long`) using Google Maps API. This may contain errors, so please [report any issues using this form](https://forms.gle/Km4YamzdXB9aZpvV8).|
 |`violation-map.css` | The stylesheet for the violation dashboard.|
-| `dashboard.js` | The javascript for the violatoin dashboard interactivity. |
+| `dashboard.js` | The javascript for the violation dashboard interactivity. |
 
 :file_folder: `archive/`
 
