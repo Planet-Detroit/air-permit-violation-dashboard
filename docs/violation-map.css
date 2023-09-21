@@ -585,6 +585,27 @@ align-items: center;
 .one-vn:nth-child(n+7) {
     display: none;
   }
+#source-button{
+    width:120px;
+    padding:10px;
+    font-size:.8em;
+    font-family:'Asap',sans-serif;
+    font-weight: 700;
+    background-color:#cacaca;
+    margin-right:0;
+    color:inherit;
+    border: none;
+    /* float:right; */
+}
+#source-button:hover{
+    opacity:.5;
+}
+#share {
+    background-color:white;
+    /* padding:10px; */
+    justify-content:right;
+    display:flex;
+}
 #load-more{
     width:100%;
     display:flex;
@@ -708,7 +729,7 @@ br {
     /* background: linear-gradient(45deg,#495164,#2e333f); */
     background-color:#2E333F;
     border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
 
 }
 #company-profile:emtpy{

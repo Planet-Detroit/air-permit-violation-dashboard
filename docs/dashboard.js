@@ -1,14 +1,35 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiZGF0YW1hbWExMTYiLCJhIjoiY2xncXMxM21rMTFhZDNybGh6cmE4YjZreCJ9.XPLngEtaW3V0Xd2vBDaxMQ'
+const urlParams = new URLSearchParams(window.location.search);
+const pntid = urlParams.get('srn');
 
+function findFeatureBySRN(srnToFind) {
+	for (var i = 0; i < infoData.features.length; i++) {
+		if (infoData.features[i].properties.srn === srnToFind) {
+			return infoData.features[i];
+		}
+	}
+	return null; // Return null if the feature with the specified srn is not found
+}
+// Use the parameters to populate the article and zoom to the point
+if (pntid) {
+	var foundFeature = findFeatureBySRN(pntid);
+	var startll = foundFeature.geometry.coordinates;
+	console.log(startll)
+}
+else {
+	var startll = [-83.6136, 43.7833];
+}
+
+// console.log(startll, startzoom)
 var map = new mapboxgl.Map({
 	container: 'map', // HTML container ID
-	style:'mapbox://styles/datamama116/cll62uwv8008r01r8drpohcph',
-	center: [-83.6136, 43.7833], // starting position as [lng, lat]
+	style:'mapbox://styles/datamama116/cll62uwv8008r01r8drpohcph',	
+	center: startll, // starting position as [lng, lat]
 	bbox:[-90.418136, 41.696118, -82.413474, 48.2388],
 	zoom: 12,
 	maxZoom: 16,
 });
-
+console.log(map)
 // disable map rotation using right click + drag
 map.dragRotate.disable();
 
@@ -46,8 +67,19 @@ var popup = new mapboxgl.Popup({ closeButton: false, closeOnClick: true });
 
 let hoverCurrentId = null
 var datalayer;
-// var circleSelected;
+document.addEventListener('click',function(e){
+	if (e.target.id === 'source-button') {
+		var button = e.target;
+		var copiedURL = button.getAttribute('source-link');
+		navigator.clipboard.writeText(copiedURL);
 
+		button.textContent = 'Copied!';
+		setTimeout(function () {
+			button.innerHTML = '<i class="fa fa-link"></i> Link to Facility'
+			// button.textContent = 'Share Link';
+		}, 3500); // Reset the button text after 1.5 seconds
+			}
+})
 function updateArticle(e) {
 	let feature = e.features[0]
 	var group_id = feature.properties.group_id
@@ -57,30 +89,28 @@ function updateArticle(e) {
 	var address = feature.properties.address_full
 	var facility_name = feature.properties.facility_name
 	var violation_article = feature.properties.violation_article
-
+	// URL to copy
+	var sourceURL = `https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=${srn}`
+	var shareBtn = `<button id="source-button" source-link="${sourceURL}"> <i class="fa fa-link"></i> Link to Facility</button>`
 	if (group_id == 4) {
-		if (violation_count > 1) {
-			var article = `<div class="epa-class-${group_id}"><h3 class="epa-class-dark">${group_name}</h3><h3 class="srn-dark">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1><h2>${violation_count} Violation Notices</h2></div><div id="company-violations">${violation_article}</div>`
-		}
-		else {
-			
-			var article = `<div class="epa-class-${group_id}"><h3 class="epa-class-dark">${group_name}</h3><h3 class="srn-dark">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1><h2>${violation_count} Violation Notice</h2></div><div id="company-violations">${violation_article}</div>`
-		}
+		var articleOpen = `<div class="epa-class-${group_id}"><h3 class="epa-class-dark">${group_name}</h3><h3 class="srn-dark">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1>`
 	}
 	else {
-		if (violation_count > 1) {
-			var article = `<div class="epa-class-${group_id}"><h3 class="epa-class">${group_name}</h3><h3 class="srn">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1><h2>${violation_count} Violation Notices</h2></div><div id="company-violations">${violation_article}</div>`
-		}
-		else {
-			
-			var article = `<div class="epa-class-${group_id}"><h3 class="epa-class">${group_name}</h3><h3 class="srn">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1><h2>${violation_count} Violation Notice</h2></div><div id="company-violations">${violation_article}</div>`
-		}
+		var articleOpen = `<div class="epa-class-${group_id}"><h3 class="epa-class">${group_name}</h3><h3 class="srn">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1>`
 	}
 
-	learn = `<div id='learn'><h4>Want to Learn More About This Facility?</h4><p>Find inspection reports, older violations and other documents for ${facility_name} in <a href="https://www.egle.state.mi.us/aps/downloads/SRN/${srn}" target="_blank">EGLE's database</a>, and use the <a href="https://www.michigan.gov/egle/-/media/Project/Websites/egle/Documents/Programs/AQD/misc-info/file-naming-convention.pdf" target="_blank">file naming conventions</a> to decode the documents.</p><br/><h4>Explore documents from more than 4,000 permitted sources</h4> <p>Browse this <a href="https://www.tinyurl.com/egle-air-documents" target="_blank">Google sheet</a> or download the data from <a href="https://github.com/srjouppi/michigan-egle-database-auto-scraper#open_file_folder-output" target="_blank">Github.</a> Pro Tip: If you're looking for this facility, filter by its State Registration Number (SRN): ${srn}</p></div>`
-	document.getElementById("articlePlace").innerHTML = article + learn
-	articlePlace.scrollTop = 0
+	if (violation_count > 1) {
+		var vnCount = `<h2>${violation_count} Violation Notices</h2>`
+	}
+	else {
+		
+		var vnCount = `<h2>${violation_count} Violation Notice</h2>`
+	}
+	var articleClose = `</div><div id="share">${shareBtn}</div><div id="company-violations">${violation_article}</div>`
 
+	var learn = `<div id='learn'><h4>Want to Learn More About This Facility?</h4><p>Find inspection reports, older violations and other documents for ${facility_name} in <a href="https://www.egle.state.mi.us/aps/downloads/SRN/${srn}" target="_blank">EGLE's database</a>, and use the <a href="https://www.michigan.gov/egle/-/media/Project/Websites/egle/Documents/Programs/AQD/misc-info/file-naming-convention.pdf" target="_blank">file naming conventions</a> to decode the documents (ie "SAR" = "Staff Activity Report", "ENFN" = "Enforcement Notice")</p><p>Explore all documents for permitted sources by browsing this <a href="https://www.tinyurl.com/egle-air-documents" target="_blank">Google sheet.</a> If you're looking for this facility, filter by its State Registration Number (SRN): ${srn}</p></div>`
+	document.getElementById("articlePlace").innerHTML = articleOpen + vnCount + articleClose + learn
+	articlePlace.scrollTop = 0
 }
 
 function startHover(e) {
@@ -148,14 +178,54 @@ function removePopup(e) {
 	popup.remove();
 }
 
+function findFeatureBySRN(srnToFind) {
+	for (var i = 0; i < infoData.features.length; i++) {
+		if (infoData.features[i].properties.srn === srnToFind) {
+			return infoData.features[i];
+		}
+	}
+	return null; // Return null if the feature with the specified srn is not found
+}
+function updateArticle2(foundFeature) {
+	let feature = foundFeature
+	var group_id = feature.properties.group_id
+	var group_name = feature.properties.group_name
+	var srn = feature.properties.srn
+	var violation_count = feature.properties.violationCount
+	var address = feature.properties.address_full
+	var facility_name = feature.properties.facility_name
+	var violation_article = feature.properties.violation_article
+	var sourceURL = `https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=${srn}`
+	var shareBtn = `<button id="source-button" source-link="${sourceURL}"> <i class="fa fa-link"></i> Link to Facility</button>`
+	if (group_id == 4) {
+		var articleOpen = `<div class="epa-class-${group_id}"><h3 class="epa-class-dark">${group_name}</h3><h3 class="srn-dark">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1>`
+	}
+	else {
+		
+		var articleOpen = `<div class="epa-class-${group_id}"><h3 class="epa-class">${group_name}</h3><h3 class="srn">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1>`
+	}
 
+	if (violation_count > 1) {
+		var vnCount = `<h2>${violation_count} Violation Notices</h2>`
+	}
+	else {
+		
+		var vnCount = `<h2>${violation_count} Violation Notice</h2>`
+	}
+	var articleClose = `</div><div id="share">${shareBtn}</div><div id="company-violations">${violation_article}</div>`
+
+	var learn = `<div id='learn'><h4>Want to Learn More About This Facility?</h4><p>Find inspection reports, older violations and other documents for ${facility_name} in <a href="https://www.egle.state.mi.us/aps/downloads/SRN/${srn}" target="_blank">EGLE's database</a>, and use the <a href="https://www.michigan.gov/egle/-/media/Project/Websites/egle/Documents/Programs/AQD/misc-info/file-naming-convention.pdf" target="_blank">file naming conventions</a> to decode the documents (ie "SAR" = "Staff Activity Report", "ENFN" = "Enforcement Notice")</p><p>Explore all documents for permitted sources by browsing this <a href="https://www.tinyurl.com/egle-air-documents" target="_blank">Google sheet.</a> If you're looking for this facility, filter by its State Registration Number (SRN): ${srn}</p></div>`
+	document.getElementById("articlePlace").innerHTML = articleOpen + vnCount + articleClose + learn
+	articlePlace.scrollTop = 0
+}
 
 map.on('load', function () {
 	for (let i = 0; i < infoData.features.length; i++) {
 		infoData.features[i]['id'] = i + 1
 	}
 // Draw Facilities
-
+	// map.setZoom(startzoom)
+	// console.log(currentZoom)
 	datalayer = map.addLayer({
 		id: "datalayer",
 		type: "circle",
@@ -191,20 +261,21 @@ map.on('load', function () {
 			'circle-stroke-opacity': .8
 		}
 	});
-
-	let currentCircle = null; // To keep track of the currently drawn circle
 	
-	function drawCircle(coordinates) {
-	// Remove the previously drawn circle, if any
-	if (currentCircle) {
-		currentCircle.remove();
-	}
 
-	// Add a new circle
-	currentCircle = new mapboxgl.Marker({ color: 'blue' })
-		.setLngLat(coordinates)
-		.addTo(map);
-	}
+	// let currentCircle = null; // To keep track of the currently drawn circle
+	
+	// function drawCircle(coordinates) {
+	// // Remove the previously drawn circle, if any
+	// if (currentCircle) {
+	// 	currentCircle.remove();
+	// }
+
+	// // Add a new circle
+	// currentCircle = new mapboxgl.Marker({ color: 'blue' })
+	// 	.setLngLat(coordinates)
+	// 	.addTo(map);
+	// }
 // these functions control Mouse actions
 // they make the pop-up headline or update the article text
 // When we move the mouse over, draw the popup and change the hover style
@@ -248,17 +319,19 @@ map.on('load', function () {
 	
 	}
 		
-	const coordinates = e.features[0].geometry.coordinates;
+	// const coordinates = e.features[0].geometry.coordinates;
 
-	// Call the drawCircle function with the coordinates
-	drawCircle(coordinates);
+	// // Call the drawCircle function with the coordinates
+	// drawCircle(coordinates);
 	});
 	
-	
-
-
 // very important!! this automatically centers the map and zooms it
 	map.fitBounds(turf.bbox(infoData), { padding: 0, linear: true })
+	if (pntid) {
+		map.setZoom(12)
+		var foundFeature = findFeatureBySRN(pntid);
+		updateArticle2(foundFeature)
+	}
 })
 
 
@@ -410,18 +483,19 @@ map.flyTo({
 })
 var mapContainer = document.getElementById('map');
 mapContainer.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
-function findFeatureBySRN(srnToFind) {
-	for (var i = 0; i < infoData.features.length; i++) {
-		if (infoData.features[i].properties.srn === srnToFind) {
-			return infoData.features[i];
-		}
-	}
-	return null; // Return null if the feature with the specified srn is not found
-}
+// function findFeatureBySRN(srnToFind) {
+// 	for (var i = 0; i < infoData.features.length; i++) {
+// 		if (infoData.features[i].properties.srn === srnToFind) {
+// 			return infoData.features[i];
+// 		}
+// 	}
+// 	return null; // Return null if the feature with the specified srn is not found
+// }
 
 // Usage
 var srnToSearchFor = id; // Replace with the SRN you want to find
 var foundFeature = findFeatureBySRN(srnToSearchFor);
+console.log(foundFeature)
 // circleSelected = map.addLayer({
 // 		"id": "circle-selected",
 // 		"type": "circle",
@@ -438,39 +512,39 @@ var foundFeature = findFeatureBySRN(srnToSearchFor);
 // 		'circle-stroke-opacity': .5
 // 		}
 // });
-function updateArticle2(foundFeature) {
-	let feature = foundFeature
-	var group_id = feature.properties.group_id
-	var group_name = feature.properties.group_name
-	var srn = feature.properties.srn
-	var violation_count = feature.properties.violationCount
-	var address = feature.properties.address_full
-	var facility_name = feature.properties.facility_name
-	var violation_article = feature.properties.violation_article
+// function updateArticle2(foundFeature) {
+// 	let feature = foundFeature
+// 	var group_id = feature.properties.group_id
+// 	var group_name = feature.properties.group_name
+// 	var srn = feature.properties.srn
+// 	var violation_count = feature.properties.violationCount
+// 	var address = feature.properties.address_full
+// 	var facility_name = feature.properties.facility_name
+// 	var violation_article = feature.properties.violation_article
 
-	if (group_id == 4) {
-		if (violation_count > 1) {
-			var article = `<div class="epa-class-${group_id}"><h3 class="epa-class-dark">${group_name}</h3><h3 class="srn-dark">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1><h2>${violation_count} Violation Notices</h2></div><div id="company-violations">${violation_article}</div>`
-		}
-		else {
+// 	if (group_id == 4) {
+// 		if (violation_count > 1) {
+// 			var article = `<div class="epa-class-${group_id}"><h3 class="epa-class-dark">${group_name}</h3><h3 class="srn-dark">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1><h2>${violation_count} Violation Notices</h2></div><div id="company-violations">${violation_article}</div>`
+// 		}
+// 		else {
 			
-			var article = `<div class="epa-class-${group_id}"><h3 class="epa-class-dark">${group_name}</h3><h3 class="srn-dark">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1><h2>${violation_count} Violation Notice</h2></div><div id="company-violations">${violation_article}</div>`
-		}
-	}
-	else {
-		if (violation_count > 1) {
-			var article = `<div class="epa-class-${group_id}"><h3 class="epa-class">${group_name}</h3><h3 class="srn">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1><h2>${violation_count} Violation Notices</h2></div><div id="company-violations">${violation_article}</div>`
-		}
-		else {
+// 			var article = `<div class="epa-class-${group_id}"><h3 class="epa-class-dark">${group_name}</h3><h3 class="srn-dark">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1><h2>${violation_count} Violation Notice</h2></div><div id="company-violations">${violation_article}</div>`
+// 		}
+// 	}
+// 	else {
+// 		if (violation_count > 1) {
+// 			var article = `<div class="epa-class-${group_id}"><h3 class="epa-class">${group_name}</h3><h3 class="srn">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1><h2>${violation_count} Violation Notices</h2></div><div id="company-violations">${violation_article}</div>`
+// 		}
+// 		else {
 			
-			var article = `<div class="epa-class-${group_id}"><h3 class="epa-class">${group_name}</h3><h3 class="srn">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1><h2>${violation_count} Violation Notice</h2></div><div id="company-violations">${violation_article}</div>`
-		}
-	}
+// 			var article = `<div class="epa-class-${group_id}"><h3 class="epa-class">${group_name}</h3><h3 class="srn">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1><h2>${violation_count} Violation Notice</h2></div><div id="company-violations">${violation_article}</div>`
+// 		}
+// 	}
 
-	learn = `<div id='learn'><h4>Want to Learn More About This Facility?</h4><p>Find inspection reports, older violations and other documents for ${facility_name} in <a href="https://www.egle.state.mi.us/aps/downloads/SRN/${srn}" target="_blank">EGLE's database</a>, and use the <a href="https://www.michigan.gov/egle/-/media/Project/Websites/egle/Documents/Programs/AQD/misc-info/file-naming-convention.pdf" target="_blank">file naming conventions</a> to decode the documents (ie "SAR" = "Staff Activity Report", "ENFN" = "Enforcement Notice")</p><p>Explore all documents for permitted sources by browsing this <a href="https://www.tinyurl.com/egle-air-documents" target="_blank">Google sheet.</a> If you're looking for this facility, filter by its State Registration Number (SRN): ${srn}</p></div>`
-	document.getElementById("articlePlace").innerHTML = article + learn
-	articlePlace.scrollTop = 0
-}
+// 	learn = `<div id='learn'><h4>Want to Learn More About This Facility?</h4><p>Find inspection reports, older violations and other documents for ${facility_name} in <a href="https://www.egle.state.mi.us/aps/downloads/SRN/${srn}" target="_blank">EGLE's database</a>, and use the <a href="https://www.michigan.gov/egle/-/media/Project/Websites/egle/Documents/Programs/AQD/misc-info/file-naming-convention.pdf" target="_blank">file naming conventions</a> to decode the documents (ie "SAR" = "Staff Activity Report", "ENFN" = "Enforcement Notice")</p><p>Explore all documents for permitted sources by browsing this <a href="https://www.tinyurl.com/egle-air-documents" target="_blank">Google sheet.</a> If you're looking for this facility, filter by its State Registration Number (SRN): ${srn}</p></div>`
+// 	document.getElementById("articlePlace").innerHTML = article + learn
+// 	articlePlace.scrollTop = 0
+// }
 updateArticle2(foundFeature)
 })
 document.addEventListener("DOMContentLoaded", function () {
