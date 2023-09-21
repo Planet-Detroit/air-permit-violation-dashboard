@@ -218,7 +218,26 @@ function updateArticle2(foundFeature) {
 	document.getElementById("articlePlace").innerHTML = articleOpen + vnCount + articleClose + learn
 	articlePlace.scrollTop = 0
 }
+let newMarker; // Define the newMarker variable at the top level
 
+function createNewMarker(ll) {
+// Remove the existing marker if it exists
+	if (newMarker) {
+		removeNewMarker();
+	}
+
+// Create a new marker and setLngLat
+	newMarker = new mapboxgl.Marker()
+		.setLngLat(ll)
+		.addTo(map);
+	}
+
+function removeNewMarker() {
+if (newMarker) {
+	newMarker.remove();
+	newMarker = undefined; // Reset the newMarker variable
+}
+}
 map.on('load', function () {
 	for (let i = 0; i < infoData.features.length; i++) {
 		infoData.features[i]['id'] = i + 1
@@ -290,9 +309,27 @@ map.on('load', function () {
 		removePopup(e)
 	});
 
+	map.fitBounds(turf.bbox(infoData), { padding: 0, linear: true });
+
+	if (pntid) {
+	map.setZoom(12);
+	var foundFeature = findFeatureBySRN(pntid);
+	var ll = startll;
+	createNewMarker(ll);
+	updateArticle2(foundFeature);
+	}
+	
 	// When we click, update the article (the right-hand side)
 	map.on('click', 'datalayer', function (e) {
 		
+		if (newMarker) {
+			removeNewMarker(newMarker)
+		}
+
+		
+		var ll = e.features[0].geometry.coordinates
+
+		createNewMarker(ll)
 		updateArticle(e)
 		var currentZoom = map.getZoom();
 		
@@ -324,14 +361,6 @@ map.on('load', function () {
 	// // Call the drawCircle function with the coordinates
 	// drawCircle(coordinates);
 	});
-	
-// very important!! this automatically centers the map and zooms it
-	map.fitBounds(turf.bbox(infoData), { padding: 0, linear: true })
-	if (pntid) {
-		map.setZoom(12)
-		var foundFeature = findFeatureBySRN(pntid);
-		updateArticle2(foundFeature)
-	}
 })
 
 
@@ -475,77 +504,21 @@ $(document).on('click', '#map-link a', function(e) {
 // lngLat = $(this).attr(data-geom)
 var id = $(this).attr('data-id')
 var ll = new mapboxgl.LngLat($(this).attr('data-long'), $(this).attr('data-lat'));
+createNewMarker(ll)
 // new LngLat(lng: number, lat: number)
 map.flyTo({
 		center:ll,
 		duration:100,
 		zoom:12,
 })
+
+
 var mapContainer = document.getElementById('map');
 mapContainer.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
-// function findFeatureBySRN(srnToFind) {
-// 	for (var i = 0; i < infoData.features.length; i++) {
-// 		if (infoData.features[i].properties.srn === srnToFind) {
-// 			return infoData.features[i];
-// 		}
-// 	}
-// 	return null; // Return null if the feature with the specified srn is not found
-// }
-
-// Usage
 var srnToSearchFor = id; // Replace with the SRN you want to find
 var foundFeature = findFeatureBySRN(srnToSearchFor);
-console.log(foundFeature)
-// circleSelected = map.addLayer({
-// 		"id": "circle-selected",
-// 		"type": "circle",
-// 		"source": {
-// 			type: "geojson",
-// 			data: foundFeature,
-// 		},
-// 		paint: {
-// 		'circle-radius': 40,
-// 		'circle-color': "white",
-// 		'circle-opacity':0,
-// 		'circle-stroke-color': 'black',  // Outline color
-// 		'circle-stroke-width': 4, // Outline thickness
-// 		'circle-stroke-opacity': .5
-// 		}
-// });
-// function updateArticle2(foundFeature) {
-// 	let feature = foundFeature
-// 	var group_id = feature.properties.group_id
-// 	var group_name = feature.properties.group_name
-// 	var srn = feature.properties.srn
-// 	var violation_count = feature.properties.violationCount
-// 	var address = feature.properties.address_full
-// 	var facility_name = feature.properties.facility_name
-// 	var violation_article = feature.properties.violation_article
-
-// 	if (group_id == 4) {
-// 		if (violation_count > 1) {
-// 			var article = `<div class="epa-class-${group_id}"><h3 class="epa-class-dark">${group_name}</h3><h3 class="srn-dark">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1><h2>${violation_count} Violation Notices</h2></div><div id="company-violations">${violation_article}</div>`
-// 		}
-// 		else {
-			
-// 			var article = `<div class="epa-class-${group_id}"><h3 class="epa-class-dark">${group_name}</h3><h3 class="srn-dark">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1><h2>${violation_count} Violation Notice</h2></div><div id="company-violations">${violation_article}</div>`
-// 		}
-// 	}
-// 	else {
-// 		if (violation_count > 1) {
-// 			var article = `<div class="epa-class-${group_id}"><h3 class="epa-class">${group_name}</h3><h3 class="srn">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1><h2>${violation_count} Violation Notices</h2></div><div id="company-violations">${violation_article}</div>`
-// 		}
-// 		else {
-			
-// 			var article = `<div class="epa-class-${group_id}"><h3 class="epa-class">${group_name}</h3><h3 class="srn">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1><h2>${violation_count} Violation Notice</h2></div><div id="company-violations">${violation_article}</div>`
-// 		}
-// 	}
-
-// 	learn = `<div id='learn'><h4>Want to Learn More About This Facility?</h4><p>Find inspection reports, older violations and other documents for ${facility_name} in <a href="https://www.egle.state.mi.us/aps/downloads/SRN/${srn}" target="_blank">EGLE's database</a>, and use the <a href="https://www.michigan.gov/egle/-/media/Project/Websites/egle/Documents/Programs/AQD/misc-info/file-naming-convention.pdf" target="_blank">file naming conventions</a> to decode the documents (ie "SAR" = "Staff Activity Report", "ENFN" = "Enforcement Notice")</p><p>Explore all documents for permitted sources by browsing this <a href="https://www.tinyurl.com/egle-air-documents" target="_blank">Google sheet.</a> If you're looking for this facility, filter by its State Registration Number (SRN): ${srn}</p></div>`
-// 	document.getElementById("articlePlace").innerHTML = article + learn
-// 	articlePlace.scrollTop = 0
-// }
 updateArticle2(foundFeature)
+
 })
 document.addEventListener("DOMContentLoaded", function () {
     const loadMoreButton = document.getElementById("loadMoreButton");
