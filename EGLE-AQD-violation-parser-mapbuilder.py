@@ -54,7 +54,8 @@ if len(new_vn) == 0:
     one_parse_df = pd.DataFrame(one_parse)
     
     new_report = pd.concat([old_report,one_parse_df])
-    new_report.to_csv('output/report-parser.csv',index=False)
+    new_report.date = pd.to_datetime(new_report.date)
+    new_report.sort_values('date',ascending=False).to_csv('output/report-parser.csv',index=False)
     sys.exit()
     
 # # Parse the new PDFs
