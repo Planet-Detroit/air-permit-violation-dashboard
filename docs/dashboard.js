@@ -218,6 +218,8 @@ function updateArticle2(foundFeature) {
 	document.getElementById("articlePlace").innerHTML = articleOpen + vnCount + articleClose + learn
 	articlePlace.scrollTop = 0
 }
+var mapContainer = document.getElementById('map');
+
 let newMarker; // Define the newMarker variable at the top level
 
 function createNewMarker(ll) {
@@ -313,6 +315,7 @@ map.on('load', function () {
 
 	if (pntid) {
 	map.setZoom(12);
+	mapContainer.scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
 	var foundFeature = findFeatureBySRN(pntid);
 	var ll = startll;
 	createNewMarker(ll);
