@@ -90,7 +90,7 @@ function updateArticle(e) {
 	var facility_name = feature.properties.facility_name
 	var violation_article = feature.properties.violation_article
 	// URL to copy
-	var sourceURL = `https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=${srn}`
+	var sourceURL = `https://bit.ly/michiganairviolations?srn=${srn}`
 	var shareBtn = `<button id="source-button" source-link="${sourceURL}"> <i class="fa fa-link"></i> Copy Facility Link</button>`
 	if (group_id == 4) {
 		var articleOpen = `<div class="epa-class-${group_id}"><h3 class="epa-class-dark">${group_name}</h3><h3 class="srn-dark">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1>`
@@ -195,7 +195,7 @@ function updateArticle2(foundFeature) {
 	var address = feature.properties.address_full
 	var facility_name = feature.properties.facility_name
 	var violation_article = feature.properties.violation_article
-	var sourceURL = `https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=${srn}`
+	var sourceURL = `https://bit.ly/michiganairviolations?srn=${srn}`
 	var shareBtn = `<button id="source-button" source-link="${sourceURL}"> <i class="fa fa-link"></i> Copy Facility Link</button>`
 	if (group_id == 4) {
 		var articleOpen = `<div class="epa-class-${group_id}"><h3 class="epa-class-dark">${group_name}</h3><h3 class="srn-dark">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1>`
