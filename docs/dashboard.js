@@ -534,3 +534,19 @@ document.addEventListener("DOMContentLoaded", function () {
       loadMoreButton.style.display = "none"; // Optionally hide the button after loading all divs
     });
   });
+  $(document).on('click', '#data-table a', function(e) {
+	var id = $(this).attr('data-id')
+	var mapContainer = document.getElementById('map');
+	mapContainer.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+	var srnToSearchFor = id; // Replace with the SRN you want to find
+	var foundFeature = findFeatureBySRN(srnToSearchFor);
+	var ll = foundFeature.geometry.coordinates;
+	map.flyTo({
+			center:ll,
+			duration:100,
+			zoom:12,
+	})
+
+	updateArticle2(foundFeature)
+	createNewMarker(ll)
+	})
