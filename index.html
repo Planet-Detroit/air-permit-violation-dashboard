@@ -49,7 +49,7 @@
 <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
 <div id="nav">
     <a href="https://planetdetroit.org/" class="home-link" target="_blank">
-		<img src = "img/PlanetDetroitLogo.svg" style="width:140px;margin:0 auto;display:inline-flex;"/>
+		<img src = "img/PlanetDetroitLogo.svg" id="logo-link" alt="Planet Detroit Logo link which leads to planetdetroit.org"/>
 	</a>
 </div>
 <div id="intro-container">
@@ -65,7 +65,7 @@
 		<h2>Welcome to Planet Detroit's interactive map of Michigan air permit violations.</h2>
 		<p>This map updates daily with new violation notices issued by EGLE
 			to companies that hold permits to pollute the air throughout the state.</p>
-		<p><a class="recent-vns" href="#recent-vns">View the most recent violations.</a></p>
+		<p><a class="recent-vns-btn" href="#recent-vns">View the most recent violations</a></p>
 		<p>Violation notices may be about excessive pollution levels, failure to keep records,
 			maintain equipment, renew permits and more.</p>
 			<p>Each circle represents one facility and is sized by the number of violation notices
@@ -73,19 +73,20 @@
 			<p>Click on the circles to read more about the specific violations
 				and find links to each document. Or search for a location and 
 				browse the facilities nearby.</p>
-			
-			<h4>Information about the source will appear below the map.</h4>
+			<h4>Information about the source will appear below the map</h4>
 			<p> Please note, there are more sources of air pollution in Michigan
-				than are on the map, as they might not have had a violation in the past five years.
+				than are on the map, as they might not have had a violation in the past five years.</p>
+			
+			<p><a class="table-btn" href="#vn-table">Explore the data in table form.</a></p>
 		<br/>
 	</div>
-				<div class="spacer"></div>
+	<div class="spacer"></div>
 
 	<div id = "mobile-legend">
 		<div>
             <h4>Violation Notices Issued Since 2018</h4>
 			<p>Click on a facility for details about its violation notices.</p>
-			<img src="img/legend-dots-02.svg" style="width:100%;margin:0 auto;"/>
+			<img src="img/legend-dots-02.svg" id="dot-size-img"/>
         </div>
         <div>
             <h4>EPA Classification</h4>
@@ -108,7 +109,7 @@
 		<div id="violations-legend" class="legend2">
             <h4>Violation Notices Issued <br/>Since 2018</h4>
 			<p>Click on a facility for details about its violation notices.</p>
-			<img src="img/legend-dots-02.svg" style="width:80%;margin:0 auto;"/>
+			<img src="img/legend-dots-02.svg" id="dot-size-img"/>
         </div>
         <div id="epa-class-legend" class="legend1">
             <h4>EPA Classification</h4>
@@ -169,7 +170,7 @@
 				<h2>Welcome to Planet Detroit's interactive map of Michigan air permit violations.</h2>
 				<p>This map updates daily with new violation notices issued by EGLE
 					to companies that hold permits to pollute the air throughout the state.</p>
-				<p><a class="recent-vns" href="#recent-vns">View the most recent violations.</a></p>
+				<p><a class="recent-vns-btn" href="#recent-vns">View the most recent violations</a></p>
 				<p>Violation notices may be about excessive pollution levels, failure to keep records,
 					maintain equipment, renew permits and more.</p>
 				<p>Each circle represents one facility and is sized by the number of violation notices
@@ -177,7 +178,10 @@
 				<p>Click on the circles to read more about the specific violations
 					and find links to each document. Or search for a location and 
 				    browse the facilities nearby.</p>
-				<p><em>There are more sources of air pollution in Michigan
+
+				<p><a class="table-btn" href="#vn-table">Explore the data in table form</a></p>
+
+				<p><em>Note: There are more sources of air pollution in Michigan
 				    than are on the map, as they might not have had a violation in the past five years.
 				    Learn more about them by browsing <a href="https://www.tinyurl.com/egle-air-documents" target="_blank" class="article">this dataset</a>
 					 of EGLE's Air Quality Division documents. </em></p>
@@ -194,7 +198,7 @@
 	<br/>
 	<div class="spacer"></div>
 	<a name="recent-vns"></a>
-	<div id="recent-violations-header">
+	<div class="header">
 		<h4>Most Recent Violation Notices</h4>
 		<hr/>
 	</div>
@@ -204,11 +208,24 @@
 		<button id="loadMoreButton">Load More</button>
 	</div>
 
-	<br/>
-	<hr/>
+	<div class="spacer"></div>
+	<!-- <hr/> -->
+	<a name="vn-table"></a>
+	<div class="header2">
+		<h4>Explore the data in table form</h4>
+		<div class="description">
+		<p>Search the table below for the company you are interested in and click on
+			the facility's name to view it on the map. By default, the table is sorted by
+			number of violation notices received since 2018, but you can sort by any column in the table. </p>
+		</div>
+		<hr/>
+	</div>
+
+	<div id="data-table">
+		<script type="text/javascript" defer src="https://datawrapper.dwcdn.net/26pmg/embed.js?v=6" charset="utf-8"></script><noscript><img src="https://datawrapper.dwcdn.net/26pmg/full.png" alt="A table of facilities that have been issued air permit violation notices by EGLE since 2018 sorted by the total number of violation notices in descending order. Sort by any of the columns or search the table." /></noscript>	</div>
 	<div id="about-project">
 	<h4>About the project</h4>
-
+	<hr/>
 	<p>Thousands of sources of air pollution operate in Michigan under a permit.
 	EGLE's Air Quality Division routinely inspects, reviews emission data and 
 	responds to complaints about these facilities. Sometimes they issue violation
