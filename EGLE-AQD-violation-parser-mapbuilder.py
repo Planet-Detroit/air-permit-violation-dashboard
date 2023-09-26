@@ -500,7 +500,7 @@ vn_export.to_csv('output/EGLE-AQD-Violation-Notices-2018-Present.csv', index=Fal
 source_directory = pd.read_csv('docs/EGLE-AQD-source-directory-geocoded.csv')
 
 new_vn_highlight = vn_export.sort_values('date',ascending=False).head(12)
-new_vn_highlight = new_vn_highlight.merge(source_directory[['lat','long','geometry','facility_name_title','srn']],how='left',left_on='srn',right_on='srn')
+new_vn_highlight = new_vn_highlight.merge(source_directory[['lat','long','geometry','facility_name_title','srn','epa_class_full']],how='left',left_on='srn',right_on='srn')
 new_vn_highlight.epa_class = new_vn_highlight.epa_class.fillna('None')
 def category_color(epa_class):
         if epa_class == "MEGASITE":
@@ -514,14 +514,6 @@ def category_color(epa_class):
         else:
             return '#DCDCDC'
 
-epa_class_name_dict = {
-        'MEGASITE': 'Megasite',
-        'MAJOR': 'Major Source',
-        'SM OPT OUT': 'Synthetic Minor Source',
-        'MINOR': 'True Minor Source',
-        'None': 'Unknown'
-    }
-
 epa_class_num_dict = {
         'MEGASITE': 1,
         'MAJOR': 2,
@@ -530,7 +522,7 @@ epa_class_num_dict = {
         'None': 5
     }
 new_vn_highlight['properties.county'] = new_vn_highlight.county.str.title()
-new_vn_highlight['properties.group_name'] = new_vn_highlight.epa_class.map(epa_class_name_dict)
+new_vn_highlight['properties.group_name'] = new_vn_highlight.epa_class_full
 new_vn_highlight['properties.group_id'] = new_vn_highlight.epa_class.map(epa_class_num_dict)
 
 # Renaming columns to get ready for geojson
@@ -577,6 +569,8 @@ with open('output/recent-violations.js', 'a') as outfile:
 # # Creating the map data
 # # Reading in my existing map_df and source directory
 map_df = pd.read_csv('output/violation-map-data.csv')
+# Reading in source violation count table
+source_vn_table = pd.read_csv('output/violation-count-by-source.csv')
 
 # # What facilities do I have and which are new?
 mapped_facilities = map_df.srn.to_list()
@@ -588,6 +582,7 @@ if len(new_facilities) > 0:
         if facility not in mapped_facilities:
             new_facility_df = source_directory.query(f'srn == "{facility}"').copy(deep=True)
             new_facility_df['properties.violationCount'] = 0
+            new_facility_df['violation_count'] = 0
             new_facility_df[['2018','2019','2020','2021','2022','2023']] = 0
             new_facility_df['type'] = 'Feature'
             new_facility_df['geometry.type'] = 'Point'
@@ -595,21 +590,22 @@ if len(new_facilities) > 0:
             if pd.isnull(new_facility_df.epa_class.item()):
                 new_facility_df.epa_class = 'None'
             new_facility_df['properties.group_id'] = new_facility_df.epa_class.replace(epa_class_num_dict)
-            new_facility_df['properties.group_name'] = new_facility_df.epa_class.replace(epa_class_name_dict)
+            new_facility_df['properties.group_name'] = new_facility_df.epa_class_full
             new_facility_df['properties.color'] = new_facility_df.epa_class.apply(category_color)
             new_facility_df['properties.srn'] = new_facility_df.srn
             new_facility_df['properties.violation_article'] = None
+            facility_name = new_facility_df.facility_name.item()
+            new_facility_df['name_url'] = f"<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn={facility}' target='_blank'>{facility_name}</a>" 
             new_facility_df = new_facility_df.rename({'geometry':'geometry.coordinates'},axis=1)
-            # Inserting dummy datetime:
+            # Inserting dummy datetime: 
             new_facility_df['properties.most_recent_vn'] = '1900-01-01'
+            new_facility_df['most_recent_vn'] = ''
             map_df = pd.concat([map_df,new_facility_df],ignore_index=True)
+            source_vn_table = pd.concat([source_vn_table,new_facility_df[['facility_name','name_url','county','epa_class_simple','srn','violation_count','most_recent_vn']]])
             mapped_facilities.append(facility)
-
 
 # # Now that there's an entry for every facility, let's start editing the tooltip 
 # # and article for the facilities with new violation notices
-
-
 map_update_report = []
 
 # For every unique facility in the new violation notices:
@@ -690,11 +686,16 @@ for facility in new_vns_clean.drop_duplicates(subset='srn').srn:
         map_df.loc[map_df.srn == facility,'properties.violation_article']  = new_violation_article + map_df.loc[map_df.srn == facility]['properties.violation_article']
 
     # 2. Add to total Violation Count 
-    map_df.loc[map_df.srn == facility,'properties.violationCount'] = new_violation_count + map_df.loc[map_df.srn == facility]['properties.violationCount']
-    one_facility_report['new_violation_count'] = map_df.query(f'srn=="{facility}"')['properties.violationCount'].item()
+    new_violation_count = new_violation_count + map_df.loc[map_df.srn == facility]['properties.violationCount']
+    map_df.loc[map_df.srn == facility,'properties.violationCount'] = new_violation_count
+    source_vn_table.loc[source_vn_table.srn == facility,'vns'] = new_violation_count
+    one_facility_report['new_violation_count'] = new_violation_count
+
 
     # 5. Update most_recent_vn:
     map_df.loc[map_df.srn == facility, 'properties.most_recent_vn'] = most_recent_vn_str
+    source_vn_table.loc[source_vn_table.srn == facility,'most_recent_vn'] = most_recent_vn_str
+
     
     # 6. Appending the report
     map_update_report.append(one_facility_report)
@@ -702,6 +703,7 @@ for facility in new_vns_clean.drop_duplicates(subset='srn').srn:
 # # Creating the map update report to make sure everything is correct!
 parser_srn_report = new_vns_clean.srn.value_counts().to_frame().reset_index().rename({'count':'violations_parsed'},axis=1)
 map_update_report = pd.DataFrame(map_update_report)
+
 
 # Merging with parser report to make sure all vns are accounted for
 map_update_report = map_update_report.merge(parser_srn_report,how='left',left_on='srn',right_on='srn')
@@ -717,6 +719,9 @@ updated_map_report.sort_values('date_updated',ascending=False).to_csv('output/re
 
 # Exporting updated map data
 map_df.to_csv('output/violation-map-data.csv',index=False)
+
+# Exporting updated source table data
+source_vn_table.to_csv('output/violation-count-by-source.csv',index=False)
 
 # # I'm going to turn this map data into a JSON file now!
 
