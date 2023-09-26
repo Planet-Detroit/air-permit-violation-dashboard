@@ -536,8 +536,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   $(document).on('click', '#data-table a', function(e) {
 	var id = $(this).attr('data-id')
-	var mapContainer = document.getElementById('map');
-	mapContainer.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+	// var mapContainer = document.getElementById('map');
+	// mapContainer.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
 	var srnToSearchFor = id; // Replace with the SRN you want to find
 	var foundFeature = findFeatureBySRN(srnToSearchFor);
 	var ll = foundFeature.geometry.coordinates;
