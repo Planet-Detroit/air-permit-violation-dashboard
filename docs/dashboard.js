@@ -517,7 +517,15 @@ map.flyTo({
 
 
 var mapContainer = document.getElementById('map');
-mapContainer.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+const timer = setTimeout(() => {
+
+	if (!mapContainer) {
+	  return;
+	}
+
+	mapContainer.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+  }, 200);
+
 var srnToSearchFor = id; // Replace with the SRN you want to find
 var foundFeature = findFeatureBySRN(srnToSearchFor);
 updateArticle2(foundFeature)
