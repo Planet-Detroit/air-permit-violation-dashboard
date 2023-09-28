@@ -688,9 +688,9 @@ for facility in new_vns_clean.drop_duplicates(subset='srn').srn:
     # 2. Add to total Violation Count 
     old_violation_count = map_df.loc[map_df.srn == facility]['properties.violationCount'].item()
     updated_violation_count = new_violation_count + old_violation_count
-    map_df.loc[map_df.srn == facility,'properties.violationCount'] = new_violation_count
-    source_vn_table.loc[source_vn_table.srn == facility,'violation_count'] = new_violation_count
-    one_facility_report['new_violation_count'] = new_violation_count
+    map_df.loc[map_df.srn == facility,'properties.violationCount'] = updated_violation_count
+    source_vn_table.loc[source_vn_table.srn == facility,'violation_count'] = updated_violation_count
+    one_facility_report['new_violation_count'] = updated_violation_count
 
 
     # 5. Update most_recent_vn:
