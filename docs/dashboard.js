@@ -469,17 +469,40 @@ if (violation_comment_list.length > 1) {
 else {
 	violation_comments = violation_comment_list[0]
 }
-
+console.log(violation_comments)
 const maxLength = 500;
 
-// Now let's limit the character length if it's over 500 characters
 function limitCharacterLength(inputString, maxLength) {
-if (inputString.length > maxLength) {
-    // 
-	return `<div id="map-link"><p>` + inputString.slice(0, maxLength)+`...<a class="read-more" data-lat="${lat}" data-long="${long}" data-id="${id}">[Read more]</a></p>`; // Truncate the string to the desired length
-}
-return `<p>`+ inputString + `</p><div id="map-link">`; // If the string is already within the limit, return it as is
-}
+	if (inputString.length <= maxLength) {
+	  return `<p>${inputString}</p><div id="map-link">`;
+	}
+  
+	// Find the last "</li>" tag within the first maxLength characters
+	const lastIndex = inputString.lastIndexOf('</li>', maxLength);
+  
+	if (lastIndex !== -1 && lastIndex >= maxLength - 10) {
+	  // If there's a "</li>" tag within the last 10 characters of the maxLength,
+	  // cut the string just after the "</li>" tag
+	  const truncatedString = inputString.slice(0, lastIndex + 5); // +5 to include </li>
+	  const readMore = `<a class="read-more" data-lat="${lat}" data-long="${long}" data-id="${id}">[Read more]</a>`;
+	  return `<div id="map-link"><p>${truncatedString}${readMore}</p>`;
+	} else {
+	  // Cut the string at maxLength and add the "Read more" link
+	  const truncatedString = inputString.slice(0, maxLength);
+	  const readMore = `...<a class="read-more" data-lat="${lat}" data-long="${long}" data-id="${id}">[Read more]</a>`;
+	  return `<div id="map-link"><p>${truncatedString}${readMore}</p>`;
+	}
+  }
+  
+// // Now let's limit the character length if it's over 500 characters
+// function limitCharacterLength(inputString, maxLength) {
+// if (inputString.length > maxLength) {
+//     // 
+// 	var readMore = `...<a class="read-more" data-lat="${lat}" data-long="${long}" data-id="${id}">[Read more]</a></p>`
+// 	return `<div id="map-link"><p>` + inputString.slice(0, maxLength)+ readMore; // Truncate the string to the desired length
+// }
+// return `<p>`+ inputString + `</p><div id="map-link">`; // If the string is already within the limit, return it as is
+// }
 
 // // Limit the character length to 200 characters
 
