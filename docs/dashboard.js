@@ -159,9 +159,13 @@ function drawPopup(e) {
 		duration = differenceInMonths(today, recent_vn).toLocaleString()
 		duration = duration + " MONTHS AGO"
 	}
+	else if (duration == 1) {
+		duration = duration.toLocaleString() + " DAY AGO"
+	}
 	else {
 		duration = duration.toLocaleString() + " DAYS AGO"
 	}
+	
 	
 	var recent_vn_str = recent_vn.toLocaleDateString('en-us', {year:"numeric", month:"short"}).toUpperCase()
 	while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
