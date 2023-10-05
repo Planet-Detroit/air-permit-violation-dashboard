@@ -600,7 +600,7 @@ if len(new_facilities) > 0:
             # Inserting dummy datetime: 
             new_facility_df['properties.most_recent_vn'] = '1900-01-01'
             new_facility_df['most_recent_vn'] = ''
-            map_df = pd.concat([map_df,new_facility_df],ignore_index=True)
+            map_df = pd.concat([map_df,new_facility_df.drop(['epa_class_simple','epa_class_full','violation_count','most_recent_vn'],axis=1)],ignore_index=True)
             source_vn_table = pd.concat([source_vn_table,new_facility_df[['facility_name','name_url','county','epa_class_simple','srn','violation_count','most_recent_vn']]])
             mapped_facilities.append(facility)
 
