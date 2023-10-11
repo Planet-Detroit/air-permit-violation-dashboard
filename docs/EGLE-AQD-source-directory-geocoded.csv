@@ -4900,7 +4900,7 @@ N0904,AVALON & TAHOE MFG,"903 E Michigan Ave, Alma, MI 48801",MINOR,43.3819159,-
 N0037,FERNCO INC,"300 S Dayton, Davison, MI 48423",,43.0287479,-83.5217682,"[-83.5217682, 43.0287479]",Fernco Inc,Davison,Genesee,Unknown,Unknown
 N2741,MODERN SHIAWASSEE,"599 S Gould St, Owosso, MI 48867",MINOR,42.9897041,-84.1572802,"[-84.1572802, 42.9897041]",Modern Shiawassee,Owosso,Shiawassee,True Minor Source,True Minor
 N1815,ITW TACC,"195 Demille, Lapeer, MI 48846",MINOR,43.0514161,-83.31883409999999,"[-83.31883409999999, 43.0514161]",ITW Tacc,Lapeer,Lapeer,True Minor Source,True Minor
-N5115,LAPEER COUNTY HEALTH DEPT,"2396 W Genesee, Lapeer, MI 48846",,43.0514641,-83.3326381,"[-83.3326381, 43.0514641]",Lapeer County Health Dept,Lapeer,Lapeer,Unknown,Unknown
+N5115,LAPEER COUNTY ANIMAL CONTROL,"2396 W Genesee, Lapeer, MI 48846",MINOR,43.0514641,-83.3326381,"[-83.3326381, 43.0514641]",Lapeer County Animal Control,Lapeer,Lapeer,True Minor Source,True Minor
 M1913,LAPEER GRAIN EAST,"155 S Saginaw, Lapeer, MI 48846",MINOR,43.0490163,-83.30400159999999,"[-83.30400159999999, 43.0490163]",Lapeer Grain East,Lapeer,Lapeer,True Minor Source,True Minor
 M1917,LAPEER GRAIN - IMLAY CITY,"140 E Second St, Imlay City, MI 48444",MINOR,43.0225558,-83.0751032,"[-83.0751032, 43.0225558]",Lapeer Grain - Imlay City,Imlay City,Lapeer,True Minor Source,True Minor
 A2810,LAPEER MANUFACTURING CO,"3056 N Lapeer Rd, Lapeer, MI 48444",MINOR,43.1173971,-83.3081246,"[-83.3081246, 43.1173971]",Lapeer Manufacturing Co,Lapeer,Lapeer,True Minor Source,True Minor
@@ -5245,7 +5245,7 @@ N8009,"MICHIGAN BELL TELEPHONE COMPANY, DBA AT&T MICHIGAN","34480 Van Dyke Ave, 
 N8010,"MICHIGAN BELL TELEPHONE COMPANY, DBA AT&T MICHIGAN","27300 Gratiot Ave, Roseville, MI 48066",,42.4968831,-82.9359547,"[-82.9359547, 42.4968831]","Michigan Bell Telephone Company, DBA AT&T Michigan",Roseville,Macomb,Unknown,Unknown
 N8011,"MICHIGAN BELL TELEPHONE COMPANY, DBA AT&T MICHIGAN","221 N Washington Square, Lansing, MI 48933",MINOR,42.7352696,-84.552849,"[-84.552849, 42.7352696]","Michigan Bell Telephone Company, DBA AT&T Michigan",Lansing,Ingham,True Minor Source,True Minor
 N8012,"MICHIGAN BELL TELEPHONE COMPANY, DBA AT&T MICHIGAN","114 Division Ave, Grand Rapids, MI 49503",MINOR,42.9658522,-85.6674931,"[-85.6674931, 42.9658522]","Michigan Bell Telephone Company, DBA AT&T Michigan",Grand Rapids,Kent,True Minor Source,True Minor
-N8013,"MICHIGAN BELL TELEPHONE COMPANY, DBA AT&T MICHIGAN","54 N Mill St, Pontiac, MI 48342",,42.6387817,-83.28998159999999,"[-83.28998159999999, 42.6387817]","Michigan Bell Telephone Company, DBA AT&T Michigan",Pontiac,Oakland,Unknown,Unknown
+N8013,"MICHIGAN BELL TELEPHONE COMPANY, DBA AT&T MICHIGAN","54 N Mill St, Pontiac, MI 48342",MINOR,42.6387817,-83.28998159999999,"[-83.28998159999999, 42.6387817]","Michigan Bell Telephone Company, DBA AT&T Michigan",Pontiac,Oakland,True Minor Source,True Minor
 N8014,AT&T,"1145 Rochester Rd, Troy, MI 48083",MINOR,42.544111,-83.135093,"[-83.135093, 42.544111]",AT&T,Troy,Oakland,True Minor Source,True Minor
 N8015,NEWBERRY REDI-MIX INC,"W17317 Us-2, Gould City, MI 49838",MINOR,46.1010848,-85.7017255,"[-85.7017255, 46.1010848]",Newberry Redi-Mix Inc,Gould City,Mackinac,True Minor Source,True Minor
 N8016,DIAMOND RACING PRODUCTS,"23003 Diamond Dr, Clinton Twp, MI 48035",MINOR,42.5592524,-82.8827287,"[-82.8827287, 42.5592524]",Diamond Racing Products,Clinton Twp,Macomb,True Minor Source,True Minor
@@ -8304,7 +8304,7 @@ P1142,ST. MARYS CEMENT INC.,"9333 Dearborn Street, Detroit, MI 48209",MINOR,42.2
 P1143,WEBASTO ROOF SYSTEMS,"14200 North Haggerty Road, Plymouth, MI 48170",MINOR,42.384136,-83.445244,"[-83.445244, 42.384136]",Webasto Roof Systems,Plymouth,Wayne,True Minor Source,True Minor
 P1144,"CARDINAL AGGREGATES, PORTABLE TROMMEL","7555 Whiteford Road, Ottawa Lake, MI 49267",,41.7511572,-83.66697099999999,"[-83.66697099999999, 41.7511572]","Cardinal Aggregates, Portable Trommel",Ottawa Lake,Monroe,Unknown,Unknown
 B2868,FORD NEW HOLLAND,"2500 East Maple Road, Troy, MI 48083",MINOR,42.5488369,-83.0975066,"[-83.0975066, 42.5488369]",Ford New Holland,Troy,Oakland,True Minor Source,True Minor
-P1145,"ALTA CREMATION & SERVICES, INC.","13425 Capital Street, Oak Park, MI 48076",,42.4544875,-83.1806008,"[-83.1806008, 42.4544875]","Alta Cremation & Services, Inc.",Oak Park,Oakland,Unknown,Unknown
+P1145,"ALTA CREMATION & SERVICES, INC.","13425 Capital Street, Oak Park, MI 48076",MINOR,42.4544875,-83.1806008,"[-83.1806008, 42.4544875]","Alta Cremation & Services, Inc.",Oak Park,Oakland,True Minor Source,True Minor
 P1146,"WILKINSON MINERALS, LLC","101 Picard Street, Bay City, MI 48091",SM OPT OUT,43.610636,-83.863383,"[-83.863383, 43.610636]","Wilkinson Minerals, LLC",Bay City,Bay,Synthetic Minor Source,Synthetic Minor
 B4158,"EAST LAWN MEMORY GARDENS, INC","2400 Bennett Road, Okemos, MI 48864",MINOR,42.69922469999999,-84.43705829999999,"[-84.43705829999999, 42.69922469999999]","East Lawn Memory Gardens, Inc",Okemos,Ingham,True Minor Source,True Minor
 P1147,"ST. MARY'S CEMENT, INC.","9333 Dearborn Street, Detroit, MI 48001",,42.286784,-83.1350885,"[-83.1350885, 42.286784]","St. Mary's Cement, Inc.",Detroit,Wayne,Unknown,Unknown
@@ -8321,7 +8321,7 @@ P1156,SPARKS BELTING COMPANY,"5005 Kraft Avenue, Grand Rapids, MI 49512",SM OPT 
 P1157,"BRIGHTMARK WILLOW POINT RNG, LLC","5301 Flannigan Road, Orleans, MI 48886",,43.0631384,-85.11532299999999,"[-85.11532299999999, 43.0631384]","Brightmark Willow Point Rng, LLC",Orleans,Ionia,Unknown,Unknown
 P1158,"BRIGHTMARK SUNRYZ RNG, LLC","8460 West Mulberry Road, Morenci, MI 49256",,41.7404969,-84.1848801,"[-84.1848801, 41.7404969]","Brightmark Sunryz Rng, LLC",Morenci,Lenawee,Unknown,Unknown
 P1159,"BRIGHTMARK RED ARROW RNG, LLC","69444 County Road 687, Hartford, MI 48063",MINOR,42.2067051,-86.1666876,"[-86.1666876, 42.2067051]","Brightmark Red Arrow Rng, LLC",Hartford,Van Buren,True Minor Source,True Minor
-P1160,KRAUSE VETERINARY CLINIC,"72025 North Avenue, Armada, MI 48005",,42.8291343,-82.887152,"[-82.887152, 42.8291343]",Krause Veterinary Clinic,Armada,Macomb,Unknown,Unknown
+P1160,KRAUSE VETERINARY CLINIC,"72025 North Avenue, Armada, MI 48005",MINOR,42.8291343,-82.887152,"[-82.887152, 42.8291343]",Krause Veterinary Clinic,Armada,Macomb,True Minor Source,True Minor
 P1161,"KEMIN INDUSTRIES, INC.","14925 Galleon Court, Plymouth, MI 48170",MINOR,42.389765,-83.51399099999999,"[-83.51399099999999, 42.389765]","Kemin Industries, Inc.",Plymouth,Wayne,True Minor Source,True Minor
 P1162,SUPERIOR ASPHALT,"669 Century Ave Sw, Grand Rapids, MI 49503",MINOR,42.950777,-85.6748298,"[-85.6748298, 42.950777]",Superior Asphalt,Grand Rapids,Kent,True Minor Source,True Minor
 P1163,"GROUND EFFECTS, LLC","2501 Lippincott Blvd, Flint, MI 48503",SM OPT OUT,43.0039541,-83.65251049999999,"[-83.65251049999999, 43.0039541]","Ground Effects, LLC",Flint,Genesee,Synthetic Minor Source,Synthetic Minor
@@ -8334,7 +8334,7 @@ P1169,HERCULES CONCRETE LLC,"12225 Stephens Road, Warren, MI 48089",,42.4713083,
 P1170,YANFENG GLOBAL AUTOMOTIVE,"1833 Frenchtown Center Drive, Monroe, MI 48162",,41.9337624,-83.35055559999999,"[-83.35055559999999, 41.9337624]",Yanfeng Global Automotive,Monroe,Monroe,Unknown,Unknown
 P1171,AJAX MATERIALS CORPORATION,"5088 Energy Drive, Flint, MI 48505",SM OPT OUT,43.07805099999999,-83.668507,"[-83.668507, 43.07805099999999]",Ajax Materials Corporation,Flint,Genesee,Synthetic Minor Source,Synthetic Minor
 P1172,ELLSWORTH CUTTING TOOLS,"25190 Terra Industrial Drive, New Baltimore, MI 48051",MINOR,42.6489672,-82.8552037,"[-82.8552037, 42.6489672]",Ellsworth Cutting Tools,New Baltimore,Macomb,True Minor Source,True Minor
-P1173,OMIMEX ENERGY - WHITE RIVER PRODUCTION LLC,"11165 Chase Road, Montague, MI 49437",,43.4621475,-86.4277942,"[-86.4277942, 43.4621475]",Omimex Energy - White River Production LLC,Montague,Muskegon,Unknown,Unknown
+P1173,OMIMEX ENERGY - WHITE RIVER PRODUCTION LLC,"11165 Chase Road, Montague, MI 49437",MINOR,43.4621475,-86.4277942,"[-86.4277942, 43.4621475]",Omimex Energy - White River Production LLC,Montague,Muskegon,True Minor Source,True Minor
 P1174,"CLEAN TECH, INC.","620 Dundee Azalia, Dundee, MI 48131",MINOR,41.96420200000001,-83.65382749999999,"[-83.65382749999999, 41.96420200000001]","Clean Tech, Inc.",Dundee,Monroe,True Minor Source,True Minor
 P1175,UTILIMASTER CORPORATION,"1111 Mikesell Street, Charlotte, MI 48813",SM OPT OUT,42.5488627,-84.8494626,"[-84.8494626, 42.5488627]",Utilimaster Corporation,Charlotte,Eaton,Synthetic Minor Source,Synthetic Minor
 P1176,ALBRECHT SAND AND GRAVEL CO,"3790 West Sanilac Road, Snover, MI 48472",MINOR,43.4179244,-82.9818872,"[-82.9818872, 43.4179244]",Albrecht Sand and Gravel Co,Snover,Sanilac,True Minor Source,True Minor
@@ -8359,7 +8359,7 @@ P1194,RIVERSIDE ENERGY MICHIGAN,"10875 Geronimo Trail, Gaylord, MI 49735",MINOR,
 P1195,TENIBAC-GRAPHION INC,"35155 Automation Drive, Clinton Twp, MI 48035",,42.5575503,-82.88477019999999,"[-82.88477019999999, 42.5575503]",Tenibac-Graphion Inc,Clinton Twp,Macomb,Unknown,Unknown
 P1196,"ELMER'S CRAN AND DOZER, INC.","3600 Rennie School Road, Traverse City, MI 49685",,44.6865628,-85.6485838,"[-85.6485838, 44.6865628]","Elmer's Cran and Dozer, Inc.",Traverse City,Grand Traverse,Unknown,Unknown
 P1197,AGGREGATE INDUSTRIES - MANCHESTER,"6211 Ann Arbor Road, Dundee, MI 48131",MINOR,41.985484,-83.67504,"[-83.67504, 41.985484]",Aggregate Industries - Manchester,Dundee,Monroe,True Minor Source,True Minor
-P1198,THERMA SEAL INC.,"141 Peyerk Court, Romeo, MI 48065",,42.810455,-82.983256,"[-82.983256, 42.810455]",Therma Seal Inc.,Romeo,Macomb,Unknown,Unknown
+P1198,THERMA SEAL INC.,"141 Peyerk Court, Romeo, MI 48065",SM OPT OUT,42.810455,-82.983256,"[-82.983256, 42.810455]",Therma Seal Inc.,Romeo,Macomb,Synthetic Minor Source,Synthetic Minor
 P1199,MAGNA ELECTRIC VEHICLE STRUCTURES-MICHIGAN,"1811 South Range Road, Saint Clair, MI 48079",,42.852466,-82.495335,"[-82.495335, 42.852466]",Magna Electric Vehicle Structures-Michigan,Saint Clair,Saint Clair,Unknown,Unknown
 P1200,"CALLAHAN SUPPLY, LLC","5201 N Brown Rd, Lake City, MI 49663",,44.4194044,-85.31781339999999,"[-85.31781339999999, 44.4194044]","Callahan Supply, LLC",Lake City,Missaukee,Unknown,Unknown
 P1201,"JORDAN DEVELOPMENT COMPANY, LLC","20177 23 Mile Road, Marshall, MI 49068",,42.3653234,-84.84949259999999,"[-84.84949259999999, 42.3653234]","Jordan Development Company, LLC",Marshall,Calhoun,Unknown,Unknown
@@ -8378,7 +8378,7 @@ P1213,TECHNI-COMP COMPOSTING SPECIALIST,"4200 Dove Road, Port Huron, MI 48060",,
 P1214,TECHNI-COMP COMPOSTING SPECIALIST,"4152 Dove Road, Port Huron, MI 48060",,42.9511694,-82.484608,"[-82.484608, 42.9511694]",Techni-Comp Composting Specialist,Port Huron,Saint Clair,Unknown,Unknown
 P1215,"42 DEGREES PROCESSING, LLC","606 S Park Drive, Kalkaska, MI 49646",,44.7322869,-85.166204,"[-85.166204, 44.7322869]","42 Degrees Processing, LLC",Kalkaska,Kalkaska,Unknown,Unknown
 P1216,BRIDGING NORTH AMERICA,"1001 Springwells Court, Detroit, MI 48209",,42.29350609999999,-83.1027719,"[-83.1027719, 42.29350609999999]",Bridging North America,Detroit,Wayne,Unknown,Unknown
-P1217,AVANCEZ HIGHLAND PARK,"1430 E 10 Mile Road, Hazel Park, MI 48030",,42.475681,-83.0874226,"[-83.0874226, 42.475681]",Avancez Highland Park,Hazel Park,Oakland,Unknown,Unknown
+P1217,AVANCEZ HIGHLAND PARK,"1430 E 10 Mile Road, Hazel Park, MI 48030",SM OPT OUT,42.475681,-83.0874226,"[-83.0874226, 42.475681]",Avancez Highland Park,Hazel Park,Oakland,Synthetic Minor Source,Synthetic Minor
 P1218,"JAMES PETERSON SONS, INC.","1001 E Lead Street, Bessemer, MI 49911",MINOR,46.48031760000001,-90.03822509999999,"[-90.03822509999999, 46.48031760000001]","James Peterson Sons, Inc.",Bessemer,Gogebic,True Minor Source,True Minor
 P1219,BOLLE CONTRACTING,"14304 George Street, Newberry, MI 49868",MINOR,46.3443703,-85.51806959999999,"[-85.51806959999999, 46.3443703]",Bolle Contracting,Newberry,Luce,True Minor Source,True Minor
 P1220,GUTHRIE'S,"6550 M-37 North, Mesick, MI 49668",MINOR,44.432801,-85.695883,"[-85.695883, 44.432801]",Guthrie's,Mesick,Wexford,True Minor Source,True Minor
@@ -8394,7 +8394,7 @@ P1228,PITSCH COMPANIES,"675 Richmond Street Nw, Grand Rapids, MI 49504",,42.9932
 B7372,"ACCURATE HVAC (FORMERLY J & J SALES, INC.)","207 West Grand River Avenue, Bancroft, MI 48414",MINOR,42.8779783,-84.0671608,"[-84.0671608, 42.8779783]","Accurate Hvac (Formerly J & J Sales, Inc.)",Bancroft,Shiawassee,True Minor Source,True Minor
 B7299,CLARK ENGINEERING,"1470 South Mcmillan Street, Owosso, MI 48867",MINOR,42.9839392,-84.1549702,"[-84.1549702, 42.9839392]",Clark Engineering,Owosso,Shiawassee,True Minor Source,True Minor
 N0020,2ND CHANCE WOOD COMPANY (EX-SCHMELZER CORP.),"201 Vinewood, Durand, MI 48429",MINOR,42.9078951,-83.9828587,"[-83.9828587, 42.9078951]",2ND Chance Wood Company (Ex-Schmelzer Corp.),Durand,Shiawassee,True Minor Source,True Minor
-P1229,WEST MICHIGAN STRIPPING,"3237 Union Avenue Se, Wyoming, MI 49545",,42.9044572,-85.65235799999999,"[-85.65235799999999, 42.9044572]",West Michigan Stripping,Wyoming,Kent,Unknown,Unknown
+P1229,WEST MICHIGAN STRIPPING,"3237 Union Avenue Se, Wyoming, MI 49545",MINOR,42.9044572,-85.65235799999999,"[-85.65235799999999, 42.9044572]",West Michigan Stripping,Wyoming,Kent,True Minor Source,True Minor
 B1714,AUTOCAST INC,"4565 Spartan Industrial Drive Sw, Grandville, MI 49418",MINOR,42.881268,-85.7376781,"[-85.7376781, 42.881268]",Autocast Inc,Grandville,Kent,True Minor Source,True Minor
 P1230,ANTOLIN SHELBY,"52888 Shelby Parkway, Shelby Twp, MI 48315",,42.6834623,-83.0112509,"[-83.0112509, 42.6834623]",Antolin Shelby,Shelby Twp,Macomb,Unknown,Unknown
 P1232,"WILKAST, INC.","9100 Byron Commerce Drive, Byron Center, MI 49315",,42.7973781,-85.67058229999999,"[-85.67058229999999, 42.7973781]","Wilkast, Inc.",Byron Center,Kent,Unknown,Unknown
@@ -8410,7 +8410,7 @@ P1241,BLUEWATER THERMAL SOLUTIONS,"800 S Fair Avenue, Benton Harbor, MI 49022",M
 P1242,"HYDRO ALUMINUM METALS USA, LLC","Tbd Follett Drive, Cassopolis, MI 49031",,41.9139365,-85.9919695,"[-85.9919695, 41.9139365]","Hydro Aluminum Metals USA, LLC",Cassopolis,Cass,Unknown,Unknown
 P1243,"21ST CENTURY SALVAGE, INC.","2001 15 Stret, Detroit, MI 48216",,42.3285129,-83.0778356,"[-83.0778356, 42.3285129]","21St Century Salvage, Inc.",Detroit,Washtenaw,Unknown,Unknown
 P1244,NLB CORPORATION,"51701 Grand River Avenue, Wixom, MI 48393",,42.49885769999999,-83.5597171,"[-83.5597171, 42.49885769999999]",Nlb Corporation,Wixom,Oakland,Unknown,Unknown
-P1245,"FAITHFUL COMPANION MEMORIALS, INC.","1909 Thunderbird Street, Troy, MI 48084",,42.5530687,-83.15493909999999,"[-83.15493909999999, 42.5530687]","Faithful Companion Memorials, Inc.",Troy,Oakland,Unknown,Unknown
+P1245,"FAITHFUL COMPANION MEMORIALS, INC.","1909 Thunderbird Street, Troy, MI 48084",MINOR,42.5530687,-83.15493909999999,"[-83.15493909999999, 42.5530687]","Faithful Companion Memorials, Inc.",Troy,Oakland,True Minor Source,True Minor
 P1246,QUICK-SAV FOOD STORES/BEACON & BRIDGE MARKETS,"111/109 North Bridge Street, Linden, MI 48451",,42.817616,-83.7826243,"[-83.7826243, 42.817616]",Quick-Sav Food Stores/Beacon & Bridge Markets,Linden,Genesee,Unknown,Unknown
 P1247,CONTOUR DEVELOPMENT LLC,"21500 Northwestern Highway, Southfield, MI 48075",MINOR,42.4510715,-83.2047516,"[-83.2047516, 42.4510715]",Contour Development LLC,Southfield,Oakland,True Minor Source,True Minor
 P1248,MICHIGAN SOUTH CENTRAL,"609 Jonesville Road, Coldwater, MI 49036",,41.9854215,-84.95000519999999,"[-84.95000519999999, 41.9854215]",Michigan South Central,Coldwater,Branch,Unknown,Unknown
@@ -8439,5 +8439,5 @@ P1270,FERROUS PROCESSING & TRADING CO,"3651 Wyoming Avenue, Dearborn, MI 48120",
 N2506,DAVIS CARTAGE COMPANY,"490 S Chestnut Street, Owosso, MI 48867",MINOR,42.99449560000001,-84.19653819999999,"[-84.19653819999999, 42.99449560000001]",Davis Cartage Company,Owosso,Shiawassee,True Minor Source,True Minor
 N1349,STASH VENTURES,"1370 East South Street, Owosso, MI 48867",MINOR,42.982737,-84.15651,"[-84.15651, 42.982737]",Stash Ventures,Owosso,Shiawassee,True Minor Source,True Minor
 P1271,US ARMY CORPS OF ENGINEERS,"477 Michigan Ave, Detroit, MI 48226",,42.3311438,-83.05316959999999,"[-83.05316959999999, 42.3311438]",(US) Army Corps of Engineers,Detroit,Wayne,Unknown,Unknown
-P1272,MONTAGUE METAL PRODUCTS,"4101 W Fruitvaled Road, Montague, MI 49437",,43.439359,-86.343254,"[-86.343254, 43.439359]",Montague Metal Products,Montague,Muskegon,Unknown,Unknown
+P1272,MONTAGUE METAL PRODUCTS,"4101 W Fruitvaled Road, Montague, MI 49437",MINOR,43.439359,-86.343254,"[-86.343254, 43.439359]",Montague Metal Products,Montague,Muskegon,True Minor Source,True Minor
 P1273,ITW DRAWFORM,"60 E 48Th Street Central Ave, Holland, MI 49423",,42.7540953,-86.1049444,"[-86.1049444, 42.7540953]",ITW Drawform,Holland,Allegan,Unknown,Unknown
