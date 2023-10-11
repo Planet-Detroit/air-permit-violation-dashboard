@@ -235,14 +235,14 @@ KERRY,<a href='?srn=P0787' target='_self'>KERRY</a>,Kent,True Minor,P0787,2.0,20
 CONSUMERS ENERGY CO. - JACKSON GENERATING STATION,<a href='?srn=N6626' target='_self'>CONSUMERS ENERGY CO. - JACKSON GENERATING STATION</a>,Jackson,Major,N6626,2.0,2022-12-15
 FLINT WATER POLLUTION CONTROL FACILITY,<a href='?srn=B1598' target='_self'>FLINT WATER POLLUTION CONTROL FACILITY</a>,Genesee,True Minor,B1598,2.0,2018-08-14
 CENTRAL ASPHALT INC.,<a href='?srn=B1620' target='_self'>CENTRAL ASPHALT INC.</a>,Isabella,Synthetic Minor,B1620,2.0,2022-12-13
-"ALTA CREMATION & SERVICES, INC.","<a href='?srn=P1145' target='_self'>ALTA CREMATION & SERVICES, INC.</a>",Oakland,Unknown,P1145,2.0,2023-07-11
+"ALTA CREMATION & SERVICES, INC.","<a href='?srn=P1145' target='_self'>ALTA CREMATION & SERVICES, INC.</a>",Oakland,True Minor,P1145,2.0,2023-07-11
 PIONEER METAL FINISHING - STEPHENS ROAD,<a href='?srn=N6388' target='_self'>PIONEER METAL FINISHING - STEPHENS ROAD</a>,Macomb,Synthetic Minor,N6388,2.0,2022-11-30
 WEBER SAND & GRAVEL INC.-NORTH BRANCH,<a href='?srn=P0539' target='_self'>WEBER SAND & GRAVEL INC.-NORTH BRANCH</a>,Lapeer,True Minor,P0539,2.0,2023-07-12
 WOLVERINE SCRAP METAL,<a href='?srn=P0920' target='_self'>WOLVERINE SCRAP METAL</a>,Kent,True Minor,P0920,2.0,2022-11-30
 MOLON ASPHALT INC.,<a href='?srn=P0206' target='_self'>MOLON ASPHALT INC.</a>,Benzie,Synthetic Minor,P0206,2.0,2022-11-10
 NORTHFIELD MANUFACTURING,<a href='?srn=N1019' target='_self'>NORTHFIELD MANUFACTURING</a>,Wayne,True Minor,N1019,2.0,2022-10-26
 CENTURY FOUNDRY,<a href='?srn=N7714' target='_self'>CENTURY FOUNDRY</a>,Muskegon,True Minor,N7714,2.0,2023-07-21
-"MICHIGAN BELL TELEPHONE COMPANY, DBA AT&T MICHIGAN","<a href='?srn=N8013' target='_self'>MICHIGAN BELL TELEPHONE COMPANY, DBA AT&T MICHIGAN</a>",Oakland,Unknown,N8013,2.0,2022-10-19
+"MICHIGAN BELL TELEPHONE COMPANY, DBA AT&T MICHIGAN","<a href='?srn=N8013' target='_self'>MICHIGAN BELL TELEPHONE COMPANY, DBA AT&T MICHIGAN</a>",Oakland,True Minor,N8013,2.0,2022-10-19
 DGP INC.,<a href='?srn=N2383' target='_self'>DGP INC.</a>,Sanilac,Major,N2383,2.0,2022-10-18
 "FLETCHER PRECISION MACHINE PAINTING, INC.","<a href='?srn=P0790' target='_self'>FLETCHER PRECISION MACHINE PAINTING, INC.</a>",Macomb,True Minor,P0790,3.0,2023-10-02
 LEADING EDGE FIBERGLASS POOL,<a href='?srn=N7982' target='_self'>LEADING EDGE FIBERGLASS POOL</a>,Genesee,Synthetic Minor,N7982,2.0,2023-08-04
@@ -250,7 +250,7 @@ SOUTH KENT LANDFILL,<a href='?srn=N1324' target='_self'>SOUTH KENT LANDFILL</a>,
 SUMMIT INDUSTRIAL COATINGS,<a href='?srn=N0931' target='_self'>SUMMIT INDUSTRIAL COATINGS</a>,Berrien,True Minor,N0931,2.0,2023-07-10
 WOODLAND MEADOWS RDF,<a href='?srn=M4449' target='_self'>WOODLAND MEADOWS RDF</a>,Wayne,Major,M4449,2.0,2023-07-07
 CORTEVA AGRISCIENCE LLC,<a href='?srn=P1028' target='_self'>CORTEVA AGRISCIENCE LLC</a>,Midland,Megasite,P1028,2.0,2023-01-27
-THERMA SEAL INC.,<a href='?srn=P1198' target='_self'>THERMA SEAL INC.</a>,Macomb,Unknown,P1198,2.0,2023-01-31
+THERMA SEAL INC.,<a href='?srn=P1198' target='_self'>THERMA SEAL INC.</a>,Macomb,Synthetic Minor,P1198,2.0,2023-01-31
 RICHARD-ALLAN SCIENTIFIC,<a href='?srn=N7418' target='_self'>RICHARD-ALLAN SCIENTIFIC</a>,Kalamazoo,Synthetic Minor,N7418,2.0,2023-06-06
 "CUSTOM CRUSHING & RECYCLE, INC.","<a href='?srn=P0828' target='_self'>CUSTOM CRUSHING & RECYCLE, INC.</a>",Kent,True Minor,P0828,2.0,2023-05-01
 SHOOK ASPHALT CO. INC.,<a href='?srn=N7436' target='_self'>SHOOK ASPHALT CO. INC.</a>,Montcalm,Synthetic Minor,N7436,2.0,2023-05-01
@@ -502,7 +502,7 @@ PORT CITY ARCHITECTURAL SIGNAGE,<a href='?srn=P0542' target='_self'>PORT CITY AR
 PIONEER METAL FINISHING INDUSTRIAL HWY,<a href='?srn=N5747' target='_self'>PIONEER METAL FINISHING INDUSTRIAL HWY</a>,Macomb,Synthetic Minor,N5747,1.0,2020-03-17
 "VERRETTE MATERIALS, INC","<a href='?srn=P0950' target='_self'>VERRETTE MATERIALS, INC</a>",Menominee,True Minor,P0950,1.0,2022-09-14
 NORTHLAND CASTINGS CORP,<a href='?srn=N6310' target='_self'>NORTHLAND CASTINGS CORP</a>,Oceana,True Minor,N6310,1.0,2022-08-12
-KRAUSE VETERINARY CLINIC,<a href='?srn=P1160' target='_self'>KRAUSE VETERINARY CLINIC</a>,Macomb,Unknown,P1160,1.0,2022-08-16
+KRAUSE VETERINARY CLINIC,<a href='?srn=P1160' target='_self'>KRAUSE VETERINARY CLINIC</a>,Macomb,True Minor,P1160,1.0,2022-08-16
 BERNIER CAST METAL INC,<a href='?srn=N5324' target='_self'>BERNIER CAST METAL INC</a>,Saginaw,True Minor,N5324,1.0,2022-08-16
 EDW C LEVY CO PLANT 3,<a href='?srn=B4364' target='_self'>EDW C LEVY CO PLANT 3</a>,Wayne,Major,B4364,1.0,2022-08-17
 "STEALTHCRAFT BOATS, LLC","<a href='?srn=P1202' target='_self'>STEALTHCRAFT BOATS, LLC</a>",Lake,True Minor,P1202,1.0,2022-08-22
@@ -529,7 +529,7 @@ TRINSEO LLC,<a href='?srn=P1025' target='_self'>TRINSEO LLC</a>,Midland,Megasite
 IMBRANDED,<a href='?srn=N2528' target='_self'>IMBRANDED</a>,Oakland,True Minor,N2528,1.0,2022-12-14
 CONSUMERS ENERGY - MUSKEGON RIVER COMPRESSOR STAT,<a href='?srn=N2901' target='_self'>CONSUMERS ENERGY - MUSKEGON RIVER COMPRESSOR STAT</a>,Clare,Major,N2901,1.0,2022-12-15
 "ACCESS BUSINESS GROUP, LLC","<a href='?srn=A2402' target='_self'>ACCESS BUSINESS GROUP, LLC</a>",Kent,Synthetic Minor,A2402,2.0,2023-10-04
-"FAITHFUL COMPANION MEMORIALS, INC.","<a href='?srn=P1245' target='_self'>FAITHFUL COMPANION MEMORIALS, INC.</a>",Oakland,Unknown,P1245,1.0,2023-01-06
+"FAITHFUL COMPANION MEMORIALS, INC.","<a href='?srn=P1245' target='_self'>FAITHFUL COMPANION MEMORIALS, INC.</a>",Oakland,True Minor,P1245,1.0,2023-01-06
 ARVRON INC,<a href='?srn=N5296' target='_self'>ARVRON INC</a>,Kent,Synthetic Minor,N5296,1.0,2023-01-13
 "ELMER'S CRAN AND DOZER, INC.","<a href='?srn=P1196' target='_self'>ELMER'S CRAN AND DOZER, INC.</a>",Grand Traverse,Unknown,P1196,1.0,2022-08-12
 HUDSONVILLE CREAMERY,<a href='?srn=N2499' target='_self'>HUDSONVILLE CREAMERY</a>,Allegan,Unknown,N2499,1.0,2022-08-11
@@ -544,7 +544,7 @@ SUPERIOR FABRICATION LLC,<a href='?srn=N5588' target='_self'>SUPERIOR FABRICATIO
 ANDREWS UNIVERSITY,<a href='?srn=C5728' target='_self'>ANDREWS UNIVERSITY</a>,Berrien,True Minor,C5728,1.0,2022-05-09
 KELLOGG USA INC.,<a href='?srn=A0563' target='_self'>KELLOGG USA INC.</a>,Calhoun,Synthetic Minor,A0563,1.0,2022-05-09
 TENNECO AUTOMOTIVE- MARSHALL,<a href='?srn=N3111' target='_self'>TENNECO AUTOMOTIVE- MARSHALL</a>,Calhoun,Synthetic Minor,N3111,1.0,2022-05-09
-MONTAGUE METAL PRODUCTS,<a href='?srn=P1272' target='_self'>MONTAGUE METAL PRODUCTS</a>,Muskegon,Unknown,P1272,1.0,2022-05-10
+MONTAGUE METAL PRODUCTS,<a href='?srn=P1272' target='_self'>MONTAGUE METAL PRODUCTS</a>,Muskegon,True Minor,P1272,1.0,2022-05-10
 FLAT ROCK METAL INC,<a href='?srn=M4768' target='_self'>FLAT ROCK METAL INC</a>,Wayne,Synthetic Minor,M4768,1.0,2022-05-11
 "TPI PETROLEUM, INC. ROOSEVELT SITE","<a href='?srn=N6624' target='_self'>TPI PETROLEUM, INC. ROOSEVELT SITE</a>",Isabella,True Minor,N6624,1.0,2022-05-12
 GREAT LAKES WATER AUTHORITY - SOUTHWEST PLANT,<a href='?srn=K5497' target='_self'>GREAT LAKES WATER AUTHORITY - SOUTHWEST PLANT</a>,Wayne,Synthetic Minor,K5497,1.0,2022-05-13
@@ -609,7 +609,7 @@ FOREST LAWN LANDFILL,<a href='?srn=N2407' target='_self'>FOREST LAWN LANDFILL</a
 HARBOR FOAM,<a href='?srn=N7754' target='_self'>HARBOR FOAM</a>,Kent,Major,N7754,1.0,2023-03-31
 TRIBAR TECHNOLOGIES INC (PLANT 4),<a href='?srn=N7809' target='_self'>TRIBAR TECHNOLOGIES INC (PLANT 4)</a>,Oakland,True Minor,N7809,1.0,2023-04-06
 WHITEFEATHER LANDFILL,<a href='?srn=N5985' target='_self'>WHITEFEATHER LANDFILL</a>,Bay,Major,N5985,1.0,2023-04-11
-AVANCEZ HIGHLAND PARK,<a href='?srn=P1217' target='_self'>AVANCEZ HIGHLAND PARK</a>,Oakland,Unknown,P1217,1.0,2023-04-12
+AVANCEZ HIGHLAND PARK,<a href='?srn=P1217' target='_self'>AVANCEZ HIGHLAND PARK</a>,Oakland,Synthetic Minor,P1217,1.0,2023-04-12
 DECC CO INC,<a href='?srn=N3751' target='_self'>DECC CO INC</a>,Kent,Synthetic Minor,N3751,1.0,2023-04-17
 CHAMPAGNE & MARX EXCAVATING  INC,<a href='?srn=N5531' target='_self'>CHAMPAGNE & MARX EXCAVATING  INC</a>,Saginaw,True Minor,N5531,1.0,2023-04-19
 DEPOR INDUSTRIES,<a href='?srn=N7599' target='_self'>DEPOR INDUSTRIES</a>,Oakland,Synthetic Minor,N7599,1.0,2023-04-25
@@ -651,7 +651,7 @@ ELLSWORTH CUTTING TOOLS,<a href='?srn=P1172' target='_self'>ELLSWORTH CUTTING TO
 TUSCOLA ENERGY - WALAT 4-26 AND 5-26,<a href='?srn=P0388' target='_self'>TUSCOLA ENERGY - WALAT 4-26 AND 5-26</a>,Tuscola,True Minor,P0388,1.0,2021-03-16
 WHITEHALL PRODUCTS LTD,<a href='?srn=B5169' target='_self'>WHITEHALL PRODUCTS LTD</a>,Muskegon,Synthetic Minor,B5169,1.0,2022-05-04
 SEBEWAING LIGHT AND WATER DEPT.,<a href='?srn=N2726' target='_self'>SEBEWAING LIGHT AND WATER DEPT.</a>,Huron,Synthetic Minor,N2726,1.0,2021-03-23
-OMIMEX ENERGY - WHITE RIVER PRODUCTION LLC,<a href='?srn=P1173' target='_self'>OMIMEX ENERGY - WHITE RIVER PRODUCTION LLC</a>,Muskegon,Unknown,P1173,1.0,2021-03-29
+OMIMEX ENERGY - WHITE RIVER PRODUCTION LLC,<a href='?srn=P1173' target='_self'>OMIMEX ENERGY - WHITE RIVER PRODUCTION LLC</a>,Muskegon,True Minor,P1173,1.0,2021-03-29
 OMIMEX ENERGY- CLAYBANKS 2 FACILITY,<a href='?srn=N2096' target='_self'>OMIMEX ENERGY- CLAYBANKS 2 FACILITY</a>,Oceana,Synthetic Minor,N2096,1.0,2021-03-29
 GREAT LAKES RUBBER CO INC,<a href='?srn=B8919' target='_self'>GREAT LAKES RUBBER CO INC</a>,Oakland,Synthetic Minor,B8919,1.0,2021-04-16
 QUAKER HOUGHTON,<a href='?srn=A7513' target='_self'>QUAKER HOUGHTON</a>,Wayne,True Minor,A7513,1.0,2021-04-29
@@ -708,7 +708,7 @@ ADM GRAIN COMPANY - WEBBERVILLE,<a href='?srn=B8863' target='_self'>ADM GRAIN CO
 PLASTIC PLATE INC,<a href='?srn=B6138' target='_self'>PLASTIC PLATE INC</a>,Kent,Synthetic Minor,B6138,1.0,2021-10-08
 A LINDBERG & SONS INC #48-99,<a href='?srn=N6717' target='_self'>A LINDBERG & SONS INC #48-99</a>,Marquette,True Minor,N6717,1.0,2021-10-08
 OAKLAND UNIVERSITY,<a href='?srn=N3422' target='_self'>OAKLAND UNIVERSITY</a>,Oakland,Synthetic Minor,N3422,1.0,2021-10-12
-WEST MICHIGAN STRIPPING,<a href='?srn=P1229' target='_self'>WEST MICHIGAN STRIPPING</a>,Kent,Unknown,P1229,1.0,2021-10-21
+WEST MICHIGAN STRIPPING,<a href='?srn=P1229' target='_self'>WEST MICHIGAN STRIPPING</a>,Kent,True Minor,P1229,1.0,2021-10-21
 NEXTEER AUTOMOTIVE CORPORATION,<a href='?srn=A6175' target='_self'>NEXTEER AUTOMOTIVE CORPORATION</a>,Saginaw,Major,A6175,1.0,2021-10-26
 "HOUND RESOURCES, FREDERIC 15 GAS PLANT","<a href='?srn=B7222' target='_self'>HOUND RESOURCES, FREDERIC 15 GAS PLANT</a>",Crawford,Major,B7222,1.0,2021-11-08
 HEMLOCK SEMICONDUCTOR OPERATIONS LLC,<a href='?srn=B2644' target='_self'>HEMLOCK SEMICONDUCTOR OPERATIONS LLC</a>,Saginaw,Major,B2644,1.0,2021-11-10
@@ -767,4 +767,4 @@ G-M WOOD PRDUCTS,<a href='?srn=P0477' target='_self'>G-M WOOD PRDUCTS</a>,Newayg
 DOUGLAS MARINE,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N1263' target='_blank'>DOUGLAS MARINE</a>,Allegan,True Minor,N1263,1.0,2023-09-23
 AUSTEMPER INC.,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N7417' target='_blank'>AUSTEMPER INC.</a>,Macomb,True Minor,N7417,1.0,2023-09-28
 METALTEC STEEL ABRASIVE CO,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N1022' target='_blank'>METALTEC STEEL ABRASIVE CO</a>,Wayne,True Minor,N1022,1.0,2023-09-29
-LAPEER COUNTY HEALTH DEPT,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N5115' target='_blank'>LAPEER COUNTY HEALTH DEPT</a>,Lapeer,Unknown,N5115,1.0,2023-10-09
+LAPEER COUNTY ANIMAL CONTROL,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N5115' target='_blank'>LAPEER COUNTY HEALTH DEPT</a>,Lapeer,True Minor,N5115,1.0,2023-10-09
