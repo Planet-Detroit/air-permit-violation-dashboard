@@ -79,6 +79,28 @@ document.addEventListener('click',function(e){
 			// button.textContent = 'Share Link';
 		}, 3500); // Reset the button text after 1.5 seconds
 			}
+		if (e.target.id === 'pdf-copy') {
+			var button = e.target;
+			var copiedURL = button.getAttribute('source-link');
+			navigator.clipboard.writeText(copiedURL);
+	
+			button.textContent = 'Copied!';
+			setTimeout(function () {
+				button.innerHTML = '<i class="fa-solid fa-file-pdf"></i> Copy PDF Link'
+				// button.textContent = 'Share Link';
+			}, 3500); // Reset the button text after 1.5 seconds
+				}
+		if (e.target.id === 'link-copy') {
+			var button = e.target;
+			var copiedURL = button.getAttribute('source-link');
+			navigator.clipboard.writeText(copiedURL);
+	
+			button.textContent = 'Copied!';
+			setTimeout(function () {
+				button.innerHTML = '<i class="fa-solid fa-map-pin"></i> Copy Facility Map Link'
+				// button.textContent = 'Share Link';
+			}, 3500); // Reset the button text after 1.5 seconds
+				}
 })
 function updateArticle(e) {
 	let feature = e.features[0]
@@ -436,16 +458,54 @@ epaModal.style.display = "none";
 }
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    const showPopupButtons = document.querySelectorAll('.showPopupButton');
+    const closeShareButtons = document.querySelectorAll('.closeShareButton');
 
+    showPopupButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            const targetPopupId = button.getAttribute('data-popup');
+            const sharePopup = document.getElementById(targetPopupId);
+            if (sharePopup) {
+                sharePopup.style.display = 'block';
+            }
+        });
+    });
+
+    closeShareButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            const targetPopupId = button.getAttribute('data-popup');
+            const sharePopup = document.getElementById(targetPopupId);
+
+            if (sharePopup) {
+                sharePopup.style.display = 'none';
+            }
+        });
+    });
+
+    // Close the popup if the user clicks outside of it
+    window.addEventListener('click', function (event) {
+        showPopupButtons.forEach(function (button) {
+            const targetPopupId = button.getAttribute('data-popup');
+            const sharePopup = document.getElementById(targetPopupId);
+
+            if (event.target === sharePopup) {
+                sharePopup.style.display = 'none';
+            }
+        });
+    });
+});
 
 let newViolations = violationData.features
 let violationDivs = ``
-
+let item_num = 0
 newViolations.forEach((item) => {
+item_num = item_num+1
 let epa_class = item.properties.group_name
 let group_id = item.properties.group_id
 let facility_name = item.properties.facility_name
 let date_str = item.properties.date_str
+var date_str_tweet = date_str.replace(", 2023","").replace(/ /g, '%20')
 let violation_comment_list = item.properties.comment_list
 let doc_url = item.properties.doc_url
 var geom = item.geometry.coordinates
@@ -453,6 +513,9 @@ var lat = item.properties.lat
 var long = item.properties.long
 var id = item.properties.srn
 var county = item.properties.county
+var facility_name_tweet = facility_name.replace(/ /g, '%20')
+var facility_url = `https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=${id}`
+
 // let violation_comments = "<ul><li>" + violation_comment_list.join("</li><li>") + "</li></ul>"
 
 // Getting ready to count characters
@@ -497,19 +560,17 @@ function limitCharacterLength(inputString, maxLength) {
 	  return `<div id="map-link"><p>${truncatedString}${readMore}</p>`;
 	}
   }
-  
-// // Now let's limit the character length if it's over 500 characters
-// function limitCharacterLength(inputString, maxLength) {
-// if (inputString.length > maxLength) {
-//     // 
-// 	var readMore = `...<a class="read-more" data-lat="${lat}" data-long="${long}" data-id="${id}">[Read more]</a></p>`
-// 	return `<div id="map-link"><p>` + inputString.slice(0, maxLength)+ readMore; // Truncate the string to the desired length
-// }
-// return `<p>`+ inputString + `</p><div id="map-link">`; // If the string is already within the limit, return it as is
-// }
+
+var share_button = `<button class="showPopupButton" data-popup="popup${item_num}"><i class="fa-solid fa-arrow-up-from-bracket"></i></button>`
+var tweet = `<a class="share-icon" href="https://twitter.com/intent/tweet?text=${facility_name_tweet}%20received%20an%20air%20permit%20violation%20notice%20on%20${date_str_tweet}.%20View%20it%20here%20via%20@PlanetDetroit.%20${facility_url}" target="_blank"><i class="fa-brands fa-square-x-twitter fa-xl"></i></a>`
+var fb = `<a class="share-icon" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fplanet-detroit.github.io%2Fair-permit-violation-dashboard%2F?srn=${id}" target="_blank"><i class="fa-brands fa-facebook fa-lg"></i></a>`
+var email = `<a class="share-icon" href="mailto:?subject=${facility_name}'s newest violation notice&body=Description of the violation(s): %0D%0A ${"• "+ violation_comment_list.join("%0D%0A • ")} %0D%0A%0D%0A Violation Notice PDF:%0D%0A${doc_url} %0D%0A %0D%0A View ${facility_name}'s violation history since 2018: %0D%0A${facility_url}"><i class="fa-solid fa-paper-plane fa-lg"></i></a>`
+var pdf = `<button id="pdf-copy" source-link="${doc_url}"> <i class="fa-solid fa-file-pdf"></i> Copy PDF Link</button>`
+var link_copy = `<button id="link-copy" source-link="${facility_url}"> <i class="fa-solid fa-map-pin"></i> Copy Facility Map Link</button>`
+var share_popup = `<div id="popup${item_num}" class="share-modal"><div class="share-modal-content"><button class="closeShareButton" data-popup="popup${item_num}">x</button><br/><h4>Share this violation notice from</h4><h3>${facility_name}</hh3><br/><div class="social-share">${tweet}${fb}${email}</div><div class="link-share">${pdf}${link_copy}</div></div></div>`
+
 
 // // Limit the character length to 200 characters
-
 violation_comments = limitCharacterLength(violation_comments, maxLength);
 
 if (group_id == 4){
@@ -519,13 +580,14 @@ else {
 	var oneDivOpen = `<div class="one-vn"><div class="epa-class-${group_id}"><h3>${epa_class}</h3></div>`
 }
 
-var oneDivClose = `<div class="snippet"><h5>${county} County</h5><h1>${facility_name}</h1><a href="${doc_url}" target="_blank">${date_str}</a><img class="icon" src="img/doc-link.svg"/>${violation_comments}<a class="article" data-lat="${lat}" data-long="${long}" data-id="${id}">View on the map &#8594;</a></div></div></div>`
+var oneDivClose = `<div class="snippet"><h5>${county} County</h5><h1>${facility_name}</h1><a href="${doc_url}" target="_blank">${date_str}</a><img class="icon" src="img/doc-link.svg"/>${violation_comments}<a class="article" data-lat="${lat}" data-long="${long}" data-id="${id}">View on the map &#8594;</a></div></div><div class="share-container">${share_button}${share_popup}</div></div>`
 
 var oneDiv = oneDivOpen + oneDivClose
 
 violationDivs = violationDivs + oneDiv
 
 })
+
 
 document.getElementById("recent-violations").innerHTML = violationDivs
 
