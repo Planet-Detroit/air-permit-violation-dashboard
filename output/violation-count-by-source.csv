@@ -1,9 +1,9 @@
 facility_name,name_url,county,epa_class_simple,srn,violation_count,most_recent_vn
 "DETROIT RENEWABLE POWER, LLC","<a href='?srn=M4148' target='_self'>DETROIT RENEWABLE POWER, LLC</a>",Wayne,Major,M4148,35.0,2019-08-29
-"ARBOR HILLS LANDFILL, INC.","<a href='?srn=N2688' target='_self'>ARBOR HILLS LANDFILL, INC.</a>",Washtenaw,Major,N2688,31.0,2022-12-08
+"ARBOR HILLS LANDFILL, INC.","<a href='?srn=N2688' target='_self'>ARBOR HILLS LANDFILL, INC.</a>",Washtenaw,Major,N2688,32.0,2023-10-10
 CLEVELAND-CLIFFS STEEL CORPORATION DEARBORN WORKS,<a href='?srn=A8640' target='_self'>CLEVELAND-CLIFFS STEEL CORPORATION DEARBORN WORKS</a>,Wayne,Megasite,A8640,19.0,2023-10-06
 "EQ DETROIT, INC. (DBA US ECOLOGY - DETROIT SOUTH)","<a href='?srn=M4545' target='_self'>EQ DETROIT, INC. (DBA US ECOLOGY - DETROIT SOUTH)</a>",Wayne,Synthetic Minor,M4545,17.0,2023-02-10
-INDUSTRIAL METAL COATINGS INC,<a href='?srn=N5145' target='_self'>INDUSTRIAL METAL COATINGS INC</a>,Macomb,True Minor,N5145,14.0,2023-09-07
+INDUSTRIAL METAL COATINGS INC,<a href='?srn=N5145' target='_self'>INDUSTRIAL METAL COATINGS INC</a>,Macomb,True Minor,N5145,15.0,2023-10-23
 MICHIGAN SUGAR COMPANY - BAY CITY,<a href='?srn=B1493' target='_self'>MICHIGAN SUGAR COMPANY - BAY CITY</a>,Bay,Major,B1493,14.0,2023-06-26
 HOLCIM (US) INC. DBA LAFARGE ALPENA PLANT,<a href='?srn=B1477' target='_self'>HOLCIM (US) INC. DBA LAFARGE ALPENA PLANT</a>,Alpena,Major,B1477,12.0,2023-07-20
 EDW C LEVY CO PLANT 6,<a href='?srn=B4243' target='_self'>EDW C LEVY CO PLANT 6</a>,Wayne,Major,B4243,14.0,2023-10-06
@@ -82,7 +82,7 @@ DRAYTON IRON AND METAL CO,<a href='?srn=B5465' target='_self'>DRAYTON IRON AND M
 VIANT MEDICAL INC.,<a href='?srn=N0795' target='_self'>VIANT MEDICAL INC.</a>,Kent,True Minor,N0795,4.0,2019-10-29
 ROSEVILLE CRUSHED CONCRETE,<a href='?srn=N6658' target='_self'>ROSEVILLE CRUSHED CONCRETE</a>,Macomb,True Minor,N6658,4.0,2023-08-30
 KAWASAKI MOTORS CORP USA,<a href='?srn=P0677' target='_self'>KAWASAKI MOTORS CORP USA</a>,Kent,Major,P0677,4.0,2023-07-31
-INTERTAPE POLYMER GROUP,<a href='?srn=A6220' target='_self'>INTERTAPE POLYMER GROUP</a>,Saint Clair,Major,A6220,3.0,2023-07-18
+INTERTAPE POLYMER GROUP,<a href='?srn=A6220' target='_self'>INTERTAPE POLYMER GROUP</a>,Saint Clair,Major,A6220,4.0,2023-10-23
 CWC TEXTRON,<a href='?srn=B1909' target='_self'>CWC TEXTRON</a>,Muskegon,Major,B1909,3.0,2023-08-31
 JAGUAR ENERGY - WEXFORD 10 FACILITY,<a href='?srn=B5588' target='_self'>JAGUAR ENERGY - WEXFORD 10 FACILITY</a>,Wexford,Synthetic Minor,B5588,3.0,2021-11-08
 "ALUDYNE MONTAGUE, LLC","<a href='?srn=B1925' target='_self'>ALUDYNE MONTAGUE, LLC</a>",Muskegon,Synthetic Minor,B1925,3.0,2022-09-30
