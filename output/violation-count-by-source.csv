@@ -1,6 +1,6 @@
 facility_name,name_url,county,epa_class_simple,srn,violation_count,most_recent_vn
 "DETROIT RENEWABLE POWER, LLC","<a href='?srn=M4148' target='_self'>DETROIT RENEWABLE POWER, LLC</a>",Wayne,Major,M4148,35.0,2019-08-29
-"ARBOR HILLS LANDFILL, INC.","<a href='?srn=N2688' target='_self'>ARBOR HILLS LANDFILL, INC.</a>",Washtenaw,Major,N2688,32.0,2023-10-10
+"ARBOR HILLS LANDFILL, INC.","<a href='?srn=N2688' target='_self'>ARBOR HILLS LANDFILL, INC.</a>",Washtenaw,Major,N2688,33.0,2023-10-25
 CLEVELAND-CLIFFS STEEL CORPORATION DEARBORN WORKS,<a href='?srn=A8640' target='_self'>CLEVELAND-CLIFFS STEEL CORPORATION DEARBORN WORKS</a>,Wayne,Megasite,A8640,19.0,2023-10-06
 "EQ DETROIT, INC. (DBA US ECOLOGY - DETROIT SOUTH)","<a href='?srn=M4545' target='_self'>EQ DETROIT, INC. (DBA US ECOLOGY - DETROIT SOUTH)</a>",Wayne,Synthetic Minor,M4545,17.0,2023-02-10
 INDUSTRIAL METAL COATINGS INC,<a href='?srn=N5145' target='_self'>INDUSTRIAL METAL COATINGS INC</a>,Macomb,True Minor,N5145,15.0,2023-10-23
@@ -774,3 +774,6 @@ ROUSH INDUSTRIES,<a href='https://planet-detroit.github.io/air-permit-violation-
 BLUEWATER THERMAL SOLUTIONS,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=P1241' target='_blank'>BLUEWATER THERMAL SOLUTIONS</a>,Berrien,True Minor,P1241,1.0,2023-10-16
 SMITHS CREEK LANDFILL,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N6207' target='_blank'>SMITHS CREEK LANDFILL</a>,Saint Clair,Major,N6207,1.0,2023-10-25
 ASH STEVENS LLC,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N7519' target='_blank'>ASH STEVENS LLC</a>,Wayne,Synthetic Minor,N7519,1.0,2023-10-26
+"BRIGHTMARK WILLOW POINT RNG, LLC","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=P1157' target='_blank'>BRIGHTMARK WILLOW POINT RNG, LLC</a>",Ionia,Unknown,P1157,1.0,2023-10-27
+"BRIGHTMARK MEADOW ROCK RNG, LLC","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=P1152' target='_blank'>BRIGHTMARK MEADOW ROCK RNG, LLC</a>",Montcalm,Unknown,P1152,1.0,2023-10-27
+"BRIGHTMARK CASTOR RNG, LLC","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=P1125' target='_blank'>BRIGHTMARK CASTOR RNG, LLC</a>",Ottawa,Unknown,P1125,1.0,2023-10-27
