@@ -18,7 +18,7 @@ U S STEEL GREAT LAKES WORKS,<a href='?srn=A7809' target='_self'>U S STEEL GREAT 
 DECORATIVE PANELS INTERNATIONAL,<a href='?srn=B1476' target='_self'>DECORATIVE PANELS INTERNATIONAL</a>,Alpena,Major,B1476,8.0,2023-06-01
 HASTINGS MANUFACTURING COMPANY,<a href='?srn=A0171' target='_self'>HASTINGS MANUFACTURING COMPANY</a>,Barry,True Minor,A0171,8.0,2022-05-04
 "CRIMSON HOLDINGS, LLC","<a href='?srn=E8117' target='_self'>CRIMSON HOLDINGS, LLC</a>",Lenawee,True Minor,E8117,9.0,2023-09-28
-"MICHIGAN SUGAR COMPANY, CROSWELL FACTORY","<a href='?srn=B2876' target='_self'>MICHIGAN SUGAR COMPANY, CROSWELL FACTORY</a>",Sanilac,Major,B2876,7.0,2023-03-14
+"MICHIGAN SUGAR COMPANY, CROSWELL FACTORY","<a href='?srn=B2876' target='_self'>MICHIGAN SUGAR COMPANY, CROSWELL FACTORY</a>",Sanilac,Major,B2876,8.0,2023-10-31
 "GREAT LAKES CREMATION, INC.","<a href='?srn=N8339' target='_self'>GREAT LAKES CREMATION, INC.</a>",Oakland,True Minor,N8339,7.0,2022-12-08
 ST MARYS CEMENT CHARLEVOIX PLANT,<a href='?srn=B1559' target='_self'>ST MARYS CEMENT CHARLEVOIX PLANT</a>,Charlevoix,Major,B1559,7.0,2022-11-15
 "LUKAZCEK EXCAVATING AND DRAINAGE, LLC.","<a href='?srn=P0820' target='_self'>LUKAZCEK EXCAVATING AND DRAINAGE, LLC.</a>",Branch,True Minor,P0820,7.0,2022-05-23
@@ -45,7 +45,7 @@ BASF CORPORATION - CHEMICAL PLANTS,<a href='?srn=B4359' target='_self'>BASF CORP
 "RECONSERVE OF MICHIGAN, INC.","<a href='?srn=N8081' target='_self'>RECONSERVE OF MICHIGAN, INC.</a>",Calhoun,Synthetic Minor,N8081,6.0,2023-10-04
 "REAL ALLOY RECYCLING, LLC","<a href='?srn=N5957' target='_self'>REAL ALLOY RECYCLING, LLC</a>",Branch,Major,N5957,6.0,2023-10-19
 U S SILICA CO,<a href='?srn=A7757' target='_self'>U S SILICA CO</a>,Wayne,Synthetic Minor,A7757,5.0,2023-05-22
-MICHIGAN SUGAR COMPANY  -  SEBEWAING FACTORY,<a href='?srn=B2873' target='_self'>MICHIGAN SUGAR COMPANY  -  SEBEWAING FACTORY</a>,Huron,Major,B2873,5.0,2023-03-14
+MICHIGAN SUGAR COMPANY  -  SEBEWAING FACTORY,<a href='?srn=B2873' target='_self'>MICHIGAN SUGAR COMPANY  -  SEBEWAING FACTORY</a>,Huron,Major,B2873,6.0,2023-10-31
 PPI AEROSPACE,<a href='?srn=N6857' target='_self'>PPI AEROSPACE</a>,Macomb,Synthetic Minor,N6857,5.0,2019-10-08
 LBWL - ECKERT STATION & REO TOWN PLANT,<a href='?srn=B2647' target='_self'>LBWL - ECKERT STATION & REO TOWN PLANT</a>,Ingham,Major,B2647,5.0,2021-05-06
 DIAMOND CHROME PLATING INC,<a href='?srn=A2931' target='_self'>DIAMOND CHROME PLATING INC</a>,Livingston,True Minor,A2931,5.0,2019-10-30
@@ -777,3 +777,5 @@ ASH STEVENS LLC,<a href='https://planet-detroit.github.io/air-permit-violation-d
 "BRIGHTMARK WILLOW POINT RNG, LLC","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=P1157' target='_blank'>BRIGHTMARK WILLOW POINT RNG, LLC</a>",Ionia,Unknown,P1157,1.0,2023-10-27
 "BRIGHTMARK MEADOW ROCK RNG, LLC","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=P1152' target='_blank'>BRIGHTMARK MEADOW ROCK RNG, LLC</a>",Montcalm,Unknown,P1152,1.0,2023-10-27
 "BRIGHTMARK CASTOR RNG, LLC","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=P1125' target='_blank'>BRIGHTMARK CASTOR RNG, LLC</a>",Ottawa,Unknown,P1125,1.0,2023-10-27
+MICHIGAN AGRICULTURAL COMMODITIES-BLISSFIELD,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N1810' target='_blank'>MICHIGAN AGRICULTURAL COMMODITIES-BLISSFIELD</a>,Lenawee,True Minor,N1810,1.0,2023-10-31
+ELITE CLEANROOM SERVICES,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=P0455' target='_blank'>ELITE CLEANROOM SERVICES</a>,Lapeer,True Minor,P0455,1.0,2023-10-31
