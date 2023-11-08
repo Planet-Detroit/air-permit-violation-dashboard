@@ -112,7 +112,7 @@ function updateArticle(e) {
 	var facility_name = feature.properties.facility_name
 	var violation_article = feature.properties.violation_article
 	// URL to copy
-	var sourceURL = `https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=${srn}`
+	var sourceURL = `https://dashboard.planetdetroit.org/?srn=${srn}`
 	var shareBtn = `<button id="source-button" source-link="${sourceURL}"> <i class="fa fa-link"></i> Copy Facility Link</button>`
 	if (group_id == 4) {
 		var articleOpen = `<div class="epa-class-${group_id}"><h3 class="epa-class-dark">${group_name}</h3><h3 class="srn-dark">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1>`
@@ -221,7 +221,7 @@ function updateArticle2(foundFeature) {
 	var address = feature.properties.address_full
 	var facility_name = feature.properties.facility_name
 	var violation_article = feature.properties.violation_article
-	var sourceURL = `https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=${srn}`
+	var sourceURL = `https://dashboard.planetdetroit.org/?srn=${srn}`
 	var shareBtn = `<button id="source-button" source-link="${sourceURL}"> <i class="fa fa-link"></i> Copy Facility Link</button>`
 	if (group_id == 4) {
 		var articleOpen = `<div class="epa-class-${group_id}"><h3 class="epa-class-dark">${group_name}</h3><h3 class="srn-dark">SRN: ${srn}</h3></div><div id="company-profile"><h3>${address}</h3><h1>${facility_name}</h1>`
@@ -514,7 +514,7 @@ var long = item.properties.long
 var id = item.properties.srn
 var county = item.properties.county
 var facility_name_tweet = facility_name.replace(/ /g, '%20')
-var facility_url = `https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=${id}`
+var facility_url = `https://dashboard.planetdetroit.org/?srn=${id}`
 
 // let violation_comments = "<ul><li>" + violation_comment_list.join("</li><li>") + "</li></ul>"
 
@@ -563,7 +563,7 @@ function limitCharacterLength(inputString, maxLength) {
 
 var share_button = `<button class="showPopupButton" data-popup="popup${item_num}"><i class="fa-solid fa-arrow-up-from-bracket"></i></button>`
 var tweet = `<a class="share-icon" href="https://twitter.com/intent/tweet?text=${facility_name_tweet}%20received%20an%20air%20permit%20violation%20notice%20on%20${date_str_tweet}.%20View%20it%20here%20via%20@PlanetDetroit.%20${facility_url}" target="_blank"><i class="fa-brands fa-square-x-twitter fa-xl"></i></a>`
-var fb = `<a class="share-icon" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fplanet-detroit.github.io%2Fair-permit-violation-dashboard%2F?srn=${id}" target="_blank"><i class="fa-brands fa-facebook fa-lg"></i></a>`
+var fb = `<a class="share-icon" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdashboard.planetdetroit.org%2F?srn=${id}" target="_blank"><i class="fa-brands fa-facebook fa-lg"></i></a>`
 var email = `<a class="share-icon" href="mailto:?subject=${facility_name}'s newest violation notice&body=Description of the violation(s): %0D%0A ${"• "+ violation_comment_list.join("%0D%0A • ")} %0D%0A%0D%0A Violation Notice PDF:%0D%0A${doc_url} %0D%0A %0D%0A View ${facility_name}'s violation history since 2018: %0D%0A${facility_url}"><i class="fa-solid fa-paper-plane fa-lg"></i></a>`
 var pdf = `<button id="pdf-copy" source-link="${doc_url}"> <i class="fa-solid fa-file-pdf"></i> Copy PDF Link</button>`
 var link_copy = `<button id="link-copy" source-link="${facility_url}"> <i class="fa-solid fa-map-pin"></i> Copy Facility Map Link</button>`
