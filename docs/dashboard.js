@@ -14,13 +14,11 @@ function findFeatureBySRN(srnToFind) {
 if (pntid) {
 	var foundFeature = findFeatureBySRN(pntid);
 	var startll = foundFeature.geometry.coordinates;
-	console.log(startll)
 }
 else {
 	var startll = [-83.6136, 43.7833];
 }
 
-// console.log(startll, startzoom)
 var map = new mapboxgl.Map({
 	container: 'map', // HTML container ID
 	style:'mapbox://styles/datamama116/cll62uwv8008r01r8drpohcph',	
@@ -29,7 +27,6 @@ var map = new mapboxgl.Map({
 	zoom: 12,
 	maxZoom: 16,
 });
-console.log(map)
 // disable map rotation using right click + drag
 map.dragRotate.disable();
 
@@ -162,7 +159,6 @@ function drawPopup(e) {
 	var group_id = feature.properties.group_id
 	var group_name = feature.properties.group_name
 	var group_name_simple = group_name.replace("Source","")
-	console.log(feature.properties.most_recent_vn)
 	var recent_vn = new Date(feature.properties.most_recent_vn.replace(/-/g, '\/'))
 	var today = new Date()
 	var duration = Math.round((today - recent_vn) / (1000 * 3600 * 24))
@@ -272,7 +268,6 @@ map.on('load', function () {
 	}
 // Draw Facilities
 	// map.setZoom(startzoom)
-	// console.log(currentZoom)
 	datalayer = map.addLayer({
 		id: "datalayer",
 		type: "circle",
@@ -536,7 +531,6 @@ if (violation_comment_list.length > 1) {
 else {
 	violation_comments = violation_comment_list[0]
 }
-console.log(violation_comments)
 const maxLength = 500;
 
 function limitCharacterLength(inputString, maxLength) {
