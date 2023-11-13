@@ -154,7 +154,7 @@ path{
     width: 100%;
     text-align: center;
     position: relative;
-    padding: 20px 0;
+    padding: 13px 0;
     /* display:flex;
     padding-top: 15px;
     padding-bottom: 15px; */
@@ -169,7 +169,7 @@ path{
     left: 20px; /* Adjust the left position as needed */
     top: 50%;
     transform: translateY(-50%);
-    padding:17px;
+    padding:13px;
     background-color:#aeba3c;
     text-transform:initial !important;
     text-decoration:none !important;
@@ -510,7 +510,7 @@ align-items: center;
         transform: none;
         /* transform:none; */
         max-width:35%;
-        padding:17px;
+        padding:13px;
         float:right !important;
 
       }
