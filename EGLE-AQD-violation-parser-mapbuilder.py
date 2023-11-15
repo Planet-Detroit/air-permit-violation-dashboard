@@ -484,8 +484,12 @@ new_vns_clean['date'] = new_vns_clean.doc_url.str.split('_').str[-1].str.split('
 new_vns_clean.date = pd.to_datetime(new_vns_clean.date)
 new_vns_clean['date_str'] = new_vns_clean.date.dt.month_name() + " " + new_vns_clean.date.dt.day.astype('str') + ", "  + new_vns_clean.date.dt.year.astype('str')
 
+# Reading in source directory
+source_directory = pd.read_csv('docs/EGLE-AQD-source-directory-geocoded.csv')
+new_vns_clean = new_vns_clean.merge(source_directory[['srn','lat','long','geometry','facility_name_title','epa_class_full']], how='left',left_on='srn',right_on='srn')
+
 # Rearranging columns
-new_vns_clean = new_vns_clean[['srn', 'facility_name', 'epa_class', 'county', 'date', 'comment_list', 'comment_list_html', 'address_full', 'location_clean', 'doc_url', 'full_text','date_str']]
+new_vns_clean = new_vns_clean[['srn','date','date_str','year','facility_name','facility_name_title','epa_class','epa_class_full', 'comment_list', 'comment_list_html', 'county', 'city', 'location_clean','address_full','lat','long','geometry','doc_url', 'full_text']]
 
 # # Concatting with old parsed vns and saving
 vn_export = pd.concat([new_vns_clean, parsed_vn],ignore_index=True)
@@ -496,11 +500,8 @@ print(vn_export.head(6))
 # EXPORTING CLEAN PARSED VIOLATION NOTICES
 vn_export.to_csv('output/EGLE-AQD-Violation-Notices-2018-Present.csv', index=False)
 
-# Creating geo-data for most recent violation notices
-source_directory = pd.read_csv('docs/EGLE-AQD-source-directory-geocoded.csv')
 
 new_vn_highlight = vn_export.sort_values('date',ascending=False).head(12)
-new_vn_highlight = new_vn_highlight.merge(source_directory[['lat','long','geometry','facility_name_title','srn','epa_class_full']],how='left',left_on='srn',right_on='srn')
 new_vn_highlight.epa_class = new_vn_highlight.epa_class.fillna('None')
 def category_color(epa_class):
         if epa_class == "MEGASITE":
