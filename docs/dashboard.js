@@ -175,7 +175,13 @@ function drawPopup(e) {
 	}
 	else if (duration > 31 ) {
 		duration = differenceInMonths(today, recent_vn).toLocaleString()
+
+		if (duration > 1) {
 		duration = duration + " MONTHS AGO"
+		}
+		else {
+			duration = duration + " MONTH AGO"
+		}
 	}
 	else if (duration == 1) {
 		duration = duration.toLocaleString() + " DAY AGO"
