@@ -107,7 +107,7 @@ NEWBERRY WOOD ENTERPRISES,<a href='?srn=N3624' target='_self'>NEWBERRY WOOD ENTE
 BASF TODA AMERICA LLC,<a href='?srn=P0089' target='_self'>BASF TODA AMERICA LLC</a>,Calhoun,True Minor,P0089,3.0,2020-10-06
 "HURON CASTING, INC (BLUE DIAMOND STEEL CASTING)","<a href='?srn=B7013' target='_self'>HURON CASTING, INC (BLUE DIAMOND STEEL CASTING)</a>",Huron,Major,B7013,3.0,2022-10-11
 REEFWORKS CANADA INCORPORATED - SIMPSON T,<a href='?srn=N6235' target='_self'>REEFWORKS CANADA INCORPORATED - SIMPSON T</a>,Kalkaska,Synthetic Minor,N6235,3.0,2022-01-19
-BURKE INDUSRIAL SALES INC,<a href='?srn=N6647' target='_self'>BURKE INDUSRIAL SALES INC</a>,Kent,Unknown,N6647,3.0,2023-09-01
+BURKE INDUSRIAL SALES INC,<a href='?srn=N6647' target='_self'>BURKE INDUSRIAL SALES INC</a>,Kent,Unknown,N6647,4.0,2023-11-14
 AXALTA COATING SYSTEMS USA LLC,<a href='?srn=A3569' target='_self'>AXALTA COATING SYSTEMS USA LLC</a>,Macomb,Major,A3569,3.0,2023-08-17
 CAPITAL REGION AIRPORT AUTHORITY,<a href='?srn=N8035' target='_self'>CAPITAL REGION AIRPORT AUTHORITY</a>,Clinton,Major,N8035,3.0,2021-12-21
 "PLASTIC TRIM INTERNATIONAL, INC.","<a href='?srn=N3592' target='_self'>PLASTIC TRIM INTERNATIONAL, INC.</a>",Iosco,True Minor,N3592,3.0,2022-05-04
@@ -489,7 +489,7 @@ SAVOY ENERGY LP,<a href='?srn=N7310' target='_self'>SAVOY ENERGY LP</a>,Newaygo,
 FOWLER'S FARM-CITY SALES,<a href='?srn=P0528' target='_self'>FOWLER'S FARM-CITY SALES</a>,Gratiot,True Minor,P0528,1.0,2019-03-26
 CARDINAL AGGREGATES,<a href='?srn=P0167' target='_self'>CARDINAL AGGREGATES</a>,Washtenaw,True Minor,P0167,1.0,2018-08-02
 KRAKEN CRUSHED CONCRETE & RECYLING - NORTHVILLE,<a href='?srn=P0358' target='_self'>KRAKEN CRUSHED CONCRETE & RECYLING - NORTHVILLE</a>,Washtenaw,True Minor,P0358,1.0,2018-08-02
-"HMI HARDWOODS OF MICHIGAN, INC.","<a href='?srn=N0786' target='_self'>HMI HARDWOODS OF MICHIGAN, INC.</a>",Lenawee,True Minor,N0786,1.0,2018-08-01
+"HMI HARDWOODS OF MICHIGAN, INC.","<a href='?srn=N0786' target='_self'>HMI HARDWOODS OF MICHIGAN, INC.</a>",Lenawee,True Minor,N0786,2.0,2023-11-14
 JELD-WEN INTERIOR DOOR - GRAND RAPIDS,<a href='?srn=B8603' target='_self'>JELD-WEN INTERIOR DOOR - GRAND RAPIDS</a>,Kent,Synthetic Minor,B8603,1.0,2019-03-29
 "CHRISTENSEN FIBERGLASS, LLC","<a href='?srn=N5883' target='_self'>CHRISTENSEN FIBERGLASS, LLC</a>",Ottawa,True Minor,N5883,1.0,2018-07-26
 GERBER COLLISION AND GLASS,<a href='?srn=M3663' target='_self'>GERBER COLLISION AND GLASS</a>,Macomb,True Minor,M3663,1.0,2019-04-11
@@ -782,3 +782,4 @@ ELITE CLEANROOM SERVICES,<a href='https://planet-detroit.github.io/air-permit-vi
 DART CONTAINER CORPORATION OF MICHIGAN,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=D8065' target='_blank'>DART CONTAINER CORPORATION OF MICHIGAN</a>,Ingham,Major,D8065,1.0,2023-11-01
 MICHIGAN STATE UNIVERSITY,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=K3249' target='_blank'>MICHIGAN STATE UNIVERSITY</a>,Ingham,Major,K3249,1.0,2023-11-03
 "DOUBLE EAGLE RNG, LLC","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=P1193' target='_blank'>DOUBLE EAGLE RNG, LLC</a>",Gratiot,True Minor,P1193,1.0,2023-10-06
+"RIETH RILEY CONSTRUCTION CO., INC.","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N6413' target='_blank'>RIETH RILEY CONSTRUCTION CO., INC.</a>",Charlevoix,True Minor,N6413,1.0,2023-10-06
