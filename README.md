@@ -71,7 +71,7 @@ This technology expedited a process that would have taken weeks of manual labor,
 | file    | description |
 | -------- | ------- |
 `EGLE-AQD-Violation-Notices-2018-Present.csv` | Each violation notice issued since 2018 parsed. See details above.|
-`violation-map-data.csv` | A .csv version of the data used to populate the map. Each record represents one source.
+`violation-map-data.csv` | A .csv version of the data used to populate the map. Each record represents one source. Has number of violations by year (`2018`,`2019`) and total since 2018 (`violation_count`)|
 `violation-map-geo-data.js` | The javascript file used to populate the map.|
 `recent-map-violations.js` | The javascript file used to populate the most recent violation notices on the dashboard.|
 `report-map-update.csv` | Shows which sources were updated on the map by the script each day. |
