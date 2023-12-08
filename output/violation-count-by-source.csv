@@ -22,7 +22,7 @@ HASTINGS MANUFACTURING COMPANY,<a href='?srn=A0171' target='_self'>HASTINGS MANU
 "GREAT LAKES CREMATION, INC.","<a href='?srn=N8339' target='_self'>GREAT LAKES CREMATION, INC.</a>",Oakland,True Minor,N8339,7.0,2022-12-08
 ST MARYS CEMENT CHARLEVOIX PLANT,<a href='?srn=B1559' target='_self'>ST MARYS CEMENT CHARLEVOIX PLANT</a>,Charlevoix,Major,B1559,7.0,2022-11-15
 "LUKAZCEK EXCAVATING AND DRAINAGE, LLC.","<a href='?srn=P0820' target='_self'>LUKAZCEK EXCAVATING AND DRAINAGE, LLC.</a>",Branch,True Minor,P0820,7.0,2022-05-23
-"CITIZENS DISPOSAL, INC.","<a href='?srn=N5991' target='_self'>CITIZENS DISPOSAL, INC.</a>",Genesee,Major,N5991,7.0,2022-10-04
+"CITIZENS DISPOSAL, INC.","<a href='?srn=N5991' target='_self'>CITIZENS DISPOSAL, INC.</a>",Genesee,Major,N5991,8.0,2023-12-08
 "BREMBO NORTH AMERICA, INC.","<a href='?srn=N6226' target='_self'>BREMBO NORTH AMERICA, INC.</a>",Calhoun,Major,N6226,7.0,2022-10-04
 "GENERATE FREMONT DIGESTER, LLC","<a href='?srn=N8210' target='_self'>GENERATE FREMONT DIGESTER, LLC</a>",Newaygo,Synthetic Minor,N8210,7.0,2021-10-04
 GERDAU MACSTEEL MONROE MILL,<a href='?srn=B7061' target='_self'>GERDAU MACSTEEL MONROE MILL</a>,Monroe,Major,B7061,7.0,2022-07-27
@@ -590,7 +590,7 @@ CARMEUSE LIME AND STONE,<a href='?srn=P1275' target='_self'>CARMEUSE LIME AND ST
 ANR PIPELINE COMPANY - HAMILTON COMPRESSOR STATION,<a href='?srn=N5574' target='_self'>ANR PIPELINE COMPANY - HAMILTON COMPRESSOR STATION</a>,Allegan,Major,N5574,1.0,2023-08-31
 ZIEBART OF MICHIGAN,<a href='?srn=P1226' target='_self'>ZIEBART OF MICHIGAN</a>,Macomb,Unknown,P1226,1.0,2023-09-07
 WILLBEE TRANSIX MIX,<a href='?srn=B6077' target='_self'>WILLBEE TRANSIX MIX</a>,Jackson,True Minor,B6077,1.0,2023-09-08
-LOUIS PADNOS IRON & METAL,<a href='?srn=A2457' target='_self'>LOUIS PADNOS IRON & METAL</a>,Kent,True Minor,A2457,2.0,2023-11-30
+LOUIS PADNOS IRON & METAL,<a href='?srn=A2457' target='_self'>LOUIS PADNOS IRON & METAL</a>,Kent,True Minor,A2457,3.0,2023-12-07
 CROSS EXCAVATING & DEMOLITION,<a href='?srn=P0060' target='_self'>CROSS EXCAVATING & DEMOLITION</a>,Cass,True Minor,P0060,1.0,2023-09-11
 THERMOTRON INDUSTRIES,<a href='?srn=B5233' target='_self'>THERMOTRON INDUSTRIES</a>,Allegan,Unknown,B5233,1.0,2023-09-18
 MANNETRON,<a href='?srn=N3914' target='_self'>MANNETRON</a>,Calhoun,True Minor,N3914,1.0,2023-09-19
@@ -783,3 +783,4 @@ DART CONTAINER CORPORATION OF MICHIGAN,<a href='https://planet-detroit.github.io
 MICHIGAN STATE UNIVERSITY,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=K3249' target='_blank'>MICHIGAN STATE UNIVERSITY</a>,Ingham,Major,K3249,1.0,2023-11-03
 "DOUBLE EAGLE RNG, LLC","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=P1193' target='_blank'>DOUBLE EAGLE RNG, LLC</a>",Gratiot,True Minor,P1193,1.0,2023-10-06
 "RIETH RILEY CONSTRUCTION CO., INC.","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N6413' target='_blank'>RIETH RILEY CONSTRUCTION CO., INC.</a>",Charlevoix,True Minor,N6413,1.0,2023-10-06
+PARKER HANNIFIN CORPORATION,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=B7585' target='_blank'>PARKER HANNIFIN CORPORATION</a>,Allegan,True Minor,B7585,1.0,2023-12-07
