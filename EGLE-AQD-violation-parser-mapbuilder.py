@@ -584,7 +584,7 @@ if len(new_facilities) > 0:
             new_facility_df = source_directory.query(f'srn == "{facility}"').copy(deep=True)
             new_facility_df['properties.violationCount'] = 0
             new_facility_df['violation_count'] = 0
-            new_facility_df[['2018','2019','2020','2021','2022','2023']] = 0
+            new_facility_df[['2018','2019','2020','2021','2022','2023','2024']] = 0
             new_facility_df['type'] = 'Feature'
             new_facility_df['geometry.type'] = 'Point'
             new_facility_df = new_facility_df.rename({'facility_name_title':'properties.facility_name','address_full':'properties.address_full'},axis=1)
