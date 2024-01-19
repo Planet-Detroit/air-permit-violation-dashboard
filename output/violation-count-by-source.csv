@@ -1,6 +1,6 @@
 facility_name,name_url,county,epa_class_simple,srn,violation_count,most_recent_vn
 "DETROIT RENEWABLE POWER, LLC","<a href='?srn=M4148' target='_self'>DETROIT RENEWABLE POWER, LLC</a>",Wayne,Major,M4148,35.0,2019-08-29
-"ARBOR HILLS LANDFILL, INC.","<a href='?srn=N2688' target='_self'>ARBOR HILLS LANDFILL, INC.</a>",Washtenaw,Major,N2688,34.0,2023-11-03
+"ARBOR HILLS LANDFILL, INC.","<a href='?srn=N2688' target='_self'>ARBOR HILLS LANDFILL, INC.</a>",Washtenaw,Major,N2688,35.0,2024-01-18
 CLEVELAND-CLIFFS STEEL CORPORATION DEARBORN WORKS,<a href='?srn=A8640' target='_self'>CLEVELAND-CLIFFS STEEL CORPORATION DEARBORN WORKS</a>,Wayne,Megasite,A8640,19.0,2023-10-06
 "EQ DETROIT, INC. (DBA US ECOLOGY - DETROIT SOUTH)","<a href='?srn=M4545' target='_self'>EQ DETROIT, INC. (DBA US ECOLOGY - DETROIT SOUTH)</a>",Wayne,Synthetic Minor,M4545,17.0,2023-02-10
 INDUSTRIAL METAL COATINGS INC,<a href='?srn=N5145' target='_self'>INDUSTRIAL METAL COATINGS INC</a>,Macomb,True Minor,N5145,15.0,2023-10-23
@@ -25,7 +25,7 @@ ST MARYS CEMENT CHARLEVOIX PLANT,<a href='?srn=B1559' target='_self'>ST MARYS CE
 "CITIZENS DISPOSAL, INC.","<a href='?srn=N5991' target='_self'>CITIZENS DISPOSAL, INC.</a>",Genesee,Major,N5991,9.0,2024-01-08
 "BREMBO NORTH AMERICA, INC.","<a href='?srn=N6226' target='_self'>BREMBO NORTH AMERICA, INC.</a>",Calhoun,Major,N6226,7.0,2022-10-04
 "GENERATE FREMONT DIGESTER, LLC","<a href='?srn=N8210' target='_self'>GENERATE FREMONT DIGESTER, LLC</a>",Newaygo,Synthetic Minor,N8210,7.0,2021-10-04
-GERDAU MACSTEEL MONROE MILL,<a href='?srn=B7061' target='_self'>GERDAU MACSTEEL MONROE MILL</a>,Monroe,Major,B7061,7.0,2022-07-27
+GERDAU MACSTEEL MONROE MILL,<a href='?srn=B7061' target='_self'>GERDAU MACSTEEL MONROE MILL</a>,Monroe,Major,B7061,8.0,2024-01-18
 ROGERS PRINTING INC,<a href='?srn=A4216' target='_self'>ROGERS PRINTING INC</a>,Muskegon,Synthetic Minor,A4216,7.0,2023-07-05
 EES COKE BATTERY L.L.C.,<a href='?srn=P0408' target='_self'>EES COKE BATTERY L.L.C.</a>,Wayne,Megasite,P0408,6.0,2023-01-11
 DYNAMIC CRUSHING LLC,<a href='?srn=P0691' target='_self'>DYNAMIC CRUSHING LLC</a>,Ionia,True Minor,P0691,6.0,2021-10-19
@@ -260,7 +260,7 @@ WALTER P.  REUTHER PSYCHIATRIC HOSPITAL,<a href='?srn=M4132' target='_self'>WALT
 AXIUM GROUP LLC,<a href='?srn=A0703' target='_self'>AXIUM GROUP LLC</a>,Cass,Synthetic Minor,A0703,2.0,2018-06-29
 "GENERAL FORMULATIONS, INC.","<a href='?srn=M3554' target='_self'>GENERAL FORMULATIONS, INC.</a>",Kent,Synthetic Minor,M3554,2.0,2023-05-12
 FRITZ ENTERPRISES OF FLINT,<a href='?srn=N6823' target='_self'>FRITZ ENTERPRISES OF FLINT</a>,Genesee,True Minor,N6823,2.0,2023-04-10
-ERVIN AMASTEEL DIVISION,<a href='?srn=B1754' target='_self'>ERVIN AMASTEEL DIVISION</a>,Lenawee,Major,B1754,2.0,2023-03-09
+ERVIN AMASTEEL DIVISION,<a href='?srn=B1754' target='_self'>ERVIN AMASTEEL DIVISION</a>,Lenawee,Major,B1754,3.0,2024-01-18
 MACOMB COUNTY ANIMAL CONTROL,<a href='?srn=M3511' target='_self'>MACOMB COUNTY ANIMAL CONTROL</a>,Macomb,True Minor,M3511,2.0,2023-06-28
 AMERICAN SEATING COMPANY,<a href='?srn=B1713' target='_self'>AMERICAN SEATING COMPANY</a>,Kent,True Minor,B1713,2.0,2018-05-02
 "PHARMACIA & UPJOHN CO LLC, A SUBSIDIARY OF PFIZER","<a href='?srn=B3610' target='_self'>PHARMACIA & UPJOHN CO LLC, A SUBSIDIARY OF PFIZER</a>",Kalamazoo,Megasite,B3610,2.0,2023-06-15
