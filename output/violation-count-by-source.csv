@@ -40,7 +40,7 @@ MOLD MASTERS COMPANY,<a href='?srn=A2809' target='_self'>MOLD MASTERS COMPANY</a
 "HOOVER ROAD REAL ESTATE, LLC","<a href='?srn=P1109' target='_self'>HOOVER ROAD REAL ESTATE, LLC</a>",Macomb,Synthetic Minor,P1109,6.0,2022-09-07
 PRATT INDUSTRIES INC.,<a href='?srn=N7486' target='_self'>PRATT INDUSTRIES INC.</a>,Berrien,Synthetic Minor,N7486,6.0,2022-06-10
 DTE ELECTRIC COMPANY - MONROE POWER PLANT,<a href='?srn=B2816' target='_self'>DTE ELECTRIC COMPANY - MONROE POWER PLANT</a>,Monroe,Major,B2816,6.0,2023-07-11
-MICHIGAN FOAM PRODUCTS LLC,<a href='?srn=N3078' target='_self'>MICHIGAN FOAM PRODUCTS LLC</a>,Kent,Major,N3078,6.0,2022-10-06
+MICHIGAN FOAM PRODUCTS LLC,<a href='?srn=N3078' target='_self'>MICHIGAN FOAM PRODUCTS LLC</a>,Kent,Major,N3078,7.0,2024-01-31
 BASF CORPORATION - CHEMICAL PLANTS,<a href='?srn=B4359' target='_self'>BASF CORPORATION - CHEMICAL PLANTS</a>,Wayne,Major,B4359,5.0,2023-03-24
 "RECONSERVE OF MICHIGAN, INC.","<a href='?srn=N8081' target='_self'>RECONSERVE OF MICHIGAN, INC.</a>",Calhoun,Synthetic Minor,N8081,7.0,2023-12-05
 "REAL ALLOY RECYCLING, LLC","<a href='?srn=N5957' target='_self'>REAL ALLOY RECYCLING, LLC</a>",Branch,Major,N5957,6.0,2023-10-19
@@ -607,7 +607,7 @@ MONTMORENCY-OSCODA-ALPENA WASTE MANAGEMENT AUTHORI,<a href='?srn=N8248' target='
 "JVIS MFG., LLC","<a href='?srn=N3747' target='_self'>JVIS MFG., LLC</a>",Berrien,Synthetic Minor,N3747,1.0,2023-03-07
 FOREST LAWN LANDFILL,<a href='?srn=N2407' target='_self'>FOREST LAWN LANDFILL</a>,Berrien,Major,N2407,1.0,2023-03-27
 HARBOR FOAM,<a href='?srn=N7754' target='_self'>HARBOR FOAM</a>,Kent,Major,N7754,1.0,2023-03-31
-TRIBAR TECHNOLOGIES INC (PLANT 4),<a href='?srn=N7809' target='_self'>TRIBAR TECHNOLOGIES INC (PLANT 4)</a>,Oakland,True Minor,N7809,1.0,2023-04-06
+TRIBAR TECHNOLOGIES INC (PLANT 4),<a href='?srn=N7809' target='_self'>TRIBAR TECHNOLOGIES INC (PLANT 4)</a>,Oakland,True Minor,N7809,2.0,2024-01-31
 WHITEFEATHER LANDFILL,<a href='?srn=N5985' target='_self'>WHITEFEATHER LANDFILL</a>,Bay,Major,N5985,1.0,2023-04-11
 AVANCEZ HIGHLAND PARK,<a href='?srn=P1217' target='_self'>AVANCEZ HIGHLAND PARK</a>,Oakland,Synthetic Minor,P1217,1.0,2023-04-12
 DECC CO INC,<a href='?srn=N3751' target='_self'>DECC CO INC</a>,Kent,Synthetic Minor,N3751,1.0,2023-04-17
@@ -793,3 +793,4 @@ GENERAL MOTORS LANSING GRAND RIVER ASSEMBLY,<a href='https://planet-detroit.gith
 GREAT LAKES CASTINGS LLC,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=A3934' target='_blank'>GREAT LAKES CASTINGS LLC</a>,Mason,Major,A3934,1.0,2024-01-23
 "SPARTAN FIRE, LLC","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N2503' target='_blank'>SPARTAN FIRE, LLC</a>",Eaton,Synthetic Minor,N2503,1.0,2024-01-19
 "SMR AUTOMOTIVE SYSTEMS USA, INC.","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N7411' target='_blank'>SMR AUTOMOTIVE SYSTEMS USA, INC.</a>",Saint Clair,Synthetic Minor,N7411,1.0,2024-01-05
+X-CEL INDUSTRIES INC.,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N6594' target='_blank'>X-CEL INDUSTRIES INC.</a>,Oakland,Synthetic Minor,N6594,1.0,2024-01-31
