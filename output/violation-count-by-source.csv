@@ -35,7 +35,7 @@ TRIBAR TECHNOLOGIES INC (PLANT 5),<a href='?srn=P0727' target='_self'>TRIBAR TEC
 "LACKS INDUSTRIES, INC.","<a href='?srn=N2079' target='_self'>LACKS INDUSTRIES, INC.</a>",Kent,Megasite,N2079,6.0,2022-10-24
 "ATLAS EPS, A DIVISION OF ATLAS ROOFING CORP.","<a href='?srn=N1794' target='_self'>ATLAS EPS, A DIVISION OF ATLAS ROOFING CORP.</a>",Kent,Major,N1794,6.0,2022-09-15
 PRATT INDUSTRIES INC.,<a href='?srn=P0491' target='_self'>PRATT INDUSTRIES INC.</a>,Berrien,True Minor,P0491,6.0,2022-06-15
-MOLD MASTERS COMPANY,<a href='?srn=A2809' target='_self'>MOLD MASTERS COMPANY</a>,Lapeer,Synthetic Minor,A2809,7.0,2024-02-16
+MOLD MASTERS COMPANY,<a href='?srn=A2809' target='_self'>MOLD MASTERS COMPANY</a>,Lapeer,Synthetic Minor,A2809,8.0,2024-02-16
 "MESSINA TRUCKING, INC.","<a href='?srn=P1020' target='_self'>MESSINA TRUCKING, INC.</a>",Macomb,True Minor,P1020,6.0,2023-09-13
 "HOOVER ROAD REAL ESTATE, LLC","<a href='?srn=P1109' target='_self'>HOOVER ROAD REAL ESTATE, LLC</a>",Macomb,Synthetic Minor,P1109,6.0,2022-09-07
 PRATT INDUSTRIES INC.,<a href='?srn=N7486' target='_self'>PRATT INDUSTRIES INC.</a>,Berrien,Synthetic Minor,N7486,6.0,2022-06-10
@@ -797,3 +797,4 @@ X-CEL INDUSTRIES INC.,<a href='https://planet-detroit.github.io/air-permit-viola
 ACTION PACKAGING,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N3293' target='_blank'>ACTION PACKAGING</a>,Jackson,True Minor,N3293,1.0,2024-02-13
 ESSENTRA POROUS TECHNOLOGIES,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N3900' target='_blank'>ESSENTRA POROUS TECHNOLOGIES</a>,Saginaw,True Minor,N3900,1.0,2024-01-29
 FUSION FLEXO,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N2020' target='_blank'>FUSION FLEXO</a>,Allegan,True Minor,N2020,1.0,2024-02-16
+BPV ENVIRONMENTAL LLC,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=P1036' target='_blank'>BPV ENVIRONMENTAL LLC</a>,Kent,True Minor,P1036,1.0,2024-02-22
