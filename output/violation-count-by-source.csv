@@ -4,7 +4,7 @@ facility_name,name_url,county,epa_class_simple,srn,violation_count,most_recent_v
 CLEVELAND-CLIFFS STEEL CORPORATION DEARBORN WORKS,<a href='?srn=A8640' target='_self'>CLEVELAND-CLIFFS STEEL CORPORATION DEARBORN WORKS</a>,Wayne,Megasite,A8640,19.0,2023-10-06
 "EQ DETROIT, INC. (DBA US ECOLOGY - DETROIT SOUTH)","<a href='?srn=M4545' target='_self'>EQ DETROIT, INC. (DBA US ECOLOGY - DETROIT SOUTH)</a>",Wayne,Synthetic Minor,M4545,17.0,2023-02-10
 INDUSTRIAL METAL COATINGS INC,<a href='?srn=N5145' target='_self'>INDUSTRIAL METAL COATINGS INC</a>,Macomb,True Minor,N5145,15.0,2023-10-23
-MICHIGAN SUGAR COMPANY - BAY CITY,<a href='?srn=B1493' target='_self'>MICHIGAN SUGAR COMPANY - BAY CITY</a>,Bay,Major,B1493,15.0,2023-12-12
+MICHIGAN SUGAR COMPANY - BAY CITY,<a href='?srn=B1493' target='_self'>MICHIGAN SUGAR COMPANY - BAY CITY</a>,Bay,Major,B1493,16.0,2024-03-18
 HOLCIM (US) INC. DBA LAFARGE ALPENA PLANT,<a href='?srn=B1477' target='_self'>HOLCIM (US) INC. DBA LAFARGE ALPENA PLANT</a>,Alpena,Major,B1477,12.0,2023-07-20
 EDW C LEVY CO PLANT 6,<a href='?srn=B4243' target='_self'>EDW C LEVY CO PLANT 6</a>,Wayne,Major,B4243,14.0,2023-10-06
 MARATHON PETROLEUM COMPANY LP,<a href='?srn=A9831' target='_self'>MARATHON PETROLEUM COMPANY LP</a>,Wayne,Megasite,A9831,12.0,2024-02-01
@@ -578,7 +578,7 @@ CENTURY FOUNDRY INC,<a href='?srn=N7027' target='_self'>CENTURY FOUNDRY INC</a>,
 MERIDIAN BRICK,<a href='?srn=A6497' target='_self'>MERIDIAN BRICK</a>,Shiawassee,Major,A6497,1.0,2023-07-28
 KALAMAZOO METAL RECYCLERS,<a href='?srn=N1373' target='_self'>KALAMAZOO METAL RECYCLERS</a>,Kalamazoo,True Minor,N1373,1.0,2023-08-14
 PAYNE & DOLAN INC  C25,<a href='?srn=N6297' target='_self'>PAYNE & DOLAN INC  C25</a>,Delta,Synthetic Minor,N6297,1.0,2023-08-09
-BULK GUYS LLC,<a href='?srn=P1383' target='_self'>BULK GUYS LLC</a>,Saint Clair,True Minor,P1383,1.0,2023-06-26
+BULK GUYS LLC,<a href='?srn=P1383' target='_self'>BULK GUYS LLC</a>,Saint Clair,True Minor,P1383,2.0,2024-03-19
 PORTERCORP,<a href='?srn=P1373' target='_self'>PORTERCORP</a>,Ottawa,True Minor,P1373,1.0,2023-05-15
 GEORGE P JOHNSON,<a href='?srn=P1345' target='_self'>GEORGE P JOHNSON</a>,Oakland,True Minor,P1345,1.0,2023-05-08
 SANDMAN TRUCKING,<a href='?srn=P1316' target='_self'>SANDMAN TRUCKING</a>,Barry,Unknown,P1316,1.0,2022-10-11
@@ -711,7 +711,7 @@ OAKLAND UNIVERSITY,<a href='?srn=N3422' target='_self'>OAKLAND UNIVERSITY</a>,Oa
 WEST MICHIGAN STRIPPING,<a href='?srn=P1229' target='_self'>WEST MICHIGAN STRIPPING</a>,Kent,True Minor,P1229,1.0,2021-10-21
 NEXTEER AUTOMOTIVE CORPORATION,<a href='?srn=A6175' target='_self'>NEXTEER AUTOMOTIVE CORPORATION</a>,Saginaw,Major,A6175,1.0,2021-10-26
 "HOUND RESOURCES, FREDERIC 15 GAS PLANT","<a href='?srn=B7222' target='_self'>HOUND RESOURCES, FREDERIC 15 GAS PLANT</a>",Crawford,Major,B7222,1.0,2021-11-08
-HEMLOCK SEMICONDUCTOR OPERATIONS LLC,<a href='?srn=B2644' target='_self'>HEMLOCK SEMICONDUCTOR OPERATIONS LLC</a>,Saginaw,Major,B2644,1.0,2021-11-10
+HEMLOCK SEMICONDUCTOR OPERATIONS LLC,<a href='?srn=B2644' target='_self'>HEMLOCK SEMICONDUCTOR OPERATIONS LLC</a>,Saginaw,Major,B2644,2.0,2024-03-11
 CONTOUR COMPANIES,<a href='?srn=P1237' target='_self'>CONTOUR COMPANIES</a>,Oakland,True Minor,P1237,1.0,2021-11-18
 SELFRIDGE AIR NATIONAL GUARD BASE,<a href='?srn=F3254' target='_self'>SELFRIDGE AIR NATIONAL GUARD BASE</a>,Macomb,Synthetic Minor,F3254,1.0,2021-11-29
 BOLLE CONTRACTING,<a href='?srn=P1219' target='_self'>BOLLE CONTRACTING</a>,Luce,True Minor,P1219,1.0,2021-12-14
@@ -801,3 +801,4 @@ BPV ENVIRONMENTAL LLC,<a href='https://planet-detroit.github.io/air-permit-viola
 "PEOPLES LANDFILL, INC.","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N5397' target='_blank'>PEOPLES LANDFILL, INC.</a>",Saginaw,Major,N5397,1.0,2024-02-26
 NORTHWEST HARDWOODS,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=E4437' target='_blank'>NORTHWEST HARDWOODS</a>,Kent,True Minor,E4437,1.0,2024-03-12
 TRIBAR TECHNOLOGIES INC (PLANT 3),<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N7202' target='_blank'>TRIBAR TECHNOLOGIES INC (PLANT 3)</a>,Oakland,Synthetic Minor,N7202,1.0,2024-02-08
+ELITE FENCE PRODUCTS INC.,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N5706' target='_blank'>ELITE FENCE PRODUCTS INC.</a>,Macomb,True Minor,N5706,1.0,2024-03-19
