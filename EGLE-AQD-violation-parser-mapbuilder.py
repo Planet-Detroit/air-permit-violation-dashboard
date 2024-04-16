@@ -486,10 +486,10 @@ new_vns_clean['date_str'] = new_vns_clean.date.dt.month_name() + " " + new_vns_c
 
 # Reading in source directory
 source_directory = pd.read_csv('docs/EGLE-AQD-source-directory-geocoded.csv')
-new_vns_clean = new_vns_clean.merge(source_directory[['srn','lat','long','geometry','facility_name_title','epa_class_full']], how='left',left_on='srn',right_on='srn')
+new_vns_clean = new_vns_clean.merge(source_directory[['srn','lat','long','geometry','facility_name_title','epa_class_full','vn_map_url']], how='left',left_on='srn',right_on='srn')
 
 # Rearranging columns
-new_vns_clean = new_vns_clean[['srn','date','date_str','year','facility_name','facility_name_title','epa_class','epa_class_full', 'comment_list', 'comment_list_html', 'county', 'city', 'location_clean','address_full','lat','long','geometry','doc_url', 'full_text']]
+new_vns_clean = new_vns_clean[['srn','date','date_str','year','facility_name','facility_name_title','epa_class','epa_class_full', 'comment_list', 'comment_list_html', 'county', 'city', 'location_clean','address_full','lat','long','geometry','doc_url','vn_map_url','full_text']]
 
 # # Concatting with old parsed vns and saving
 vn_export = pd.concat([new_vns_clean, parsed_vn],ignore_index=True)
