@@ -4,7 +4,7 @@ from pygsheets.datarange import DataRange
 import pandas as pd
   
 # Create the cietn and enter 
-gc = pygsheets.authorize(service_account_env_var = 'PYG_SHEETS_AUTH')
+gc = pygsheets.authorize(service_account_env_var = 'pyg_sheets_auth')
 
 # Grab the spreadsheet
 sh = gc.open('EGLE-AQD-Violation-Notices-2018-Present')
