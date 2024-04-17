@@ -33,5 +33,5 @@ jobs:
           git push
       - name: Run the google sheets updater script
         env:
-          sheets_service_auth: ${{ secrets.PYG_SHEETS_AUTH }}
+          pyg_sheets_auth: ${{ secrets.PYG_SHEETS_AUTH }}
         run: python sheets-updater.py
