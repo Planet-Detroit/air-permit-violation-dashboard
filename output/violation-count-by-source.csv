@@ -500,7 +500,7 @@ KENDRICK PLASTICS,<a href='?srn=N1786' target='_self'>KENDRICK PLASTICS</a>,Kent
 PORT CITY ARCHITECTURAL SIGNAGE,<a href='?srn=P0542' target='_self'>PORT CITY ARCHITECTURAL SIGNAGE</a>,Muskegon,True Minor,P0542,1.0,2019-06-05
 "MAYZIE, INC. DBA PET PASSAGES","<a href='?srn=P1112' target='_self'>MAYZIE, INC. DBA PET PASSAGES</a>",Oakland,True Minor,P1112,1.0,2021-08-10
 PIONEER METAL FINISHING INDUSTRIAL HWY,<a href='?srn=N5747' target='_self'>PIONEER METAL FINISHING INDUSTRIAL HWY</a>,Macomb,Synthetic Minor,N5747,1.0,2020-03-17
-"VERRETTE MATERIALS, INC","<a href='?srn=P0950' target='_self'>VERRETTE MATERIALS, INC</a>",Menominee,True Minor,P0950,1.0,2022-09-14
+"VERRETTE MATERIALS, INC","<a href='?srn=P0950' target='_self'>VERRETTE MATERIALS, INC</a>",Menominee,True Minor,P0950,2.0,2024-05-02
 NORTHLAND CASTINGS CORP,<a href='?srn=N6310' target='_self'>NORTHLAND CASTINGS CORP</a>,Oceana,True Minor,N6310,1.0,2022-08-12
 KRAUSE VETERINARY CLINIC,<a href='?srn=P1160' target='_self'>KRAUSE VETERINARY CLINIC</a>,Macomb,True Minor,P1160,1.0,2022-08-16
 BERNIER CAST METAL INC,<a href='?srn=N5324' target='_self'>BERNIER CAST METAL INC</a>,Saginaw,True Minor,N5324,1.0,2022-08-16
@@ -599,7 +599,7 @@ MANNETRON,<a href='?srn=N3914' target='_self'>MANNETRON</a>,Calhoun,True Minor,N
 PAYNE AND DOLAN INC.,<a href='?srn=P1204' target='_self'>PAYNE AND DOLAN INC.</a>,Marquette,Synthetic Minor,P1204,1.0,2023-09-20
 "PRECISE FINISHING SYSTEMS, INC.","<a href='?srn=P0805' target='_self'>PRECISE FINISHING SYSTEMS, INC.</a>",Livingston,True Minor,P0805,1.0,2023-07-11
 "ARKEMA, INC.","<a href='?srn=E4569' target='_self'>ARKEMA, INC.</a>",Kent,Synthetic Minor,E4569,1.0,2023-07-07
-THE TORO COMPANY,<a href='?srn=N2907' target='_self'>THE TORO COMPANY</a>,Dickinson,True Minor,N2907,1.0,2023-02-07
+THE TORO COMPANY,<a href='?srn=N2907' target='_self'>THE TORO COMPANY</a>,Dickinson,True Minor,N2907,2.0,2024-05-02
 BURTON EXCAVATING,<a href='?srn=N2837' target='_self'>BURTON EXCAVATING</a>,Chippewa,True Minor,N2837,1.0,2023-06-30
 VALICOR ENVIRONMENTAL SERVICES,<a href='?srn=B9080' target='_self'>VALICOR ENVIRONMENTAL SERVICES</a>,Wayne,True Minor,B9080,1.0,2023-02-21
 DELTA SOLID WASTE MANAGEMENT AUTHORITY,<a href='?srn=N6035' target='_self'>DELTA SOLID WASTE MANAGEMENT AUTHORITY</a>,Delta,Major,N6035,1.0,2023-02-23
@@ -808,3 +808,6 @@ POTLATCHDELTIC LAND & LUMBER LLC.,<a href='https://planet-detroit.github.io/air-
 "ARISTEO INSTALLATION, LLC","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=P0972' target='_blank'>ARISTEO INSTALLATION, LLC</a>",Genesee,Synthetic Minor,P0972,1.0,2024-04-10
 "GOMA RNG, LLC","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=P1192' target='_blank'>GOMA RNG, LLC</a>",Sanilac,True Minor,P1192,1.0,2024-04-29
 ZOETIS LLC,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=B7149' target='_blank'>ZOETIS LLC</a>,Kalamazoo,True Minor,B7149,1.0,2024-05-01
+ANGELO LUPPINO INC,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=P1287' target='_blank'>ANGELO LUPPINO INC</a>,Gogebic,Unknown,P1287,1.0,2024-05-02
+"SLOBODNIK GRAVEL & EXCAVATING, LLC","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=P1039' target='_blank'>SLOBODNIK GRAVEL & EXCAVATING, LLC</a>",Ontonagon,True Minor,P1039,1.0,2024-05-02
+ANGELO LUPPINO INC,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=P1276' target='_blank'>ANGELO LUPPINO INC</a>,Gogebic,Unknown,P1276,1.0,2024-05-02
