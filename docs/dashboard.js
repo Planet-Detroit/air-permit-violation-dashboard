@@ -161,15 +161,18 @@ function drawPopup(e) {
 	var group_name_simple = group_name.replace("Source","")
 	var recent_vn = new Date(feature.properties.most_recent_vn.replace(/-/g, '\/'))
 	var today = new Date()
-	var duration = Math.round((today - recent_vn) / (1000 * 3600 * 24))
+	var duration = Math.floor((today - recent_vn) / (1000 * 3600 * 24))
 	function differenceInMonths(today, recent_vn) {
 		const monthDiff = today.getMonth() - recent_vn.getMonth();
 		const yearDiff = today.getYear() - recent_vn.getYear();
 
 		return monthDiff + yearDiff * 12;
 	}
-	
-	if (duration > 365) {
+
+	if (duration == 0) {
+		duration = "TODAY"
+	}
+	else if (duration > 365) {
 		duration = (today.getYear() - recent_vn.getYear()).toLocaleString()
 		duration = duration + "+ YEARS AGO"
 	}
@@ -189,8 +192,6 @@ function drawPopup(e) {
 	else {
 		duration = duration.toLocaleString() + " DAYS AGO"
 	}
-	
-	
 	var recent_vn_str = recent_vn.toLocaleDateString('en-us', {year:"numeric", month:"short"}).toUpperCase()
 	while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
 		coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
