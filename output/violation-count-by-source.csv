@@ -1,6 +1,6 @@
 facility_name,name_url,county,epa_class_simple,srn,violation_count,most_recent_vn
 "DETROIT RENEWABLE POWER, LLC","<a href='?srn=M4148' target='_self'>DETROIT RENEWABLE POWER, LLC</a>",Wayne,Major,M4148,35.0,2019-08-29
-"ARBOR HILLS LANDFILL, INC.","<a href='?srn=N2688' target='_self'>ARBOR HILLS LANDFILL, INC.</a>",Washtenaw,Major,N2688,35.0,2024-01-18
+"ARBOR HILLS LANDFILL, INC.","<a href='?srn=N2688' target='_self'>ARBOR HILLS LANDFILL, INC.</a>",Washtenaw,Major,N2688,37.0,2024-05-10
 CLEVELAND-CLIFFS STEEL CORPORATION DEARBORN WORKS,<a href='?srn=A8640' target='_self'>CLEVELAND-CLIFFS STEEL CORPORATION DEARBORN WORKS</a>,Wayne,Megasite,A8640,19.0,2023-10-06
 "EQ DETROIT, INC. (DBA US ECOLOGY - DETROIT SOUTH)","<a href='?srn=M4545' target='_self'>EQ DETROIT, INC. (DBA US ECOLOGY - DETROIT SOUTH)</a>",Wayne,Synthetic Minor,M4545,17.0,2023-02-10
 INDUSTRIAL METAL COATINGS INC,<a href='?srn=N5145' target='_self'>INDUSTRIAL METAL COATINGS INC</a>,Macomb,True Minor,N5145,15.0,2023-10-23
