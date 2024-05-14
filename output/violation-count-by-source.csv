@@ -377,7 +377,7 @@ FCA US LLC - MACK AVENUE ENGINE PLANT,<a href='?srn=M4085' target='_self'>FCA US
 PENINSULA POWDER COATING INC,<a href='?srn=N7959' target='_self'>PENINSULA POWDER COATING INC</a>,Baraga,True Minor,N7959,1.0,2020-01-27
 KREHER WIRE PROCESSING INC,<a href='?srn=N7836' target='_self'>KREHER WIRE PROCESSING INC</a>,Wayne,True Minor,N7836,1.0,2018-03-23
 HENRY FORD ALLEGIANCE HEALTH,<a href='?srn=E2236' target='_self'>HENRY FORD ALLEGIANCE HEALTH</a>,Jackson,Unknown,E2236,1.0,2018-03-20
-OTSEGO PAPER INC,<a href='?srn=A0023' target='_self'>OTSEGO PAPER INC</a>,Allegan,Major,A0023,1.0,2019-10-09
+OTSEGO PAPER INC,<a href='?srn=A0023' target='_self'>OTSEGO PAPER INC</a>,Allegan,Major,A0023,2.0,2024-05-10
 "NGK SPARK PLUGS (U.S.A.), INC.","<a href='?srn=P1099' target='_self'>NGK SPARK PLUGS (U.S.A.), INC.</a>",Oakland,Synthetic Minor,P1099,1.0,2020-01-22
 VCP MICHIGAN - BAGLEY 23,<a href='?srn=N6080' target='_self'>VCP MICHIGAN - BAGLEY 23</a>,Otsego,Synthetic Minor,N6080,1.0,2018-03-19
 TUSCOLA ENERGY INC,<a href='?srn=P0199' target='_self'>TUSCOLA ENERGY INC</a>,Tuscola,True Minor,P0199,1.0,2018-11-05
@@ -791,7 +791,7 @@ TRANSITIONS PET MEMORIAL SERVICES,<a href='https://planet-detroit.github.io/air-
 "TUSCOLA ENERGY, INC.","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=B7394' target='_blank'>TUSCOLA ENERGY, INC.</a>",Lapeer,True Minor,B7394,1.0,2024-01-19
 GENERAL MOTORS LANSING GRAND RIVER ASSEMBLY,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=A1641' target='_blank'>GENERAL MOTORS LANSING GRAND RIVER ASSEMBLY</a>,Ingham,Major,A1641,1.0,2024-01-22
 GREAT LAKES CASTINGS LLC,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=A3934' target='_blank'>GREAT LAKES CASTINGS LLC</a>,Mason,Major,A3934,1.0,2024-01-23
-"SPARTAN FIRE, LLC","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N2503' target='_blank'>SPARTAN FIRE, LLC</a>",Eaton,Synthetic Minor,N2503,1.0,2024-01-19
+"SPARTAN FIRE, LLC","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N2503' target='_blank'>SPARTAN FIRE, LLC</a>",Eaton,Synthetic Minor,N2503,2.0,2024-05-13
 "SMR AUTOMOTIVE SYSTEMS USA, INC.","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N7411' target='_blank'>SMR AUTOMOTIVE SYSTEMS USA, INC.</a>",Saint Clair,Synthetic Minor,N7411,1.0,2024-01-05
 X-CEL INDUSTRIES INC.,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N6594' target='_blank'>X-CEL INDUSTRIES INC.</a>,Oakland,Synthetic Minor,N6594,1.0,2024-01-31
 ACTION PACKAGING,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N3293' target='_blank'>ACTION PACKAGING</a>,Jackson,True Minor,N3293,1.0,2024-02-13
@@ -815,3 +815,4 @@ ORIGINAL FOOTWEAR,<a href='https://planet-detroit.github.io/air-permit-violation
 ORCHARD HILL SANITARY LANDFILL,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N5719' target='_blank'>ORCHARD HILL SANITARY LANDFILL</a>,Berrien,Major,N5719,1.0,2024-05-06
 "ACUMENT GLOBAL TECHNOLOGIES, BALDWIN OPERATIONS","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N1705' target='_blank'>ACUMENT GLOBAL TECHNOLOGIES, BALDWIN OPERATIONS</a>",Genesee,True Minor,N1705,1.0,2024-05-07
 MIDWEST II,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N2735' target='_blank'>MIDWEST II</a>,Monroe,True Minor,N2735,1.0,2024-05-07
+AMERICHEM SALES CORPORATION,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=M3648' target='_blank'>AMERICHEM SALES CORPORATION</a>,Ingham,True Minor,M3648,1.0,2024-05-13
