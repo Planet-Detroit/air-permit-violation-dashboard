@@ -3,7 +3,7 @@ facility_name,name_url,county,epa_class_simple,srn,violation_count,most_recent_v
 "ARBOR HILLS LANDFILL, INC.","<a href='?srn=N2688' target='_self'>ARBOR HILLS LANDFILL, INC.</a>",Washtenaw,Major,N2688,37.0,2024-05-10
 CLEVELAND-CLIFFS STEEL CORPORATION DEARBORN WORKS,<a href='?srn=A8640' target='_self'>CLEVELAND-CLIFFS STEEL CORPORATION DEARBORN WORKS</a>,Wayne,Megasite,A8640,19.0,2023-10-06
 "EQ DETROIT, INC. (DBA US ECOLOGY - DETROIT SOUTH)","<a href='?srn=M4545' target='_self'>EQ DETROIT, INC. (DBA US ECOLOGY - DETROIT SOUTH)</a>",Wayne,Synthetic Minor,M4545,17.0,2023-02-10
-INDUSTRIAL METAL COATINGS INC,<a href='?srn=N5145' target='_self'>INDUSTRIAL METAL COATINGS INC</a>,Macomb,True Minor,N5145,15.0,2023-10-23
+INDUSTRIAL METAL COATINGS INC,<a href='?srn=N5145' target='_self'>INDUSTRIAL METAL COATINGS INC</a>,Macomb,True Minor,N5145,16.0,2024-05-15
 MICHIGAN SUGAR COMPANY - BAY CITY,<a href='?srn=B1493' target='_self'>MICHIGAN SUGAR COMPANY - BAY CITY</a>,Bay,Major,B1493,17.0,2024-03-25
 HOLCIM (US) INC. DBA LAFARGE ALPENA PLANT,<a href='?srn=B1477' target='_self'>HOLCIM (US) INC. DBA LAFARGE ALPENA PLANT</a>,Alpena,Major,B1477,12.0,2023-07-20
 EDW C LEVY CO PLANT 6,<a href='?srn=B4243' target='_self'>EDW C LEVY CO PLANT 6</a>,Wayne,Major,B4243,15.0,2024-04-02
@@ -38,7 +38,7 @@ PRATT INDUSTRIES INC.,<a href='?srn=P0491' target='_self'>PRATT INDUSTRIES INC.<
 MOLD MASTERS COMPANY,<a href='?srn=A2809' target='_self'>MOLD MASTERS COMPANY</a>,Lapeer,Synthetic Minor,A2809,9.0,2024-04-11
 "MESSINA TRUCKING, INC.","<a href='?srn=P1020' target='_self'>MESSINA TRUCKING, INC.</a>",Macomb,True Minor,P1020,6.0,2023-09-13
 "HOOVER ROAD REAL ESTATE, LLC","<a href='?srn=P1109' target='_self'>HOOVER ROAD REAL ESTATE, LLC</a>",Macomb,Synthetic Minor,P1109,6.0,2022-09-07
-PRATT INDUSTRIES INC.,<a href='?srn=N7486' target='_self'>PRATT INDUSTRIES INC.</a>,Berrien,Synthetic Minor,N7486,6.0,2022-06-10
+PRATT INDUSTRIES INC.,<a href='?srn=N7486' target='_self'>PRATT INDUSTRIES INC.</a>,Berrien,Synthetic Minor,N7486,7.0,2024-05-15
 DTE ELECTRIC COMPANY - MONROE POWER PLANT,<a href='?srn=B2816' target='_self'>DTE ELECTRIC COMPANY - MONROE POWER PLANT</a>,Monroe,Major,B2816,6.0,2023-07-11
 MICHIGAN FOAM PRODUCTS LLC,<a href='?srn=N3078' target='_self'>MICHIGAN FOAM PRODUCTS LLC</a>,Kent,Major,N3078,7.0,2024-01-31
 BASF CORPORATION - CHEMICAL PLANTS,<a href='?srn=B4359' target='_self'>BASF CORPORATION - CHEMICAL PLANTS</a>,Wayne,Major,B4359,5.0,2023-03-24
@@ -816,3 +816,4 @@ ORCHARD HILL SANITARY LANDFILL,<a href='https://planet-detroit.github.io/air-per
 "ACUMENT GLOBAL TECHNOLOGIES, BALDWIN OPERATIONS","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N1705' target='_blank'>ACUMENT GLOBAL TECHNOLOGIES, BALDWIN OPERATIONS</a>",Genesee,True Minor,N1705,1.0,2024-05-07
 MIDWEST II,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N2735' target='_blank'>MIDWEST II</a>,Monroe,True Minor,N2735,1.0,2024-05-07
 AMERICHEM SALES CORPORATION,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=M3648' target='_blank'>AMERICHEM SALES CORPORATION</a>,Ingham,True Minor,M3648,1.0,2024-05-13
+OATSVALL CONSTRUCTION LLC,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=P1369' target='_blank'>OATSVALL CONSTRUCTION LLC</a>,Berrien,Unknown,P1369,1.0,2024-05-15
