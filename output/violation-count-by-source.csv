@@ -35,7 +35,7 @@ TRIBAR TECHNOLOGIES INC (PLANT 5),<a href='?srn=P0727' target='_self'>TRIBAR TEC
 "LACKS INDUSTRIES, INC.","<a href='?srn=N2079' target='_self'>LACKS INDUSTRIES, INC.</a>",Kent,Megasite,N2079,6.0,2022-10-24
 "ATLAS EPS, A DIVISION OF ATLAS ROOFING CORP.","<a href='?srn=N1794' target='_self'>ATLAS EPS, A DIVISION OF ATLAS ROOFING CORP.</a>",Kent,Major,N1794,6.0,2022-09-15
 PRATT INDUSTRIES INC.,<a href='?srn=P0491' target='_self'>PRATT INDUSTRIES INC.</a>,Berrien,True Minor,P0491,6.0,2022-06-15
-MOLD MASTERS COMPANY,<a href='?srn=A2809' target='_self'>MOLD MASTERS COMPANY</a>,Lapeer,Synthetic Minor,A2809,9.0,2024-04-11
+MOLD MASTERS COMPANY,<a href='?srn=A2809' target='_self'>MOLD MASTERS COMPANY</a>,Lapeer,Synthetic Minor,A2809,10.0,2024-05-23
 "MESSINA TRUCKING, INC.","<a href='?srn=P1020' target='_self'>MESSINA TRUCKING, INC.</a>",Macomb,True Minor,P1020,6.0,2023-09-13
 "HOOVER ROAD REAL ESTATE, LLC","<a href='?srn=P1109' target='_self'>HOOVER ROAD REAL ESTATE, LLC</a>",Macomb,Synthetic Minor,P1109,6.0,2022-09-07
 PRATT INDUSTRIES INC.,<a href='?srn=N7486' target='_self'>PRATT INDUSTRIES INC.</a>,Berrien,Synthetic Minor,N7486,7.0,2024-05-15
@@ -122,7 +122,7 @@ CENTRAL SANITARY LANDFILL,<a href='?srn=N2804' target='_self'>CENTRAL SANITARY L
 THELAMCO INC,<a href='?srn=B6608' target='_self'>THELAMCO INC</a>,Berrien,Synthetic Minor,B6608,3.0,2022-06-14
 "MT CRUSHMOR, LLC","<a href='?srn=P1164' target='_self'>MT CRUSHMOR, LLC</a>",Genesee,True Minor,P1164,3.0,2022-08-30
 "GREAT LAKES COMPOSITE, LLC","<a href='?srn=N2430' target='_self'>GREAT LAKES COMPOSITE, LLC</a>",Shiawassee,Major,N2430,3.0,2023-09-19
-MID-MICHIGAN CRUSHING & RECYCLING INC,<a href='?srn=N8316' target='_self'>MID-MICHIGAN CRUSHING & RECYCLING INC</a>,Wayne,True Minor,N8316,3.0,2022-07-21
+MID-MICHIGAN CRUSHING & RECYCLING INC,<a href='?srn=N8316' target='_self'>MID-MICHIGAN CRUSHING & RECYCLING INC</a>,Wayne,True Minor,N8316,4.0,2024-05-23
 GERDAU SPECIAL STEEL NORTH AMERICA - JACKSON MILL,<a href='?srn=B4306' target='_self'>GERDAU SPECIAL STEEL NORTH AMERICA - JACKSON MILL</a>,Jackson,Major,B4306,3.0,2019-09-25
 SUPERIOR ASPHALT INC,<a href='?srn=N8295' target='_self'>SUPERIOR ASPHALT INC</a>,Kent,Synthetic Minor,N8295,3.0,2020-05-21
 "RJ TORCHING, INC.","<a href='?srn=N7885' target='_self'>RJ TORCHING, INC.</a>",Genesee,True Minor,N7885,3.0,2023-09-18
@@ -821,3 +821,4 @@ SPARKS BELTING COMPANY,<a href='https://planet-detroit.github.io/air-permit-viol
 OTTAWA COUNTY FARMS LANDFILL,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N3294' target='_blank'>OTTAWA COUNTY FARMS LANDFILL</a>,Ottawa,Major,N3294,1.0,2024-05-17
 DOUBLE EAGLE STEEL COATING COMPANY,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N1089' target='_blank'>DOUBLE EAGLE STEEL COATING COMPANY</a>,Wayne,Unknown,N1089,1.0,2024-05-21
 JOSEPH LUNGHAMER CHEVROLET INC,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N3789' target='_blank'>JOSEPH LUNGHAMER CHEVROLET INC</a>,Oakland,Synthetic Minor,N3789,1.0,2024-05-23
+CREATIVE FOAM CORPORATION,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N6574' target='_blank'>CREATIVE FOAM CORPORATION</a>,Genesee,Synthetic Minor,N6574,1.0,2024-05-23
