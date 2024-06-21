@@ -99,7 +99,7 @@ BRENT RUN LANDFILL,<a href='?srn=N5987' target='_self'>BRENT RUN LANDFILL</a>,Ge
 SHELBY CABINETS,<a href='?srn=N7999' target='_self'>SHELBY CABINETS</a>,Macomb,Synthetic Minor,N7999,3.0,2023-07-28
 ANR PIPELINE CO -  WOOLFOLK COMPRESSOR STATION,<a href='?srn=B7220' target='_self'>ANR PIPELINE CO -  WOOLFOLK COMPRESSOR STATION</a>,Mecosta,Major,B7220,3.0,2021-11-09
 "MOD INTERIORS, INCORPORATED","<a href='?srn=N7499' target='_self'>MOD INTERIORS, INCORPORATED</a>",Saint Clair,Synthetic Minor,N7499,4.0,2024-02-01
-"LAYLINE OIL & GAS, LLC- ST. A2","<a href='?srn=P1075' target='_self'>LAYLINE OIL & GAS, LLC- ST. A2</a>",Clare,Synthetic Minor,P1075,3.0,2023-08-22
+"LAYLINE OIL & GAS, LLC- ST. A2","<a href='?srn=P1075' target='_self'>LAYLINE OIL & GAS, LLC- ST. A2</a>",Clare,Synthetic Minor,P1075,4.0,2024-06-18
 "ALBAR INDUSTRIES, INC.","<a href='?srn=N0802' target='_self'>ALBAR INDUSTRIES, INC.</a>",Lapeer,Major,N0802,3.0,2022-04-05
 "STATE CRUSHING, INC.-EAST","<a href='?srn=M3526' target='_self'>STATE CRUSHING, INC.-EAST</a>",Macomb,True Minor,M3526,3.0,2022-10-20
 FORD MOTOR COMPANY - FLAT ROCK ASSEMBLY,<a href='?srn=N0929' target='_self'>FORD MOTOR COMPANY - FLAT ROCK ASSEMBLY</a>,Wayne,Major,N0929,3.0,2022-02-18
@@ -200,7 +200,7 @@ PASLIN COMPANY,<a href='?srn=P0739' target='_self'>PASLIN COMPANY</a>,Macomb,Syn
 FCA US LLC - CHRYSLER TECHNOLOGY CENTER,<a href='?srn=N1436' target='_self'>FCA US LLC - CHRYSLER TECHNOLOGY CENTER</a>,Oakland,Major,N1436,2.0,2021-09-09
 SC ENVIRONMENTAL SERVICES,<a href='?srn=P0951' target='_self'>SC ENVIRONMENTAL SERVICES</a>,Ingham,True Minor,P0951,2.0,2019-06-04
 AMERITI MANUFACTURING COMPANY,<a href='?srn=A8892' target='_self'>AMERITI MANUFACTURING COMPANY</a>,Wayne,Synthetic Minor,A8892,2.0,2020-09-25
-"KNAUF INSULATION, INC.","<a href='?srn=B7205' target='_self'>KNAUF INSULATION, INC.</a>",Calhoun,Major,B7205,3.0,2024-04-01
+"KNAUF INSULATION, INC.","<a href='?srn=B7205' target='_self'>KNAUF INSULATION, INC.</a>",Calhoun,Major,B7205,4.0,2024-06-20
 TOWER AUTOMOTIVE,<a href='?srn=N7871' target='_self'>TOWER AUTOMOTIVE</a>,Wayne,Synthetic Minor,N7871,2.0,2019-12-17
 "SAKTHI AUTOMOTIVE GROUP USA, INC","<a href='?srn=P0380' target='_self'>SAKTHI AUTOMOTIVE GROUP USA, INC</a>",Wayne,Synthetic Minor,P0380,2.0,2019-03-04
 TUSCOLA ENERGY - RICHFIELD GAS PLANT,<a href='?srn=B5462' target='_self'>TUSCOLA ENERGY - RICHFIELD GAS PLANT</a>,Lapeer,Major,B5462,4.0,2024-04-10
@@ -828,3 +828,4 @@ R L M INDUSTRIES INC,<a href='https://planet-detroit.github.io/air-permit-violat
 BRUCE WALDRON EXCAVATING,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=P1166' target='_blank'>BRUCE WALDRON EXCAVATING</a>,Gratiot,True Minor,P1166,1.0,2024-05-29
 "VIBRACOUSTIC USA, INC.","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=A6445' target='_blank'>VIBRACOUSTIC USA, INC.</a>",Sanilac,Synthetic Minor,A6445,1.0,2024-06-10
 BILLCO PRODUCTS,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N0984' target='_blank'>BILLCO PRODUCTS</a>,Allegan,Unknown,N0984,1.0,2024-06-17
+LAYLINE OIL & GAS LLC,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=P1318' target='_blank'>LAYLINE OIL & GAS LLC</a>,Clare,Unknown,P1318,1.0,2024-06-18
