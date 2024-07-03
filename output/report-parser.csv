@@ -1,4 +1,5 @@
 date,vns_found,comments_found,comments_flagged,empty_pdfs,unparsable_pdfs,table_errors
+2024-07-02,2,2.0,0.0,0.0,0.0,0.0
 2024-07-01,0,,,,,
 2024-06-30,0,,,,,
 2024-06-29,0,,,,,
@@ -167,8 +168,8 @@ date,vns_found,comments_found,comments_flagged,empty_pdfs,unparsable_pdfs,table_
 2024-01-13,0,,,,,
 2024-01-12,0,,,,,
 2024-01-11,0,,,,,
-2024-01-10,0,,,,,
 2024-01-10,1,1.0,0.0,0.0,0.0,0.0
+2024-01-10,0,,,,,
 2024-01-07,0,,,,,
 2024-01-06,0,,,,,
 2024-01-05,0,,,,,
