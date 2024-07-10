@@ -1,6 +1,6 @@
 facility_name,name_url,county,epa_class_simple,srn,violation_count,most_recent_vn
 "DETROIT RENEWABLE POWER, LLC","<a href='?srn=M4148' target='_self'>DETROIT RENEWABLE POWER, LLC</a>",Wayne,Major,M4148,35.0,2019-08-29
-"ARBOR HILLS LANDFILL, INC.","<a href='?srn=N2688' target='_self'>ARBOR HILLS LANDFILL, INC.</a>",Washtenaw,Major,N2688,37.0,2024-05-10
+"ARBOR HILLS LANDFILL, INC.","<a href='?srn=N2688' target='_self'>ARBOR HILLS LANDFILL, INC.</a>",Washtenaw,Major,N2688,38.0,2024-06-14
 CLEVELAND-CLIFFS STEEL CORPORATION DEARBORN WORKS,<a href='?srn=A8640' target='_self'>CLEVELAND-CLIFFS STEEL CORPORATION DEARBORN WORKS</a>,Wayne,Megasite,A8640,19.0,2023-10-06
 "EQ DETROIT, INC. (DBA US ECOLOGY - DETROIT SOUTH)","<a href='?srn=M4545' target='_self'>EQ DETROIT, INC. (DBA US ECOLOGY - DETROIT SOUTH)</a>",Wayne,Synthetic Minor,M4545,17.0,2023-02-10
 INDUSTRIAL METAL COATINGS INC,<a href='?srn=N5145' target='_self'>INDUSTRIAL METAL COATINGS INC</a>,Macomb,True Minor,N5145,17.0,2024-07-03
@@ -734,7 +734,7 @@ IRWIN SEATING COMPANY,<a href='?srn=B0333' target='_self'>IRWIN SEATING COMPANY<
 AZON USA INC,<a href='?srn=N3124' target='_self'>AZON USA INC</a>,Kalamazoo,True Minor,N3124,1.0,2021-09-24
 "CENTENNIAL COATINGS, LLC","<a href='?srn=A5814' target='_self'>CENTENNIAL COATINGS, LLC</a>",Ottawa,True Minor,A5814,1.0,2021-07-12
 "HUTCHINSON ANTIVIBRATION SYSTEMS, INC.","<a href='?srn=E5094' target='_self'>HUTCHINSON ANTIVIBRATION SYSTEMS, INC.</a>",Kent,Major,E5094,1.0,2021-09-23
-LAKELAND MONROE GROUP - PLANT 2,<a href='?srn=N7645' target='_self'>LAKELAND MONROE GROUP - PLANT 2</a>,Kent,Synthetic Minor,N7645,1.0,2021-07-15
+LAKELAND MONROE GROUP - PLANT 2,<a href='?srn=N7645' target='_self'>LAKELAND MONROE GROUP - PLANT 2</a>,Kent,Synthetic Minor,N7645,2.0,2024-07-09
 "BUCKEYE TERMINALS, LLC-MARSHALL TERMINAL","<a href='?srn=B9052' target='_self'>BUCKEYE TERMINALS, LLC-MARSHALL TERMINAL</a>",Calhoun,Synthetic Minor,B9052,1.0,2021-07-19
 "COMPASSIONATE ADVISORS-PINCANNA, LLC","<a href='?srn=P1098' target='_self'>COMPASSIONATE ADVISORS-PINCANNA, LLC</a>",Bay,True Minor,P1098,1.0,2021-07-23
 STATE HEAT TREATING COMPANY,<a href='?srn=P1208' target='_self'>STATE HEAT TREATING COMPANY</a>,Kent,True Minor,P1208,1.0,2021-07-27
