@@ -66,8 +66,10 @@ new_parsed_vns = pd.DataFrame(columns=['doc_url','location','process_description
 # Looping through the Document URLs
 for file in new_vn.doc_url:
     # Download the PDF and save it for posterity
-    wget.download(file, out='archive/')
-
+    try:
+        wget.download(file, out='archive/')
+    except:
+        pass
     # Making a list and a dictionary to create a dataframe later on
     one_vn_list = []
     one_vn = {}
