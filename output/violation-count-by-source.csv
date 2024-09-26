@@ -720,7 +720,7 @@ DC BYERS COMPANY,<a href='?srn=N6637' target='_self'>DC BYERS COMPANY</a>,Kent,T
 WEEKS FOOD CORP WAREHOUSE,<a href='?srn=P1255' target='_self'>WEEKS FOOD CORP WAREHOUSE</a>,Macomb,Unknown,P1255,1.0,2022-02-24
 RESSURRECTION CEMETERY-CREMATORY,<a href='?srn=N7745' target='_self'>RESSURRECTION CEMETERY-CREMATORY</a>,Macomb,True Minor,N7745,1.0,2022-02-25
 ST JOSEPH MERCY HOSPITAL,<a href='?srn=M3431' target='_self'>ST JOSEPH MERCY HOSPITAL</a>,Washtenaw,Synthetic Minor,M3431,1.0,2022-03-08
-DT MIDSTREAM - WASHINGTON 10 COMPRESSOR STATION,<a href='?srn=N3391' target='_self'>DT MIDSTREAM - WASHINGTON 10 COMPRESSOR STATION</a>,Macomb,Major,N3391,1.0,2022-03-15
+DT MIDSTREAM - WASHINGTON 10 COMPRESSOR STATION,<a href='?srn=N3391' target='_self'>DT MIDSTREAM - WASHINGTON 10 COMPRESSOR STATION</a>,Macomb,Major,N3391,2.0,2024-09-25
 GM TECHNICAL CENTER,<a href='?srn=B4049' target='_self'>GM TECHNICAL CENTER</a>,Macomb,Major,B4049,1.0,2022-03-16
 DTE GAS CO. - BELLE RIVER MILLS COMPRESSOR STATION,<a href='?srn=B6478' target='_self'>DTE GAS CO. - BELLE RIVER MILLS COMPRESSOR STATION</a>,Saint Clair,Major,B6478,1.0,2022-03-22
 "MARCELLUS METALCASTERS, INC.","<a href='?srn=P0759' target='_self'>MARCELLUS METALCASTERS, INC.</a>",Cass,Unknown,P0759,1.0,2022-03-23
@@ -774,9 +774,9 @@ ROUSH INDUSTRIES,<a href='https://planet-detroit.github.io/air-permit-violation-
 BLUEWATER THERMAL SOLUTIONS,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=P1241' target='_blank'>BLUEWATER THERMAL SOLUTIONS</a>,Berrien,True Minor,P1241,1.0,2023-10-16
 SMITHS CREEK LANDFILL,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N6207' target='_blank'>SMITHS CREEK LANDFILL</a>,Saint Clair,Major,N6207,9.0,2024-07-19
 ASH STEVENS LLC,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N7519' target='_blank'>ASH STEVENS LLC</a>,Wayne,Synthetic Minor,N7519,1.0,2023-10-26
-"BRIGHTMARK WILLOW POINT RNG, LLC","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=P1157' target='_blank'>BRIGHTMARK WILLOW POINT RNG, LLC</a>",Ionia,Unknown,P1157,1.0,2023-10-27
-"BRIGHTMARK MEADOW ROCK RNG, LLC","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=P1152' target='_blank'>BRIGHTMARK MEADOW ROCK RNG, LLC</a>",Montcalm,Unknown,P1152,1.0,2023-10-27
-"BRIGHTMARK CASTOR RNG, LLC","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=P1125' target='_blank'>BRIGHTMARK CASTOR RNG, LLC</a>",Ottawa,Unknown,P1125,2.0,2024-04-09
+"BRIGHTMARK WILLOW POINT RNG, LLC","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=P1157' target='_blank'>BRIGHTMARK WILLOW POINT RNG, LLC</a>",Ionia,Unknown,P1157,2.0,2024-09-25
+"BRIGHTMARK MEADOW ROCK RNG, LLC","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=P1152' target='_blank'>BRIGHTMARK MEADOW ROCK RNG, LLC</a>",Montcalm,Unknown,P1152,2.0,2024-09-25
+"BRIGHTMARK CASTOR RNG, LLC","<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=P1125' target='_blank'>BRIGHTMARK CASTOR RNG, LLC</a>",Ottawa,Unknown,P1125,3.0,2024-09-25
 MICHIGAN AGRICULTURAL COMMODITIES-BLISSFIELD,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N1810' target='_blank'>MICHIGAN AGRICULTURAL COMMODITIES-BLISSFIELD</a>,Lenawee,True Minor,N1810,1.0,2023-10-31
 ELITE CLEANROOM SERVICES,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=P0455' target='_blank'>ELITE CLEANROOM SERVICES</a>,Lapeer,True Minor,P0455,2.0,2024-05-28
 DART CONTAINER CORPORATION OF MICHIGAN,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=D8065' target='_blank'>DART CONTAINER CORPORATION OF MICHIGAN</a>,Ingham,Major,D8065,1.0,2023-11-01
