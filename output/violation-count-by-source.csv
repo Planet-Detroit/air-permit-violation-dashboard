@@ -25,7 +25,7 @@ ST MARYS CEMENT CHARLEVOIX PLANT,<a href='?srn=B1559' target='_self'>ST MARYS CE
 "CITIZENS DISPOSAL, INC.","<a href='?srn=N5991' target='_self'>CITIZENS DISPOSAL, INC.</a>",Genesee,Major,N5991,9.0,2024-01-08
 "BREMBO NORTH AMERICA, INC.","<a href='?srn=N6226' target='_self'>BREMBO NORTH AMERICA, INC.</a>",Calhoun,Major,N6226,7.0,2022-10-04
 "GENERATE FREMONT DIGESTER, LLC","<a href='?srn=N8210' target='_self'>GENERATE FREMONT DIGESTER, LLC</a>",Newaygo,Synthetic Minor,N8210,7.0,2021-10-04
-GERDAU MACSTEEL MONROE MILL,<a href='?srn=B7061' target='_self'>GERDAU MACSTEEL MONROE MILL</a>,Monroe,Major,B7061,8.0,2024-01-18
+GERDAU MACSTEEL MONROE MILL,<a href='?srn=B7061' target='_self'>GERDAU MACSTEEL MONROE MILL</a>,Monroe,Major,B7061,9.0,2024-09-18
 ROGERS PRINTING INC,<a href='?srn=A4216' target='_self'>ROGERS PRINTING INC</a>,Muskegon,Synthetic Minor,A4216,8.0,2024-04-01
 EES COKE BATTERY L.L.C.,<a href='?srn=P0408' target='_self'>EES COKE BATTERY L.L.C.</a>,Wayne,Megasite,P0408,7.0,2024-04-23
 DYNAMIC CRUSHING LLC,<a href='?srn=P0691' target='_self'>DYNAMIC CRUSHING LLC</a>,Ionia,True Minor,P0691,6.0,2021-10-19
@@ -147,7 +147,7 @@ PLASTIC PLATE KRAFT,<a href='?srn=N7374' target='_self'>PLASTIC PLATE KRAFT</a>,
 "OAKLAND HEIGHTS DEVELOPMENT, INC.","<a href='?srn=N6008' target='_self'>OAKLAND HEIGHTS DEVELOPMENT, INC.</a>",Oakland,Major,N6008,2.0,2020-02-27
 STATELINE CRUSHING,<a href='?srn=P0622' target='_self'>STATELINE CRUSHING</a>,Washtenaw,True Minor,P0622,2.0,2022-07-13
 VERSO ESCANABA LLC,<a href='?srn=A0884' target='_self'>VERSO ESCANABA LLC</a>,Delta,Major,A0884,2.0,2020-09-14
-AMERICAN RACK COMPANY,<a href='?srn=P0893' target='_self'>AMERICAN RACK COMPANY</a>,Allegan,Synthetic Minor,P0893,3.0,2023-11-02
+AMERICAN RACK COMPANY,<a href='?srn=P0893' target='_self'>AMERICAN RACK COMPANY</a>,Allegan,Synthetic Minor,P0893,4.0,2024-09-30
 VOSS INDUSTRIES-VOSS TAYLOR DIV,<a href='?srn=B3472' target='_self'>VOSS INDUSTRIES-VOSS TAYLOR DIV</a>,Wayne,Synthetic Minor,B3472,2.0,2020-01-17
 FENDT BUILDER'S SUPPLY INC,<a href='?srn=F9158' target='_self'>FENDT BUILDER'S SUPPLY INC</a>,Oakland,True Minor,F9158,2.0,2020-09-23
 GENE BROW AND SONS INC  #369-07,<a href='?srn=N7918' target='_self'>GENE BROW AND SONS INC  #369-07</a>,Chippewa,True Minor,N7918,2.0,2020-09-11
@@ -847,3 +847,4 @@ BECKER METAL WORKS,<a href='https://planet-detroit.github.io/air-permit-violatio
 UNIVERSAL CASKET COMPANY,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=P1371' target='_blank'>UNIVERSAL CASKET COMPANY</a>,Cass,Unknown,P1371,1.0,2024-09-16
 WHEELOCK & SONS WELDING SHOP,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N6813' target='_blank'>WHEELOCK & SONS WELDING SHOP</a>,Grand Traverse,True Minor,N6813,1.0,2024-09-17
 SEKISUI VOLTEK LLC.,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=B8786' target='_blank'>SEKISUI VOLTEK LLC.</a>,Branch,Major,B8786,1.0,2024-09-26
+WESTROCK-MULTI PACKAGING SOLUTIONS,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N6727' target='_blank'>WESTROCK-MULTI PACKAGING SOLUTIONS</a>,Allegan,True Minor,N6727,1.0,2024-09-30
