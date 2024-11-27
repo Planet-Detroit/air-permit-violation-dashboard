@@ -699,6 +699,25 @@ align-items: center;
     background-color:#ffd254;
     text-decoration:none;
 }
+.data-btn{
+    border: 1px solid black;
+    border-radius:.2em;
+    padding:5px 10px 5px;
+    margin: 5px;
+    font-size:small;
+    text-decoration: none;
+    text-transform:none;
+    /* line-height:3em; */
+    color:black;
+    /* margin: 0 auto; */
+    text-align:center;
+    display:inline-block; 
+    background-color:#d2d2d2;
+}
+.data-btn:hover{
+    background-color:#ececec;
+    text-decoration:none;
+}
 .one-vn {
     width:100%;
     border: 1px solid black;
