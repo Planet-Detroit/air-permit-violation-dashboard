@@ -42,7 +42,7 @@ PRATT INDUSTRIES INC.,<a href='?srn=N7486' target='_self'>PRATT INDUSTRIES INC.<
 DTE ELECTRIC COMPANY - MONROE POWER PLANT,<a href='?srn=B2816' target='_self'>DTE ELECTRIC COMPANY - MONROE POWER PLANT</a>,Monroe,Major,B2816,6.0,2023-07-11
 MICHIGAN FOAM PRODUCTS LLC,<a href='?srn=N3078' target='_self'>MICHIGAN FOAM PRODUCTS LLC</a>,Kent,Major,N3078,7.0,2024-01-31
 BASF CORPORATION - CHEMICAL PLANTS,<a href='?srn=B4359' target='_self'>BASF CORPORATION - CHEMICAL PLANTS</a>,Wayne,Major,B4359,5.0,2023-03-24
-"RECONSERVE OF MICHIGAN, INC.","<a href='?srn=N8081' target='_self'>RECONSERVE OF MICHIGAN, INC.</a>",Calhoun,Synthetic Minor,N8081,9.0,2024-11-12
+"RECONSERVE OF MICHIGAN, INC.","<a href='?srn=N8081' target='_self'>RECONSERVE OF MICHIGAN, INC.</a>",Calhoun,Synthetic Minor,N8081,10.0,2024-11-26
 "REAL ALLOY RECYCLING, LLC","<a href='?srn=N5957' target='_self'>REAL ALLOY RECYCLING, LLC</a>",Branch,Major,N5957,6.0,2023-10-19
 U S SILICA CO,<a href='?srn=A7757' target='_self'>U S SILICA CO</a>,Wayne,Synthetic Minor,A7757,5.0,2023-05-22
 MICHIGAN SUGAR COMPANY  -  SEBEWAING FACTORY,<a href='?srn=B2873' target='_self'>MICHIGAN SUGAR COMPANY  -  SEBEWAING FACTORY</a>,Huron,Major,B2873,6.0,2023-10-31
@@ -51,7 +51,7 @@ LBWL - ECKERT STATION & REO TOWN PLANT,<a href='?srn=B2647' target='_self'>LBWL 
 DIAMOND CHROME PLATING INC,<a href='?srn=A2931' target='_self'>DIAMOND CHROME PLATING INC</a>,Livingston,True Minor,A2931,6.0,2024-03-20
 MICHIGAN METAL COATINGS,<a href='?srn=N0950' target='_self'>MICHIGAN METAL COATINGS</a>,Saint Clair,Synthetic Minor,N0950,5.0,2019-09-12
 HARD ROCK QUARRY LLC,<a href='?srn=P0723' target='_self'>HARD ROCK QUARRY LLC</a>,Jackson,True Minor,P0723,5.0,2022-06-02
-GRAND RAPIDS WASTEWATER TREATMENT PLANT,<a href='?srn=B1729' target='_self'>GRAND RAPIDS WASTEWATER TREATMENT PLANT</a>,Kent,Synthetic Minor,B1729,5.0,2023-08-03
+GRAND RAPIDS WASTEWATER TREATMENT PLANT,<a href='?srn=B1729' target='_self'>GRAND RAPIDS WASTEWATER TREATMENT PLANT</a>,Kent,Synthetic Minor,B1729,6.0,2024-12-03
 GRAPHIC PACKAGING INTERNATIONAL LLC,<a href='?srn=B1678' target='_self'>GRAPHIC PACKAGING INTERNATIONAL LLC</a>,Kalamazoo,Major,B1678,5.0,2022-12-19
 PREMIER FINISHES LLC,<a href='?srn=N7896' target='_self'>PREMIER FINISHES LLC</a>,Macomb,True Minor,N7896,5.0,2023-09-20
 PREGIS,<a href='?srn=N6944' target='_self'>PREGIS</a>,Saint Clair,Major,N6944,5.0,2023-06-26
@@ -75,9 +75,9 @@ YPSILANTI COMM. UTILITIES AUTHORITY,<a href='?srn=B6237' target='_self'>YPSILANT
 "METAL TECHNOLOGIES, INC. THREE RIVERS GRAY IRON","<a href='?srn=B2015' target='_self'>METAL TECHNOLOGIES, INC. THREE RIVERS GRAY IRON</a>",Saint Joseph,Major,B2015,4.0,2021-10-18
 WORTHEN COATED FABRICS,<a href='?srn=P0634' target='_self'>WORTHEN COATED FABRICS</a>,Kent,Major,P0634,7.0,2024-06-26
 GM LLC SAGINAW METAL CASTING OPERATIONS,<a href='?srn=B1991' target='_self'>GM LLC SAGINAW METAL CASTING OPERATIONS</a>,Saginaw,Major,B1991,4.0,2022-01-07
-TEMPERFORM LLC,<a href='?srn=B7357' target='_self'>TEMPERFORM LLC</a>,Oakland,Synthetic Minor,B7357,4.0,2023-04-18
+TEMPERFORM LLC,<a href='?srn=B7357' target='_self'>TEMPERFORM LLC</a>,Oakland,Synthetic Minor,B7357,5.0,2024-12-06
 COMFORT RESEARCH,<a href='?srn=N1916' target='_self'>COMFORT RESEARCH</a>,Kent,Synthetic Minor,N1916,4.0,2022-08-02
-"LEAR CORPORATION, FARWELL PLANT","<a href='?srn=B7294' target='_self'>LEAR CORPORATION, FARWELL PLANT</a>",Clare,Major,B7294,4.0,2021-04-05
+"LEAR CORPORATION, FARWELL PLANT","<a href='?srn=B7294' target='_self'>LEAR CORPORATION, FARWELL PLANT</a>",Clare,Major,B7294,5.0,2024-11-13
 DRAYTON IRON AND METAL CO,<a href='?srn=B5465' target='_self'>DRAYTON IRON AND METAL CO</a>,Oakland,True Minor,B5465,6.0,2024-06-12
 VIANT MEDICAL INC.,<a href='?srn=N0795' target='_self'>VIANT MEDICAL INC.</a>,Kent,True Minor,N0795,4.0,2019-10-29
 ROSEVILLE CRUSHED CONCRETE,<a href='?srn=N6658' target='_self'>ROSEVILLE CRUSHED CONCRETE</a>,Macomb,True Minor,N6658,5.0,2024-06-25
@@ -248,7 +248,7 @@ DGP INC.,<a href='?srn=N2383' target='_self'>DGP INC.</a>,Sanilac,Major,N2383,3.
 LEADING EDGE FIBERGLASS POOL,<a href='?srn=N7982' target='_self'>LEADING EDGE FIBERGLASS POOL</a>,Genesee,Synthetic Minor,N7982,2.0,2023-08-04
 SOUTH KENT LANDFILL,<a href='?srn=N1324' target='_self'>SOUTH KENT LANDFILL</a>,Kent,Major,N1324,2.0,2022-10-06
 SUMMIT INDUSTRIAL COATINGS,<a href='?srn=N0931' target='_self'>SUMMIT INDUSTRIAL COATINGS</a>,Berrien,True Minor,N0931,2.0,2023-07-10
-WOODLAND MEADOWS RDF,<a href='?srn=M4449' target='_self'>WOODLAND MEADOWS RDF</a>,Wayne,Major,M4449,4.0,2024-08-07
+WOODLAND MEADOWS RDF,<a href='?srn=M4449' target='_self'>WOODLAND MEADOWS RDF</a>,Wayne,Major,M4449,5.0,2024-12-03
 CORTEVA AGRISCIENCE LLC,<a href='?srn=P1028' target='_self'>CORTEVA AGRISCIENCE LLC</a>,Midland,Megasite,P1028,2.0,2023-01-27
 THERMA SEAL INC.,<a href='?srn=P1198' target='_self'>THERMA SEAL INC.</a>,Macomb,Synthetic Minor,P1198,2.0,2023-01-31
 RICHARD-ALLAN SCIENTIFIC,<a href='?srn=N7418' target='_self'>RICHARD-ALLAN SCIENTIFIC</a>,Kalamazoo,Synthetic Minor,N7418,3.0,2024-05-07
@@ -273,7 +273,7 @@ PREFIX CORPORATION,<a href='?srn=P0328' target='_self'>PREFIX CORPORATION</a>,Oa
 CITY OF MIDLAND UTILITIES DIVISION,<a href='?srn=N6004' target='_self'>CITY OF MIDLAND UTILITIES DIVISION</a>,Midland,Major,N6004,2.0,2022-10-03
 DAPCO INDUSTRIES,<a href='?srn=N3267' target='_self'>DAPCO INDUSTRIES</a>,Washtenaw,Synthetic Minor,N3267,2.0,2023-05-01
 WARREN WASTE WATER TREATMENT PLANT,<a href='?srn=B1792' target='_self'>WARREN WASTE WATER TREATMENT PLANT</a>,Macomb,Major,B1792,2.0,2018-10-11
-MEG'S HAULING,<a href='?srn=P1280' target='_self'>MEG'S HAULING</a>,Macomb,True Minor,P1280,2.0,2022-08-31
+MEG'S HAULING,<a href='?srn=P1280' target='_self'>MEG'S HAULING</a>,Macomb,True Minor,P1280,3.0,2024-11-27
 EAGLE INDUSTRIES INC,<a href='?srn=N7578' target='_self'>EAGLE INDUSTRIES INC</a>,Oakland,Major,N7578,3.0,2024-04-03
 TITAN CONCRETE,<a href='?srn=P1297' target='_self'>TITAN CONCRETE</a>,Macomb,True Minor,P1297,2.0,2023-01-11
 SUMMIT POLYMERS PLANT 18,<a href='?srn=P0815' target='_self'>SUMMIT POLYMERS PLANT 18</a>,Kalamazoo,Synthetic Minor,P0815,2.0,2022-09-15
@@ -856,3 +856,5 @@ CREATIVE FOAM CORP,<a href='https://planet-detroit.github.io/air-permit-violatio
 AXSON NORTH AMERICA INC,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N5561' target='_blank'>AXSON NORTH AMERICA INC</a>,Eaton,True Minor,N5561,1.0,2024-10-11
 PIRANHA HOSE PRODUCTS,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N7275' target='_blank'>PIRANHA HOSE PRODUCTS</a>,Wexford,True Minor,N7275,1.0,2024-11-07
 MICHIGAN TECHNOLOGICAL UNIVERSITY,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N7350' target='_blank'>MICHIGAN TECHNOLOGICAL UNIVERSITY</a>,Houghton,True Minor,N7350,1.0,2024-11-22
+GRAND TRAVERSE FRUIT LLC,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N7902' target='_blank'>GRAND TRAVERSE FRUIT LLC</a>,Grand Traverse,True Minor,N7902,1.0,2024-11-26
+SOMERO ENTERPRISES INC,<a href='https://planet-detroit.github.io/air-permit-violation-dashboard/?srn=N6729' target='_blank'>SOMERO ENTERPRISES INC</a>,Houghton,True Minor,N6729,1.0,2024-11-19
