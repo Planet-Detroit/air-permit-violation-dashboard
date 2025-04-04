@@ -428,8 +428,13 @@ $(document).ready(function () {
 });
 
 var constructionModal = document.getElementById("constructionPopup");
-window.onload = function() {
+// Check if the user has seen the modal before
+if (!localStorage.getItem('constructionModalSeen')) {
+	// Show the modal
 	constructionModal.style.display = "block";
+
+	// Mark the modal as seen in localStorage
+	localStorage.setItem('constructionModalSeen', 'true');
 }
 // Get the Epa Modal
 var epaModal = document.getElementById("epaPopup");
