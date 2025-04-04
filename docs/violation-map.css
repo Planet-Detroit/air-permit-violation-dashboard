@@ -1471,6 +1471,20 @@ a.button-green:hover{
     cursor: pointer;
   }
 
+.close-construction {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close-construction:hover,
+  .close-construction:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
 .caption{
     font-style:italic;
     color:#6d6d6d;

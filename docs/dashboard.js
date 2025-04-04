@@ -1,4 +1,6 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiZGF0YW1hbWExMTYiLCJhIjoiY2xncXMxM21rMTFhZDNybGh6cmE4YjZreCJ9.XPLngEtaW3V0Xd2vBDaxMQ'
+
+
 const urlParams = new URLSearchParams(window.location.search);
 const pntid = urlParams.get('srn');
 
@@ -425,6 +427,10 @@ $(document).ready(function () {
 	});
 });
 
+var constructionModal = document.getElementById("constructionPopup");
+window.onload = function() {
+	constructionModal.style.display = "block";
+}
 // Get the Epa Modal
 var epaModal = document.getElementById("epaPopup");
 // var epaModal2 = document.getElementById("epaPopup2");
@@ -437,7 +443,7 @@ var epaBtn2 = document.getElementById("epaButton2");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-// var span2 = document.getElementsByClassName("close2")[0];
+var span2 = document.getElementsByClassName("close-construction")[0];
 
 // When the user clicks the button, open the modal 
 epaBtn.onclick = function() {
@@ -452,14 +458,20 @@ epaModal.style.display = "block";
 span.onclick = function() {
 epaModal.style.display = "none";
 }
+span2.onclick = function() {
+constructionModal.style.display = "none";
+}
+
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
 if (event.target == epaModal) {
 epaModal.style.display = "none";
 }
+if (event.target == constructionModal) {
+	constructionModal.style.display = "none";
 }
-
+}
 document.addEventListener('DOMContentLoaded', function () {
     const showPopupButtons = document.querySelectorAll('.showPopupButton');
     const closeShareButtons = document.querySelectorAll('.closeShareButton');
