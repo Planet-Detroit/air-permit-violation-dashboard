@@ -7,7 +7,7 @@ import pandas as pd
 gc = pygsheets.authorize(service_account_env_var = 'pyg_sheets_auth')
 
 # Grab the spreadsheet
-sh = gc.open('EGLE-AQD-Violation-Notices-2018-Present')
+sh = gc.open('EGLE-AQD-Violation-Notices-2018-2024')
 
 # Grab the worksheet
 wks = sh.worksheet_by_title("data")
