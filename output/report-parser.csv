@@ -1,4 +1,5 @@
 date,vns_found,comments_found,comments_flagged,empty_pdfs,unparsable_pdfs,table_errors
+2025-04-27,0,,,,,
 2025-04-26,0,,,,,
 2025-04-25,0,,,,,
 2025-04-24,0,,,,,
@@ -371,8 +372,8 @@ date,vns_found,comments_found,comments_flagged,empty_pdfs,unparsable_pdfs,table_
 2024-04-17,0,,,,,
 2024-04-17,0,,,,,
 2024-04-17,0,,,,,
-2024-04-16,0,,,,,
 2024-04-16,1,0.0,0.0,0.0,0.0,1.0
+2024-04-16,0,,,,,
 2024-04-15,0,,,,,
 2024-04-14,0,,,,,
 2024-04-13,0,,,,,
