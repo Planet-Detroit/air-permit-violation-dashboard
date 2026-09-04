@@ -5,6 +5,23 @@ This dashboard contains an interactive map of Michigan facilities that have viol
 
 The map updates daily with new violation notices posted to [EGLE's Air Quality Division database.](https://www.egle.state.mi.us/aps/downloads/srn/)
 
+### Data source update (September 2026)
+
+EGLE stopped posting documents to its old `egle.state.mi.us/aps/downloads/SRN/`
+directory in September 2024 and now publishes through the MiEnviro portal.
+This dashboard reads Shelby Jouppi's document dataset, which was migrated to
+the MiEnviro API in June 2026, but the parser here still derived each notice's
+facility ID and date from the old PDF filename pattern, so it failed daily from
+July 1, 2026 and the map showed nothing after December 2024. Fixed September 4,
+2026: `parser_helpers.py` takes the facility ID and date from the dataset for
+MiEnviro URLs (old URLs still parse from the filename), and the map builder
+adds a count column for any new calendar year. `test_parser_helpers.py` covers
+both; the workflow runs the tests before scraping.
+
+Known gap: the dataset has no documents for January 2025 through June 2026, so
+violation notices from that period are not on the map until they are backfilled
+from MiEnviro.
+
 ### How it works
 🔍 **1. Finding and parsing new violation notices** 
 

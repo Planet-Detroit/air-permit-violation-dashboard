@@ -15,7 +15,7 @@ from ast import literal_eval
 import json
 import sys
 import os
-import wget
+from parser_helpers import archive_filename, ensure_year_columns, srn_for_urls, year_columns
 
 
 # # What day is it?
@@ -63,13 +63,10 @@ if len(new_vn) == 0:
 # Creating the new parsed violation dataframe
 new_parsed_vns = pd.DataFrame(columns=['doc_url','location','process_description','rule_permit_condition_violated','comments','full_text','pdf_parsing_error','empty_pdf_error','table_error','flag','comments_found'])
 
-# Looping through the Document URLs
-for file in new_vn.doc_url:
-    # Download the PDF and save it for posterity
-    try:
-        wget.download(file, out='archive/')
-    except:
-        pass
+# Looping through the Document URLs. MiEnviro URLs (Sept 2024 onward) carry no
+# filename, so the facility ID and date come from Shelby's document CSV instead.
+for doc_row in new_vn.drop_duplicates(subset='doc_url').itertuples():
+    file = doc_row.doc_url
     # Making a list and a dictionary to create a dataframe later on
     one_vn_list = []
     one_vn = {}
@@ -82,6 +79,13 @@ for file in new_vn.doc_url:
     try:
         # Requesting the file from the URL
         rq = requests.get(file)
+
+        # Save the PDF for posterity, named the way EGLE's old site named them
+        try:
+            with open(archive_filename(file, doc_row.srn, doc_row.date), 'wb') as archived:
+                archived.write(rq.content)
+        except Exception:
+            pass
         
         # Opening it with PDF plumber
         pdf = pdfplumber.open(BytesIO(rq.content))
@@ -417,7 +421,7 @@ new_parsed_vns['comments_clean'] = new_parsed_vns.comments.apply(process_comment
 new_parsed_vns['location_clean'] = new_parsed_vns.location.str.split(", Michigan").str[0]
 new_parsed_vns['location_clean'] = new_parsed_vns.location_clean.apply(process_location)
 new_parsed_vns.full_text = new_parsed_vns.full_text.str.replace("\n"," ")
-new_parsed_vns['srn'] = new_parsed_vns.doc_url.str.split('/').str[-1].str.split('_').str[0]
+new_parsed_vns['srn'] = srn_for_urls(new_parsed_vns.doc_url, docs)
 
 # # For each violation, create a list of comments
 file_list = new_parsed_vns.drop_duplicates(subset='doc_url').doc_url.to_list()
@@ -481,8 +485,7 @@ new_vns_clean = new_parsed_vns.merge(comments_consolidated,how='left',left_on='d
 # Merging with docs to get doc info:
 new_vns_clean = new_vns_clean.merge(docs, how='left',left_on=['doc_url','srn'],right_on=['doc_url','srn'])
 
-# Creating new columns that I'll need later
-new_vns_clean['date'] = new_vns_clean.doc_url.str.split('_').str[-1].str.split('.').str[0]
+# The issue date comes from the document CSV (merged in above), not the URL
 new_vns_clean.date = pd.to_datetime(new_vns_clean.date)
 new_vns_clean['date_str'] = new_vns_clean.date.dt.month_name() + " " + new_vns_clean.date.dt.day.astype('str') + ", "  + new_vns_clean.date.dt.year.astype('str')
 
@@ -572,6 +575,9 @@ with open('output/recent-violations.js', 'a') as outfile:
 # # Creating the map data
 # # Reading in my existing map_df and source directory
 map_df = pd.read_csv('output/violation-map-data.csv')
+# The map keeps one count column per year; add columns for any year that is
+# new this run (this is what broke the first 2026 notice).
+map_df = ensure_year_columns(map_df, new_vns_clean.date.dt.year)
 # Reading in source violation count table
 source_vn_table = pd.read_csv('output/violation-count-by-source.csv')
 
@@ -586,7 +592,7 @@ if len(new_facilities) > 0:
             new_facility_df = source_directory.query(f'srn == "{facility}"').copy(deep=True)
             new_facility_df['properties.violationCount'] = 0
             new_facility_df['violation_count'] = 0
-            new_facility_df[['2018','2019','2020','2021','2022','2023','2024']] = 0
+            new_facility_df[year_columns(map_df)] = 0
             new_facility_df['type'] = 'Feature'
             new_facility_df['geometry.type'] = 'Point'
             new_facility_df = new_facility_df.rename({'facility_name_title':'properties.facility_name','address_full':'properties.address_full'},axis=1)
